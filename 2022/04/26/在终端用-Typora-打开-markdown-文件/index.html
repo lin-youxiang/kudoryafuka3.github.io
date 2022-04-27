@@ -240,7 +240,7 @@
             
             <div class="markdown-body">
               <p>用 Hexo 写博客时，一般需要在终端先 new 一下 markdown 文件，然后再写。这时候切到 Finder 或 Typora 再去打开就很麻烦，于是进行如下操作。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs shell">open -a typora 文件名<br></code></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">open -a typora 文件名<br></code></pre></div></td></tr></table></figure>
 
 <p>其中 <code>open -a typora</code> ➡️ 用 Typora 打开某文件</p>
 <p>为方便使用，将 <code>open -a typora</code> 设置为别名</p>
@@ -253,13 +253,13 @@
 <p>这是 zsh 给的例子，不妨在这之后添加自用的命令别名</p>
 </li>
 <li><p>将如下代码写入 <code>.zshrc</code></p>
-<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs abnf">alias typora<span class="hljs-operator">=</span><span class="hljs-string">&quot;open -a typora&quot;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight abnf"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs abnf">alias typora<span class="hljs-operator">=</span><span class="hljs-string">&quot;open -a typora&quot;</span><br></code></pre></div></td></tr></table></figure>
 </li>
 <li><p>让配置文件立刻生效</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-built_in">source</span> ~.zshrc<br></code></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh"><span class="hljs-built_in">source</span> ~.zshrc<br></code></pre></div></td></tr></table></figure>
 </li>
 <li><p>查看当前的命令别名</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-built_in">alias</span><br></code></pre></td></tr></table></figure></li>
+<figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh"><span class="hljs-built_in">alias</span><br></code></pre></div></td></tr></table></figure></li>
 </ol>
 
             </div>
