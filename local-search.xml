@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>3. 无重复字符的最长子串</title>
+    <link href="/2022/04/30/3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/"/>
+    <url>/2022/04/30/3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/</url>
+    
+    <content type="html"><![CDATA[<h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><figure class="highlight go"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">lengthOfLongestSubstring</span><span class="hljs-params">(s <span class="hljs-type">string</span>)</span></span> <span class="hljs-type">int</span> &#123;<br>    lengthOfString := <span class="hljs-built_in">len</span>(s)<br>    left,right := <span class="hljs-number">0</span>,<span class="hljs-number">0</span><br>    ans := <span class="hljs-number">0</span><br>    <span class="hljs-keyword">if</span> lengthOfString == <span class="hljs-number">0</span> &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>    &#125;<br>    <span class="hljs-keyword">if</span> lengthOfString == <span class="hljs-number">1</span> &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span><br>    &#125;<br>    <span class="hljs-keyword">for</span> left=<span class="hljs-number">0</span>; left &lt; lengthOfString;left++&#123;<br>        maps := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">map</span>[<span class="hljs-type">byte</span>]<span class="hljs-type">int</span>)<br>        <span class="hljs-keyword">for</span> right = left;right &lt; lengthOfString; right++ &#123;<br>            <span class="hljs-keyword">if</span> maps[s[right]] == <span class="hljs-number">0</span> &#123;<br>                maps[s[right]]++<br>            &#125; <span class="hljs-keyword">else</span> &#123;<br>                <span class="hljs-keyword">break</span><br>            &#125;<br>        &#125;<br>        ans = max(ans, right - left)<br>        <br>    &#125;<br>    <span class="hljs-keyword">return</span> ans<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">max</span><span class="hljs-params">(a, b <span class="hljs-type">int</span>)</span></span> <span class="hljs-type">int</span> &#123;<br><span class="hljs-keyword">if</span> a &gt; b &#123;<br><span class="hljs-keyword">return</span> a<br>&#125;<br><span class="hljs-keyword">return</span> b<br>&#125;<br></code></pre></div></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>算法</category>
+      
+      <category>题解</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>macOS 自定义 Typora 快捷键</title>
     <link href="/2022/04/26/macOS-%E8%87%AA%E5%AE%9A%E4%B9%89-Typora-%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     <url>/2022/04/26/macOS-%E8%87%AA%E5%AE%9A%E4%B9%89-Typora-%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
@@ -251,7 +272,7 @@
   
   
   <entry>
-    <title>70.爬楼梯</title>
+    <title>70. 爬楼梯</title>
     <link href="/2022/03/15/70-%E7%88%AC%E6%A5%BC%E6%A2%AF/"/>
     <url>/2022/03/15/70-%E7%88%AC%E6%A5%BC%E6%A2%AF/</url>
     
