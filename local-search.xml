@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>5. 最长回文子串</title>
+    <link href="/2022/05/02/5-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/"/>
+    <url>/2022/05/02/5-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/</url>
+    
+    <content type="html"><![CDATA[<h4 id="暴力解"><a href="#暴力解" class="headerlink" title="暴力解"></a>暴力解</h4><figure class="highlight go"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">longestPalindrome</span><span class="hljs-params">(s <span class="hljs-type">string</span>)</span></span> <span class="hljs-type">string</span> &#123;<br><span class="hljs-keyword">if</span> IsPalindrome(s) &#123;<br><span class="hljs-keyword">return</span> s<br>&#125;<br>maxLength := <span class="hljs-number">0</span><br><span class="hljs-keyword">var</span> ans <span class="hljs-type">string</span><br><span class="hljs-keyword">for</span> width := <span class="hljs-number">1</span>; width &lt; <span class="hljs-built_in">len</span>(s); width++ &#123;<br><span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">len</span>(s)-width+<span class="hljs-number">1</span>; i++ &#123;<br>temp := s[i : i+width]<br><span class="hljs-keyword">if</span> IsPalindrome(temp) &#123;<br><span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(temp) &gt; maxLength &#123;<br>maxLength = <span class="hljs-built_in">len</span>(temp)<br>ans = temp<br>&#125;<br>&#125;<br>&#125;<br>&#125;<br><span class="hljs-keyword">return</span> ans<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">IsPalindrome</span><span class="hljs-params">(s <span class="hljs-type">string</span>)</span></span> <span class="hljs-type">bool</span> &#123;<br><span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(s) == <span class="hljs-number">0</span> || <span class="hljs-built_in">len</span>(s) == <span class="hljs-number">1</span> &#123;<br><span class="hljs-keyword">return</span> <span class="hljs-literal">true</span><br>&#125;<br>i := <span class="hljs-number">0</span><br>j := <span class="hljs-built_in">len</span>(s) - <span class="hljs-number">1</span><br><span class="hljs-keyword">for</span> i &lt; (<span class="hljs-built_in">len</span>(s) / <span class="hljs-number">2</span>) &#123;<br><span class="hljs-keyword">if</span> s[i] != s[j] &#123;<br><span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>&#125;<br>i++<br>j--<br>&#125;<br><span class="hljs-keyword">return</span> <span class="hljs-literal">true</span><br>&#125;<br></code></pre></div></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>算法</category>
+      
+      <category>题解</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>3. 无重复字符的最长子串</title>
     <link href="/2022/04/30/3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/"/>
     <url>/2022/04/30/3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/</url>

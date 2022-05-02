@@ -16,20 +16,20 @@
   <meta name="author" content="ritsurin">
   <meta name="keywords" content="">
   
-    <meta name="description" content="题解12345678910111213141516171819202122232425262728293031func lengthOfLongestSubstring(s string) int &amp;#123;    lengthOfString :&#x3D; len(s)    left,right :&#x3D; 0,0    ans :&#x3D; 0    if lengthOfString &#x3D;&#x3D; 0 &amp;#123;">
+    <meta name="description" content="暴力解1234567891011121314151617181920212223242526272829303132333435func longestPalindrome(s string) string &amp;#123;	if IsPalindrome(s) &amp;#123;		return s	&amp;#125;	maxLength :&#x3D; 0	var ans string	for width :&#x3D; 1;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="3. 无重复字符的最长子串">
-<meta property="og:url" content="http://example.com/2022/04/30/3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/index.html">
+<meta property="og:title" content="5. 最长回文子串">
+<meta property="og:url" content="http://example.com/2022/05/02/5-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/index.html">
 <meta property="og:site_name" content="你好👋">
-<meta property="og:description" content="题解12345678910111213141516171819202122232425262728293031func lengthOfLongestSubstring(s string) int &amp;#123;    lengthOfString :&#x3D; len(s)    left,right :&#x3D; 0,0    ans :&#x3D; 0    if lengthOfString &#x3D;&#x3D; 0 &amp;#123;">
+<meta property="og:description" content="暴力解1234567891011121314151617181920212223242526272829303132333435func longestPalindrome(s string) string &amp;#123;	if IsPalindrome(s) &amp;#123;		return s	&amp;#125;	maxLength :&#x3D; 0	var ans string	for width :&#x3D; 1;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-04-30T03:56:42.000Z">
-<meta property="article:modified_time" content="2022-04-30T06:41:59.363Z">
+<meta property="article:published_time" content="2022-05-02T12:43:01.000Z">
+<meta property="article:modified_time" content="2022-05-02T12:44:08.201Z">
 <meta property="article:author" content="ritsurin">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>3. 无重复字符的最长子串 - 你好👋</title>
+  <title>5. 最长回文子串 - 你好👋</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -175,7 +175,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="3. 无重复字符的最长子串">
+            <span class="h2" id="subtitle" title="5. 最长回文子串">
               
             </span>
 
@@ -185,8 +185,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-04-30 11:56" pubdate>
-        2022年4月30日 中午
+      <time datetime="2022-05-02 20:43" pubdate>
+        2022年5月2日 晚上
       </time>
     </span>
   
@@ -196,7 +196,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      522 字
+      565 字
     </span>
   
 
@@ -234,10 +234,10 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">3. 无重复字符的最长子串</h1>
+            <h1 style="display: none">5. 最长回文子串</h1>
             
             <div class="markdown-body">
-              <h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><figure class="highlight go"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">lengthOfLongestSubstring</span><span class="hljs-params">(s <span class="hljs-type">string</span>)</span></span> <span class="hljs-type">int</span> &#123;<br>    lengthOfString := <span class="hljs-built_in">len</span>(s)<br>    left,right := <span class="hljs-number">0</span>,<span class="hljs-number">0</span><br>    ans := <span class="hljs-number">0</span><br>    <span class="hljs-keyword">if</span> lengthOfString == <span class="hljs-number">0</span> &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>    &#125;<br>    <span class="hljs-keyword">if</span> lengthOfString == <span class="hljs-number">1</span> &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span><br>    &#125;<br>    <span class="hljs-keyword">for</span> left=<span class="hljs-number">0</span>; left &lt; lengthOfString;left++&#123;<br>        maps := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">map</span>[<span class="hljs-type">byte</span>]<span class="hljs-type">int</span>)<br>        <span class="hljs-keyword">for</span> right = left;right &lt; lengthOfString; right++ &#123;<br>            <span class="hljs-keyword">if</span> maps[s[right]] == <span class="hljs-number">0</span> &#123;<br>                maps[s[right]]++<br>            &#125; <span class="hljs-keyword">else</span> &#123;<br>                <span class="hljs-keyword">break</span><br>            &#125;<br>        &#125;<br>        ans = max(ans, right - left)<br>        <br>    &#125;<br>    <span class="hljs-keyword">return</span> ans<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">max</span><span class="hljs-params">(a, b <span class="hljs-type">int</span>)</span></span> <span class="hljs-type">int</span> &#123;<br>	<span class="hljs-keyword">if</span> a &gt; b &#123;<br>		<span class="hljs-keyword">return</span> a<br>	&#125;<br>	<span class="hljs-keyword">return</span> b<br>&#125;<br></code></pre></div></td></tr></table></figure>
+              <h4 id="暴力解"><a href="#暴力解" class="headerlink" title="暴力解"></a>暴力解</h4><figure class="highlight go"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">longestPalindrome</span><span class="hljs-params">(s <span class="hljs-type">string</span>)</span></span> <span class="hljs-type">string</span> &#123;<br>	<span class="hljs-keyword">if</span> IsPalindrome(s) &#123;<br>		<span class="hljs-keyword">return</span> s<br>	&#125;<br>	maxLength := <span class="hljs-number">0</span><br>	<span class="hljs-keyword">var</span> ans <span class="hljs-type">string</span><br>	<span class="hljs-keyword">for</span> width := <span class="hljs-number">1</span>; width &lt; <span class="hljs-built_in">len</span>(s); width++ &#123;<br>		<span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">len</span>(s)-width+<span class="hljs-number">1</span>; i++ &#123;<br>			temp := s[i : i+width]<br>			<span class="hljs-keyword">if</span> IsPalindrome(temp) &#123;<br>				<span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(temp) &gt; maxLength &#123;<br>					maxLength = <span class="hljs-built_in">len</span>(temp)<br>					ans = temp<br>				&#125;<br>			&#125;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">return</span> ans<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">IsPalindrome</span><span class="hljs-params">(s <span class="hljs-type">string</span>)</span></span> <span class="hljs-type">bool</span> &#123;<br>	<span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(s) == <span class="hljs-number">0</span> || <span class="hljs-built_in">len</span>(s) == <span class="hljs-number">1</span> &#123;<br>		<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span><br>	&#125;<br>	i := <span class="hljs-number">0</span><br>	j := <span class="hljs-built_in">len</span>(s) - <span class="hljs-number">1</span><br>	<span class="hljs-keyword">for</span> i &lt; (<span class="hljs-built_in">len</span>(s) / <span class="hljs-number">2</span>) &#123;<br>		<span class="hljs-keyword">if</span> s[i] != s[j] &#123;<br>			<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>		&#125;<br>		i++<br>		j--<br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span><br>&#125;<br></code></pre></div></td></tr></table></figure>
 
 
             </div>
@@ -268,18 +268,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/05/02/5-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">5. 最长回文子串</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/04/26/macOS-%E8%87%AA%E5%AE%9A%E4%B9%89-Typora-%E5%BF%AB%E6%8D%B7%E9%94%AE/">
-                        <span class="hidden-mobile">macOS 自定义 Typora 快捷键</span>
+                      <a href="/2022/04/30/3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/">
+                        <span class="hidden-mobile">3. 无重复字符的最长子串</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
