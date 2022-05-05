@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>12. 整数转罗马数字</title>
+    <link href="/2022/05/05/12-%E6%95%B4%E6%95%B0%E8%BD%AC%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97/"/>
+    <url>/2022/05/05/12-%E6%95%B4%E6%95%B0%E8%BD%AC%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97/</url>
+    
+    <content type="html"><![CDATA[<h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><figure class="highlight go"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">intToRoman</span><span class="hljs-params">(num <span class="hljs-type">int</span>)</span></span> <span class="hljs-type">string</span> &#123;<br>res := <span class="hljs-string">&quot;&quot;</span><br>roman := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">map</span>[<span class="hljs-type">int</span>]<span class="hljs-type">string</span>)<br>roman[<span class="hljs-number">1</span>] = <span class="hljs-string">&quot;I&quot;</span><br>roman[<span class="hljs-number">4</span>] = <span class="hljs-string">&quot;IV&quot;</span><br>roman[<span class="hljs-number">5</span>] = <span class="hljs-string">&quot;V&quot;</span><br>roman[<span class="hljs-number">9</span>] = <span class="hljs-string">&quot;IX&quot;</span><br>roman[<span class="hljs-number">10</span>] = <span class="hljs-string">&quot;X&quot;</span><br>roman[<span class="hljs-number">40</span>] = <span class="hljs-string">&quot;XL&quot;</span><br>roman[<span class="hljs-number">50</span>] = <span class="hljs-string">&quot;L&quot;</span><br>roman[<span class="hljs-number">90</span>] = <span class="hljs-string">&quot;XC&quot;</span><br>roman[<span class="hljs-number">100</span>] = <span class="hljs-string">&quot;C&quot;</span><br>roman[<span class="hljs-number">400</span>] = <span class="hljs-string">&quot;CD&quot;</span><br>roman[<span class="hljs-number">500</span>] = <span class="hljs-string">&quot;D&quot;</span><br>roman[<span class="hljs-number">900</span>] = <span class="hljs-string">&quot;CM&quot;</span><br>roman[<span class="hljs-number">1000</span>] = <span class="hljs-string">&quot;M&quot;</span><br>nums := []<span class="hljs-type">int</span>&#123;<span class="hljs-number">1000</span>, <span class="hljs-number">900</span>, <span class="hljs-number">500</span>, <span class="hljs-number">400</span>, <span class="hljs-number">100</span>, <span class="hljs-number">90</span>, <span class="hljs-number">50</span>, <span class="hljs-number">40</span>, <span class="hljs-number">10</span>, <span class="hljs-number">9</span>, <span class="hljs-number">5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>&#125;<br><span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">len</span>(nums); &#123;<br><span class="hljs-keyword">if</span> num &gt;= nums[i] &#123;<br>num -= nums[i]<br>res += roman[nums[i]]<br>&#125; <span class="hljs-keyword">else</span> &#123;<br>i++<br>&#125;<br>&#125;<br><span class="hljs-keyword">return</span> res<br>&#125;<br></code></pre></div></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>算法</category>
+      
+      <category>题解</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>11. 盛最多水的容器</title>
     <link href="/2022/05/04/11-%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/"/>
     <url>/2022/05/04/11-%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/</url>
