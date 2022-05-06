@@ -16,20 +16,20 @@
   <meta name="author" content="ritsurin">
   <meta name="keywords" content="">
   
-    <meta name="description" content="题解123456789101112131415161718192021222324252627func intToRoman(num int) string &amp;#123;	res :&#x3D; &quot;&quot;	roman :&#x3D; make(map[int]string)	roman[1] &#x3D; &quot;I&quot;	roman[4] &#x3D; &quot;IV&quot;	roman[5] &#x3D; &amp;q">
+    <meta name="description" content="题解12345678910111213141516171819202122232425262728293031func romanToInt(s string) int &amp;#123;    roman :&#x3D; make(map[string]int)	roman[&quot;I&quot;] &#x3D; 1	roman[&quot;IV&quot;] &#x3D; 4	roman[&quot;V&quot;] &#x3D; 5">
 <meta property="og:type" content="article">
-<meta property="og:title" content="12. 整数转罗马数字">
-<meta property="og:url" content="http://example.com/2022/05/05/12-%E6%95%B4%E6%95%B0%E8%BD%AC%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97/index.html">
+<meta property="og:title" content="13. 罗马数字转整数">
+<meta property="og:url" content="http://example.com/2022/05/06/13-%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E8%BD%AC%E6%95%B4%E6%95%B0/index.html">
 <meta property="og:site_name" content="你好👋">
-<meta property="og:description" content="题解123456789101112131415161718192021222324252627func intToRoman(num int) string &amp;#123;	res :&#x3D; &quot;&quot;	roman :&#x3D; make(map[int]string)	roman[1] &#x3D; &quot;I&quot;	roman[4] &#x3D; &quot;IV&quot;	roman[5] &#x3D; &amp;q">
+<meta property="og:description" content="题解12345678910111213141516171819202122232425262728293031func romanToInt(s string) int &amp;#123;    roman :&#x3D; make(map[string]int)	roman[&quot;I&quot;] &#x3D; 1	roman[&quot;IV&quot;] &#x3D; 4	roman[&quot;V&quot;] &#x3D; 5">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-05-05T06:27:01.000Z">
-<meta property="article:modified_time" content="2022-05-05T06:27:57.375Z">
+<meta property="article:published_time" content="2022-05-06T02:54:40.000Z">
+<meta property="article:modified_time" content="2022-05-06T02:55:19.536Z">
 <meta property="article:author" content="ritsurin">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>12. 整数转罗马数字 - 你好👋</title>
+  <title>13. 罗马数字转整数 - 你好👋</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -175,7 +175,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="12. 整数转罗马数字">
+            <span class="h2" id="subtitle" title="13. 罗马数字转整数">
               
             </span>
 
@@ -185,8 +185,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-05-05 14:27" pubdate>
-        2022年5月5日 下午
+      <time datetime="2022-05-06 10:54" pubdate>
+        2022年5月6日 上午
       </time>
     </span>
   
@@ -196,7 +196,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      624 字
+      702 字
     </span>
   
 
@@ -234,10 +234,10 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">12. 整数转罗马数字</h1>
+            <h1 style="display: none">13. 罗马数字转整数</h1>
             
             <div class="markdown-body">
-              <h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><figure class="highlight go"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">intToRoman</span><span class="hljs-params">(num <span class="hljs-type">int</span>)</span></span> <span class="hljs-type">string</span> &#123;<br>	res := <span class="hljs-string">&quot;&quot;</span><br>	roman := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">map</span>[<span class="hljs-type">int</span>]<span class="hljs-type">string</span>)<br>	roman[<span class="hljs-number">1</span>] = <span class="hljs-string">&quot;I&quot;</span><br>	roman[<span class="hljs-number">4</span>] = <span class="hljs-string">&quot;IV&quot;</span><br>	roman[<span class="hljs-number">5</span>] = <span class="hljs-string">&quot;V&quot;</span><br>	roman[<span class="hljs-number">9</span>] = <span class="hljs-string">&quot;IX&quot;</span><br>	roman[<span class="hljs-number">10</span>] = <span class="hljs-string">&quot;X&quot;</span><br>	roman[<span class="hljs-number">40</span>] = <span class="hljs-string">&quot;XL&quot;</span><br>	roman[<span class="hljs-number">50</span>] = <span class="hljs-string">&quot;L&quot;</span><br>	roman[<span class="hljs-number">90</span>] = <span class="hljs-string">&quot;XC&quot;</span><br>	roman[<span class="hljs-number">100</span>] = <span class="hljs-string">&quot;C&quot;</span><br>	roman[<span class="hljs-number">400</span>] = <span class="hljs-string">&quot;CD&quot;</span><br>	roman[<span class="hljs-number">500</span>] = <span class="hljs-string">&quot;D&quot;</span><br>	roman[<span class="hljs-number">900</span>] = <span class="hljs-string">&quot;CM&quot;</span><br>	roman[<span class="hljs-number">1000</span>] = <span class="hljs-string">&quot;M&quot;</span><br>	nums := []<span class="hljs-type">int</span>&#123;<span class="hljs-number">1000</span>, <span class="hljs-number">900</span>, <span class="hljs-number">500</span>, <span class="hljs-number">400</span>, <span class="hljs-number">100</span>, <span class="hljs-number">90</span>, <span class="hljs-number">50</span>, <span class="hljs-number">40</span>, <span class="hljs-number">10</span>, <span class="hljs-number">9</span>, <span class="hljs-number">5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>&#125;<br>	<span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">len</span>(nums); &#123;<br>		<span class="hljs-keyword">if</span> num &gt;= nums[i] &#123;<br>			num -= nums[i]<br>			res += roman[nums[i]]<br>		&#125; <span class="hljs-keyword">else</span> &#123;<br>			i++<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">return</span> res<br>&#125;<br></code></pre></div></td></tr></table></figure>
+              <h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><figure class="highlight go"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">romanToInt</span><span class="hljs-params">(s <span class="hljs-type">string</span>)</span></span> <span class="hljs-type">int</span> &#123;<br>    roman := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">map</span>[<span class="hljs-type">string</span>]<span class="hljs-type">int</span>)<br>	roman[<span class="hljs-string">&quot;I&quot;</span>] = <span class="hljs-number">1</span><br>	roman[<span class="hljs-string">&quot;IV&quot;</span>] = <span class="hljs-number">4</span><br>	roman[<span class="hljs-string">&quot;V&quot;</span>] = <span class="hljs-number">5</span><br>	roman[<span class="hljs-string">&quot;IX&quot;</span>] = <span class="hljs-number">9</span><br>	roman[<span class="hljs-string">&quot;X&quot;</span>] = <span class="hljs-number">10</span><br>	roman[<span class="hljs-string">&quot;XL&quot;</span>] = <span class="hljs-number">40</span><br>	roman[<span class="hljs-string">&quot;L&quot;</span>] = <span class="hljs-number">50</span><br>	roman[<span class="hljs-string">&quot;XC&quot;</span>] = <span class="hljs-number">90</span><br>	roman[<span class="hljs-string">&quot;C&quot;</span>] = <span class="hljs-number">100</span><br>	roman[<span class="hljs-string">&quot;CD&quot;</span>] = <span class="hljs-number">400</span><br>	roman[<span class="hljs-string">&quot;D&quot;</span>] = <span class="hljs-number">500</span><br>	roman[<span class="hljs-string">&quot;CM&quot;</span>] = <span class="hljs-number">900</span><br>	roman[<span class="hljs-string">&quot;M&quot;</span>] = <span class="hljs-number">1000</span><br>    <span class="hljs-keyword">var</span> lastRoman <span class="hljs-type">int</span><br>    <span class="hljs-keyword">var</span> nowRoman <span class="hljs-type">int</span><br>    res := <span class="hljs-number">0</span><br>	res += roman[<span class="hljs-type">string</span>(s[<span class="hljs-number">0</span>])]<br>    lastRoman = roman[<span class="hljs-type">string</span>(s[<span class="hljs-number">0</span>])]<br>    <span class="hljs-keyword">for</span> i := <span class="hljs-number">1</span>; i &lt; <span class="hljs-built_in">len</span>(s); i++ &#123;<br>        nowRoman = roman[<span class="hljs-type">string</span>(s[i])]<br>        <span class="hljs-keyword">if</span> nowRoman &gt; lastRoman &#123;<br>            res += nowRoman - lastRoman - lastRoman<br>        &#125; <span class="hljs-keyword">else</span> &#123;<br>            res += nowRoman<br>        &#125; <br>        lastRoman = nowRoman<br>    &#125;<br>    <span class="hljs-keyword">return</span> res<br>&#125;<br></code></pre></div></td></tr></table></figure>
 
 
             </div>
@@ -268,18 +268,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/05/06/13-%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E8%BD%AC%E6%95%B4%E6%95%B0/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">13. 罗马数字转整数</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/05/04/11-%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/">
-                        <span class="hidden-mobile">11. 盛最多水的容器</span>
+                      <a href="/2022/05/05/12-%E6%95%B4%E6%95%B0%E8%BD%AC%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97/">
+                        <span class="hidden-mobile">12. 整数转罗马数字</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
