@@ -16,20 +16,20 @@
   <meta name="author" content="ritsurin">
   <meta name="keywords" content="">
   
-    <meta name="description" content="思路和上一题差不多 题解12345678910111213141516171819202122232425262728293031323334353637383940func threeSumClosest(nums []int, target int) int &amp;#123;	sort.Ints(nums)	var res int	delta :&#x3D; math.MaxInt32	for i :&#x3D; 0">
+    <meta name="description" content="思路回溯 题解12345678910111213141516171819202122232425262728293031func letterCombinations(digits string) []string &amp;#123;	if len(digits) &#x3D;&#x3D; 0 || len(digits) &gt; 4 &amp;#123;		return nil	&amp;#125;	var res []string">
 <meta property="og:type" content="article">
-<meta property="og:title" content="16. 最接近的三数之和">
-<meta property="og:url" content="http://example.com/2022/05/08/16-%E6%9C%80%E6%8E%A5%E8%BF%91%E7%9A%84%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/index.html">
+<meta property="og:title" content="17. 电话号码的字母组合">
+<meta property="og:url" content="http://example.com/2022/05/09/17-%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88/index.html">
 <meta property="og:site_name" content="你好👋">
-<meta property="og:description" content="思路和上一题差不多 题解12345678910111213141516171819202122232425262728293031323334353637383940func threeSumClosest(nums []int, target int) int &amp;#123;	sort.Ints(nums)	var res int	delta :&#x3D; math.MaxInt32	for i :&#x3D; 0">
+<meta property="og:description" content="思路回溯 题解12345678910111213141516171819202122232425262728293031func letterCombinations(digits string) []string &amp;#123;	if len(digits) &#x3D;&#x3D; 0 || len(digits) &gt; 4 &amp;#123;		return nil	&amp;#125;	var res []string">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-05-07T16:45:07.000Z">
-<meta property="article:modified_time" content="2022-05-07T16:45:45.497Z">
+<meta property="article:published_time" content="2022-05-09T07:02:30.000Z">
+<meta property="article:modified_time" content="2022-05-09T07:03:26.655Z">
 <meta property="article:author" content="ritsurin">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>16. 最接近的三数之和 - 你好👋</title>
+  <title>17. 电话号码的字母组合 - 你好👋</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -175,7 +175,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="16. 最接近的三数之和">
+            <span class="h2" id="subtitle" title="17. 电话号码的字母组合">
               
             </span>
 
@@ -185,8 +185,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-05-08 00:45" pubdate>
-        2022年5月8日 凌晨
+      <time datetime="2022-05-09 15:02" pubdate>
+        2022年5月9日 下午
       </time>
     </span>
   
@@ -196,7 +196,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      724 字
+      985 字
     </span>
   
 
@@ -205,7 +205,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      7 分钟
+      9 分钟
     </span>
   
 
@@ -234,11 +234,11 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">16. 最接近的三数之和</h1>
+            <h1 style="display: none">17. 电话号码的字母组合</h1>
             
             <div class="markdown-body">
-              <h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>和上一题差不多</p>
-<h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><figure class="highlight go"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">threeSumClosest</span><span class="hljs-params">(nums []<span class="hljs-type">int</span>, target <span class="hljs-type">int</span>)</span></span> <span class="hljs-type">int</span> &#123;<br>	sort.Ints(nums)<br>	<span class="hljs-keyword">var</span> res <span class="hljs-type">int</span><br>	delta := math.MaxInt32<br>	<span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">len</span>(nums)<span class="hljs-number">-2</span>; i++ &#123;<br>		sum := twoSumClosest(nums, i+<span class="hljs-number">1</span>, target-nums[i]) + nums[i]<br>		<span class="hljs-keyword">if</span> abs(sum-target) &lt; delta &#123;<br>			delta = abs(sum - target)<br>			res = sum<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">return</span> res<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">twoSumClosest</span><span class="hljs-params">(nums []<span class="hljs-type">int</span>, start <span class="hljs-type">int</span>, target <span class="hljs-type">int</span>)</span></span> <span class="hljs-type">int</span> &#123;<br>	left := start<br>	right := <span class="hljs-built_in">len</span>(nums) - <span class="hljs-number">1</span><br>	delta := math.MaxInt32<br>	<span class="hljs-keyword">var</span> res <span class="hljs-type">int</span><br>	<span class="hljs-keyword">for</span> left &lt; right &#123;<br>		sum := nums[left] + nums[right]<br>		<span class="hljs-keyword">if</span> abs(target-sum) &lt; delta &#123;<br>			delta = abs(target - sum)<br>			res = sum<br>		&#125;<br>		<span class="hljs-keyword">if</span> sum &lt; target &#123;<br>			left++<br>		&#125; <span class="hljs-keyword">else</span> &#123;<br>			right--<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">return</span> res<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">abs</span><span class="hljs-params">(num <span class="hljs-type">int</span>)</span></span> <span class="hljs-type">int</span> &#123;<br>	<span class="hljs-keyword">if</span> num &lt; <span class="hljs-number">0</span> &#123;<br>		<span class="hljs-keyword">return</span> -num<br>	&#125;<br>	<span class="hljs-keyword">return</span> num<br>&#125;<br></code></pre></div></td></tr></table></figure>
+              <h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p><a target="_blank" rel="noopener" href="https://www.programmercarl.com/0017.%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88.html#go">回溯</a></p>
+<h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><figure class="highlight go"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">letterCombinations</span><span class="hljs-params">(digits <span class="hljs-type">string</span>)</span></span> []<span class="hljs-type">string</span> &#123;<br>	<span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(digits) == <span class="hljs-number">0</span> || <span class="hljs-built_in">len</span>(digits) &gt; <span class="hljs-number">4</span> &#123;<br>		<span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span><br>	&#125;<br>	<span class="hljs-keyword">var</span> res []<span class="hljs-type">string</span><br>	numbers := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">map</span>[<span class="hljs-type">byte</span>]<span class="hljs-type">string</span>)<br>	numbers[<span class="hljs-string">&#x27;2&#x27;</span>] = <span class="hljs-string">&quot;abc&quot;</span><br>	numbers[<span class="hljs-string">&#x27;3&#x27;</span>] = <span class="hljs-string">&quot;def&quot;</span><br>	numbers[<span class="hljs-string">&#x27;4&#x27;</span>] = <span class="hljs-string">&quot;ghi&quot;</span><br>	numbers[<span class="hljs-string">&#x27;5&#x27;</span>] = <span class="hljs-string">&quot;jkl&quot;</span><br>	numbers[<span class="hljs-string">&#x27;6&#x27;</span>] = <span class="hljs-string">&quot;mno&quot;</span><br>	numbers[<span class="hljs-string">&#x27;7&#x27;</span>] = <span class="hljs-string">&quot;pqrs&quot;</span><br>	numbers[<span class="hljs-string">&#x27;8&#x27;</span>] = <span class="hljs-string">&quot;tuv&quot;</span><br>	numbers[<span class="hljs-string">&#x27;9&#x27;</span>] = <span class="hljs-string">&quot;wxyz&quot;</span><br>	backTracking(<span class="hljs-string">&quot;&quot;</span>, digits, <span class="hljs-number">0</span>, numbers, &amp;res)<br>	<span class="hljs-keyword">return</span> res<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">backTracking</span><span class="hljs-params">(tempString <span class="hljs-type">string</span>, digits <span class="hljs-type">string</span>, index <span class="hljs-type">int</span>, numbers <span class="hljs-keyword">map</span>[<span class="hljs-type">byte</span>]<span class="hljs-type">string</span>, res *[]<span class="hljs-type">string</span>)</span></span> &#123;<br>	<span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(tempString) == <span class="hljs-built_in">len</span>(digits) &#123;<br>		*res = <span class="hljs-built_in">append</span>(*res, tempString)<br>		<span class="hljs-keyword">return</span><br>	&#125;<br>	letters := numbers[digits[index]]<br>	<span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">len</span>(letters); i++ &#123;<br>		tempString = tempString + <span class="hljs-type">string</span>(letters[i])<br>		<span class="hljs-comment">// ⚠️这里是 index+1，不是 i+1</span><br>		backTracking(tempString, digits, index+<span class="hljs-number">1</span>, numbers, res)<br>		tempString = tempString[:<span class="hljs-built_in">len</span>(tempString)<span class="hljs-number">-1</span>]<br>	&#125;<br>&#125;<br></code></pre></div></td></tr></table></figure>
 
 
             </div>
@@ -269,18 +269,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/05/09/17-%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">17. 电话号码的字母组合</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/05/07/15-%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/">
-                        <span class="hidden-mobile">15. 三数之和</span>
+                      <a href="/2022/05/08/16-%E6%9C%80%E6%8E%A5%E8%BF%91%E7%9A%84%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/">
+                        <span class="hidden-mobile">16. 最接近的三数之和</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

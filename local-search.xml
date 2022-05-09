@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>17. 电话号码的字母组合</title>
+    <link href="/2022/05/09/17-%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88/"/>
+    <url>/2022/05/09/17-%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88/</url>
+    
+    <content type="html"><![CDATA[<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p><a href="https://www.programmercarl.com/0017.%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88.html#go">回溯</a></p><h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><figure class="highlight go"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">letterCombinations</span><span class="hljs-params">(digits <span class="hljs-type">string</span>)</span></span> []<span class="hljs-type">string</span> &#123;<br><span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(digits) == <span class="hljs-number">0</span> || <span class="hljs-built_in">len</span>(digits) &gt; <span class="hljs-number">4</span> &#123;<br><span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span><br>&#125;<br><span class="hljs-keyword">var</span> res []<span class="hljs-type">string</span><br>numbers := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">map</span>[<span class="hljs-type">byte</span>]<span class="hljs-type">string</span>)<br>numbers[<span class="hljs-string">&#x27;2&#x27;</span>] = <span class="hljs-string">&quot;abc&quot;</span><br>numbers[<span class="hljs-string">&#x27;3&#x27;</span>] = <span class="hljs-string">&quot;def&quot;</span><br>numbers[<span class="hljs-string">&#x27;4&#x27;</span>] = <span class="hljs-string">&quot;ghi&quot;</span><br>numbers[<span class="hljs-string">&#x27;5&#x27;</span>] = <span class="hljs-string">&quot;jkl&quot;</span><br>numbers[<span class="hljs-string">&#x27;6&#x27;</span>] = <span class="hljs-string">&quot;mno&quot;</span><br>numbers[<span class="hljs-string">&#x27;7&#x27;</span>] = <span class="hljs-string">&quot;pqrs&quot;</span><br>numbers[<span class="hljs-string">&#x27;8&#x27;</span>] = <span class="hljs-string">&quot;tuv&quot;</span><br>numbers[<span class="hljs-string">&#x27;9&#x27;</span>] = <span class="hljs-string">&quot;wxyz&quot;</span><br>backTracking(<span class="hljs-string">&quot;&quot;</span>, digits, <span class="hljs-number">0</span>, numbers, &amp;res)<br><span class="hljs-keyword">return</span> res<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">backTracking</span><span class="hljs-params">(tempString <span class="hljs-type">string</span>, digits <span class="hljs-type">string</span>, index <span class="hljs-type">int</span>, numbers <span class="hljs-keyword">map</span>[<span class="hljs-type">byte</span>]<span class="hljs-type">string</span>, res *[]<span class="hljs-type">string</span>)</span></span> &#123;<br><span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(tempString) == <span class="hljs-built_in">len</span>(digits) &#123;<br>*res = <span class="hljs-built_in">append</span>(*res, tempString)<br><span class="hljs-keyword">return</span><br>&#125;<br>letters := numbers[digits[index]]<br><span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">len</span>(letters); i++ &#123;<br>tempString = tempString + <span class="hljs-type">string</span>(letters[i])<br><span class="hljs-comment">// ⚠️这里是 index+1，不是 i+1</span><br>backTracking(tempString, digits, index+<span class="hljs-number">1</span>, numbers, res)<br>tempString = tempString[:<span class="hljs-built_in">len</span>(tempString)<span class="hljs-number">-1</span>]<br>&#125;<br>&#125;<br></code></pre></div></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>算法</category>
+      
+      <category>题解</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>16. 最接近的三数之和</title>
     <link href="/2022/05/08/16-%E6%9C%80%E6%8E%A5%E8%BF%91%E7%9A%84%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/"/>
     <url>/2022/05/08/16-%E6%9C%80%E6%8E%A5%E8%BF%91%E7%9A%84%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/</url>
