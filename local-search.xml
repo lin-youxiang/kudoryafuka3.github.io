@@ -4,6 +4,44 @@
   
   
   <entry>
+    <title>关于 Mac 勿扰模式菜单栏时间变色问题</title>
+    <link href="/2022/06/13/%E5%85%B3%E4%BA%8E-Mac-%E5%8B%BF%E6%89%B0%E6%A8%A1%E5%BC%8F%E8%8F%9C%E5%8D%95%E6%A0%8F%E6%97%B6%E9%97%B4%E5%8F%98%E8%89%B2%E9%97%AE%E9%A2%98/"/>
+    <url>/2022/06/13/%E5%85%B3%E4%BA%8E-Mac-%E5%8B%BF%E6%89%B0%E6%A8%A1%E5%BC%8F%E8%8F%9C%E5%8D%95%E6%A0%8F%E6%97%B6%E9%97%B4%E5%8F%98%E8%89%B2%E9%97%AE%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<p>开启勿扰模式后，菜单栏中该图标变为灰色</p><p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20220613182451.png" alt="image-20220613182451414"></p><p>如果菜单栏中没有勿扰模式的图标，按住 ⌥ 然后点击右上角的时间，可以进入勿扰模式，此时菜单栏时间会变为灰色</p><p>重新将勿扰模式的图标放回菜单栏，即可接触时间变灰的问题</p><p>之后只要不使用 <code>⌥ + 左键时间</code> 则不会再次变灰，无论勿扰模式图标是否在菜单栏</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>记录</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>不错的项目集合</title>
+    <link href="/2022/05/23/%E4%B8%8D%E9%94%99%E7%9A%84%E9%A1%B9%E7%9B%AE%E9%9B%86%E5%90%88/"/>
+    <url>/2022/05/23/%E4%B8%8D%E9%94%99%E7%9A%84%E9%A1%B9%E7%9B%AE%E9%9B%86%E5%90%88/</url>
+    
+    <content type="html"><![CDATA[<h4 id="1-前端项目"><a href="#1-前端项目" class="headerlink" title="1. 前端项目"></a>1. 前端项目</h4><ul><li><p><a href="https://github.com/animate-css/animate.css">Animate.css</a></p><p>前端 css 样式集</p></li></ul><h4 id="2-后端项目"><a href="#2-后端项目" class="headerlink" title="2. 后端项目"></a>2. 后端项目</h4><ul><li><p><a href="https://github.com/google/guava">Guava</a></p><p>Java 工具集</p></li><li></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>记录</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>18. 四数之和</title>
     <link href="/2022/05/10/18-%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C/"/>
     <url>/2022/05/10/18-%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C/</url>
