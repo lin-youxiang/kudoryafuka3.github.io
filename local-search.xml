@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>Mac 关闭 IPv6</title>
+    <link href="/2022/06/17/Mac-%E5%85%B3%E9%97%AD-IPv6/"/>
+    <url>/2022/06/17/Mac-%E5%85%B3%E9%97%AD-IPv6/</url>
+    
+    <content type="html"><![CDATA[<ol><li><p>查看当前使用的网络类型</p><figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">networksetup -listallnetworkservices<br></code></pre></div></td></tr></table></figure></li><li><p>关闭对应网络类型的 IPv6</p><p>这里以关闭 <code>Wi-Fi</code> 的 IPv6 示意</p><figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">networksetup -setv6off Wi-Fi<br></code></pre></div></td></tr></table></figure></li><li><p>查看是否关闭成功</p><p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20220617171436.png" alt="image-20220617171435908"></p></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>记录</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>关于 Mac 勿扰模式菜单栏时间变色问题</title>
     <link href="/2022/06/13/%E5%85%B3%E4%BA%8E-Mac-%E5%8B%BF%E6%89%B0%E6%A8%A1%E5%BC%8F%E8%8F%9C%E5%8D%95%E6%A0%8F%E6%97%B6%E9%97%B4%E5%8F%98%E8%89%B2%E9%97%AE%E9%A2%98/"/>
     <url>/2022/06/13/%E5%85%B3%E4%BA%8E-Mac-%E5%8B%BF%E6%89%B0%E6%A8%A1%E5%BC%8F%E8%8F%9C%E5%8D%95%E6%A0%8F%E6%97%B6%E9%97%B4%E5%8F%98%E8%89%B2%E9%97%AE%E9%A2%98/</url>
