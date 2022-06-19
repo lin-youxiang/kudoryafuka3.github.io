@@ -4,6 +4,46 @@
   
   
   <entry>
+    <title>3. 无重复字符的最长子串</title>
+    <link href="/2022/06/19/3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2-1/"/>
+    <url>/2022/06/19/3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2-1/</url>
+    
+    <content type="html"><![CDATA[<h3 id="3-无重复字符的最长子串"><a href="#3-无重复字符的最长子串" class="headerlink" title="3. 无重复字符的最长子串"></a><a href="https://leetcode.cn/problems/longest-substring-without-repeating-characters/">3. 无重复字符的最长子串</a></h3><h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>遍历字符串，将字符作为 <code>key</code>，下标作为 <code>value</code>，存入 <code>HashMap</code> 中</p><p>当发现重复字符时，就从 <code>HashMap</code> 中取出该字符的下标 <code>x</code>，之后清空 <code>HashMap</code>，从下标 <code>x</code> 处重新开始遍历</p><h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">lengthOfLongestSubstring</span><span class="hljs-params">(String s)</span> &#123;<br>        <span class="hljs-keyword">if</span> (s.length() == <span class="hljs-number">0</span>) &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        &#125;<br>        HashMap&lt;Character, Integer&gt; hashMap = <span class="hljs-keyword">new</span> <span class="hljs-title class_">HashMap</span>&lt;&gt;();<br>        <span class="hljs-type">int</span> <span class="hljs-variable">maxLength</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; s.length();) &#123;<br>            <span class="hljs-keyword">if</span> (hashMap.containsKey(s.charAt(i))) &#123;<br>                i = hashMap.get(s.charAt(i));<br>                hashMap.clear();<br>            &#125;<span class="hljs-keyword">else</span> &#123;<br>                hashMap.put(s.charAt(i),i);<br>            &#125;<br>            i++;<br>            maxLength = Math.max(hashMap.size(),maxLength);<br>        &#125;<br>        <span class="hljs-keyword">return</span> maxLength;<br>    &#125;<br>&#125;<br></code></pre></div></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>算法</category>
+      
+      <category>题解</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Mac 心得</title>
+    <link href="/2022/06/19/Mac-%E5%BF%83%E5%BE%97/"/>
+    <url>/2022/06/19/Mac-%E5%BF%83%E5%BE%97/</url>
+    
+    <content type="html"><![CDATA[<h4 id="值得一看的博客"><a href="#值得一看的博客" class="headerlink" title="值得一看的博客"></a>值得一看的博客</h4><ul><li><a href="https://imageslr.com/2020/03/19/mac-initialization.html">从零开始配置高效 Mac 开发环境</a></li><li></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>记录</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>2. 两数相加</title>
     <link href="/2022/06/19/2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/"/>
     <url>/2022/06/19/2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</url>

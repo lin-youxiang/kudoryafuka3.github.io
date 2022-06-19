@@ -16,20 +16,20 @@
   <meta name="author" content="ritsurin">
   <meta name="keywords" content="">
   
-    <meta name="description" content="2. 两数相加思路因为给的链表已经是倒序的，所以按序取数相加 主要是进位问题，最后一次的进位需要再结束循环时额外处理一下 注意添加结点的方式，先 new 尾结点的 next，然后再移动尾结点 题解123456789101112131415161718192021222324252627282930313233343536373839404142&#x2F;** * Definition for singly">
+    <meta name="description" content="3. 无重复字符的最长子串思路遍历字符串，将字符作为 key，下标作为 value，存入 HashMap 中 当发现重复字符时，就从 HashMap 中取出该字符的下标 x，之后清空 HashMap，从下标 x 处重新开始遍历 题解1234567891011121314151617181920class Solution &amp;#123;    public int lengthOfLongestSu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2. 两数相加">
-<meta property="og:url" content="http://example.com/2022/06/19/2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/index.html">
+<meta property="og:title" content="3. 无重复字符的最长子串">
+<meta property="og:url" content="http://example.com/2022/06/19/3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2-1/index.html">
 <meta property="og:site_name" content="你好👋">
-<meta property="og:description" content="2. 两数相加思路因为给的链表已经是倒序的，所以按序取数相加 主要是进位问题，最后一次的进位需要再结束循环时额外处理一下 注意添加结点的方式，先 new 尾结点的 next，然后再移动尾结点 题解123456789101112131415161718192021222324252627282930313233343536373839404142&#x2F;** * Definition for singly">
+<meta property="og:description" content="3. 无重复字符的最长子串思路遍历字符串，将字符作为 key，下标作为 value，存入 HashMap 中 当发现重复字符时，就从 HashMap 中取出该字符的下标 x，之后清空 HashMap，从下标 x 处重新开始遍历 题解1234567891011121314151617181920class Solution &amp;#123;    public int lengthOfLongestSu">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-06-18T16:17:48.000Z">
-<meta property="article:modified_time" content="2022-06-18T16:22:08.634Z">
+<meta property="article:published_time" content="2022-06-19T10:52:09.000Z">
+<meta property="article:modified_time" content="2022-06-19T11:04:46.153Z">
 <meta property="article:author" content="ritsurin">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>2. 两数相加 - 你好👋</title>
+  <title>3. 无重复字符的最长子串 - 你好👋</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -175,7 +175,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="2. 两数相加">
+            <span class="h2" id="subtitle" title="3. 无重复字符的最长子串">
               
             </span>
 
@@ -185,8 +185,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-06-19 00:17" pubdate>
-        2022年6月19日 凌晨
+      <time datetime="2022-06-19 18:52" pubdate>
+        2022年6月19日 晚上
       </time>
     </span>
   
@@ -196,7 +196,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      929 字
+      565 字
     </span>
   
 
@@ -205,7 +205,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      8 分钟
+      5 分钟
     </span>
   
 
@@ -234,13 +234,12 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">2. 两数相加</h1>
+            <h1 style="display: none">3. 无重复字符的最长子串</h1>
             
             <div class="markdown-body">
-              <h3 id="2-两数相加"><a href="#2-两数相加" class="headerlink" title="2. 两数相加"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/add-two-numbers/">2. 两数相加</a></h3><h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>因为给的链表已经是倒序的，所以按序取数相加</p>
-<p>主要是进位问题，最后一次的进位需要再结束循环时额外处理一下</p>
-<p>注意添加结点的方式，先 <code>new</code> 尾结点的 <code>next</code>，然后再移动尾结点</p>
-<h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for singly-linked list.</span><br><span class="hljs-comment"> * public class ListNode &#123;</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     ListNode next;</span><br><span class="hljs-comment"> *     ListNode() &#123;&#125;</span><br><span class="hljs-comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span><br><span class="hljs-comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span><br><span class="hljs-comment"> * &#125;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> ListNode <span class="hljs-title function_">addTwoNumbers</span><span class="hljs-params">(ListNode l1, ListNode l2)</span> &#123;<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">p1</span> <span class="hljs-operator">=</span> l1;<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">p2</span> <span class="hljs-operator">=</span> l2;<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">head</span> <span class="hljs-operator">=</span> <span class="hljs-literal">null</span>;<br>        <span class="hljs-type">ListNode</span> <span class="hljs-variable">tail</span> <span class="hljs-operator">=</span> <span class="hljs-literal">null</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">carry</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span>(p1 != <span class="hljs-literal">null</span> || p2 != <span class="hljs-literal">null</span>) &#123;<br>            <span class="hljs-type">int</span> <span class="hljs-variable">n1</span> <span class="hljs-operator">=</span> p1 != <span class="hljs-literal">null</span> ? p1.val : <span class="hljs-number">0</span>;<br>            <span class="hljs-type">int</span> <span class="hljs-variable">n2</span> <span class="hljs-operator">=</span> p2 != <span class="hljs-literal">null</span> ? p2.val : <span class="hljs-number">0</span>;<br>            <span class="hljs-type">int</span> sum;<br>            sum = n1 + n2 + carry;<br>            carry = sum / <span class="hljs-number">10</span>;<br>            <span class="hljs-keyword">if</span> (head == <span class="hljs-literal">null</span>) &#123;<br>                head = tail = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ListNode</span>(sum % <span class="hljs-number">10</span>);<br>            &#125; <span class="hljs-keyword">else</span> &#123;<br>                tail.next = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ListNode</span>(sum % <span class="hljs-number">10</span>);<br>                tail = tail.next;<br>            &#125;<br>            <span class="hljs-keyword">if</span> (p1 != <span class="hljs-literal">null</span>) &#123;<br>                p1 = p1.next;<br>            &#125;<br>            <span class="hljs-keyword">if</span> (p2 != <span class="hljs-literal">null</span>) &#123;<br>                p2 = p2.next;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">if</span> (carry &gt; <span class="hljs-number">0</span>) &#123;<br>            tail.next = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ListNode</span>(carry);<br>        &#125;<br>        <span class="hljs-keyword">return</span> head;<br>    &#125;<br>&#125;<br></code></pre></div></td></tr></table></figure>
+              <h3 id="3-无重复字符的最长子串"><a href="#3-无重复字符的最长子串" class="headerlink" title="3. 无重复字符的最长子串"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/longest-substring-without-repeating-characters/">3. 无重复字符的最长子串</a></h3><h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>遍历字符串，将字符作为 <code>key</code>，下标作为 <code>value</code>，存入 <code>HashMap</code> 中</p>
+<p>当发现重复字符时，就从 <code>HashMap</code> 中取出该字符的下标 <code>x</code>，之后清空 <code>HashMap</code>，从下标 <code>x</code> 处重新开始遍历</p>
+<h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">lengthOfLongestSubstring</span><span class="hljs-params">(String s)</span> &#123;<br>        <span class="hljs-keyword">if</span> (s.length() == <span class="hljs-number">0</span>) &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        &#125;<br>        HashMap&lt;Character, Integer&gt; hashMap = <span class="hljs-keyword">new</span> <span class="hljs-title class_">HashMap</span>&lt;&gt;();<br>        <span class="hljs-type">int</span> <span class="hljs-variable">maxLength</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; s.length();) &#123;<br>            <span class="hljs-keyword">if</span> (hashMap.containsKey(s.charAt(i))) &#123;<br>                i = hashMap.get(s.charAt(i));<br>                hashMap.clear();<br>            &#125;<span class="hljs-keyword">else</span> &#123;<br>                hashMap.put(s.charAt(i),i);<br>            &#125;<br>            i++;<br>            maxLength = Math.max(hashMap.size(),maxLength);<br>        &#125;<br>        <span class="hljs-keyword">return</span> maxLength;<br>    &#125;<br>&#125;<br></code></pre></div></td></tr></table></figure>
 
 
             </div>
@@ -271,18 +270,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/06/19/Mac-%E5%BF%83%E5%BE%97/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Mac 心得</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/06/17/Mac-%E5%85%B3%E9%97%AD-IPv6/">
-                        <span class="hidden-mobile">Mac 关闭 IPv6</span>
+                      <a href="/2022/06/19/Mac-%E5%BF%83%E5%BE%97/">
+                        <span class="hidden-mobile">Mac 心得</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
