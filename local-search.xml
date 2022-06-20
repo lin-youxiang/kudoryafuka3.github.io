@@ -4,6 +4,46 @@
   
   
   <entry>
+    <title>5. 最长回文子串</title>
+    <link href="/2022/06/20/5-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2-1/"/>
+    <url>/2022/06/20/5-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2-1/</url>
+    
+    <content type="html"><![CDATA[<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><ul><li>题解 1：双循环暴力解</li><li>题解 2：</li></ul><h4 id="题解-1"><a href="#题解-1" class="headerlink" title="题解 1"></a>题解 1</h4><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">longestPalindrome</span><span class="hljs-params">(String s)</span> &#123;<br>        <span class="hljs-type">String</span> <span class="hljs-variable">res</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;&quot;</span>;<br>        <span class="hljs-keyword">if</span> (s.length() == <span class="hljs-number">1</span> || isPalindrome(s)) &#123;<br>            <span class="hljs-keyword">return</span> s;<br>        &#125;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; s.length() - <span class="hljs-number">1</span>; i++) &#123;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> i + <span class="hljs-number">1</span>; j &lt; s.length() + <span class="hljs-number">1</span>; j++) &#123;<br>                <span class="hljs-type">String</span> <span class="hljs-variable">subString</span> <span class="hljs-operator">=</span> s.substring(i, j);<br>                <span class="hljs-keyword">if</span> (subString.length() &gt;= res.length()) &#123;<br>                    <span class="hljs-keyword">if</span> (isPalindrome(subString)) &#123;<br>                        res = subString;<br>                    &#125;<br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> res;<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Boolean <span class="hljs-title function_">isPalindrome</span><span class="hljs-params">(String s)</span> &#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">halfOfLength</span> <span class="hljs-operator">=</span> s.length() / <span class="hljs-number">2</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>, j = s.length() - <span class="hljs-number">1</span>; i &lt;= halfOfLength; i++, j--) &#123;<br>            <span class="hljs-keyword">if</span> (s.charAt(i) != s.charAt(j)) &#123;<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>    &#125;<br>&#125;<br></code></pre></div></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>算法</category>
+      
+      <category>题解</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Google 搜索 tips</title>
+    <link href="/2022/06/20/Google-%E6%90%9C%E7%B4%A2-tips/"/>
+    <url>/2022/06/20/Google-%E6%90%9C%E7%B4%A2-tips/</url>
+    
+    <content type="html"><![CDATA[<ul><li><code>“”</code>：完全匹配</li><li><code>-</code>：排除内容</li><li><code>*</code>：通配符或未知字词，比如一串命令中间忘记是什么，可以用 <code>*</code> 代替</li><li><code>year1..year2</code>：指定搜索结果的日期范围</li><li>OR&#x2F;AND：逻辑或&#x2F;逻辑与拼接关键词</li><li><code>site:+ 网址 + 关键词</code>：站内搜索</li><li><code>define: 关键字</code>：查询关键字的定义</li><li></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>记录</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>关于无法 git clone 问题</title>
     <link href="/2022/06/20/%E5%85%B3%E4%BA%8E%E6%97%A0%E6%B3%95-git-clone-%E9%97%AE%E9%A2%98/"/>
     <url>/2022/06/20/%E5%85%B3%E4%BA%8E%E6%97%A0%E6%B3%95-git-clone-%E9%97%AE%E9%A2%98/</url>
