@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>关于无法 git clone 问题</title>
+    <link href="/2022/06/20/%E5%85%B3%E4%BA%8E%E6%97%A0%E6%B3%95-git-clone-%E9%97%AE%E9%A2%98/"/>
+    <url>/2022/06/20/%E5%85%B3%E4%BA%8E%E6%97%A0%E6%B3%95-git-clone-%E9%97%AE%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<p>事情是这样</p><p>我在看一篇 blog 中提到的一个 <code>oh-my-zsh</code> 的插件，想 clone 下来用一下，命令如下</p><figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions<br></code></pre></div></td></tr></table></figure><p>然后发现怎么试都没有办法 clone 下来，即使我已经配置了终端代理环境</p><p>最后看了一圈，解决办法是把命令中的 <code>git://</code> 替换成 <code>https://</code></p><p>建议同时修改一下 <code>git</code> 的全局配置，避免以后在同样的事情上浪费时间</p><p>全局 git 配置文件路径：<code>~/.gitconfig</code></p><figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">git config --global url.&quot;https://&quot;.insteadOf git://<br></code></pre></div></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>记录</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>3. 无重复字符的最长子串</title>
     <link href="/2022/06/19/3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2-1/"/>
     <url>/2022/06/19/3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2-1/</url>
