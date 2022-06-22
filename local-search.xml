@@ -4,6 +4,46 @@
   
   
   <entry>
+    <title>6. Z 字形变换</title>
+    <link href="/2022/06/22/6-Z-%E5%AD%97%E5%BD%A2%E5%8F%98%E6%8D%A2/"/>
+    <url>/2022/06/22/6-Z-%E5%AD%97%E5%BD%A2%E5%8F%98%E6%8D%A2/</url>
+    
+    <content type="html"><![CDATA[<h3 id="6-Z-字形变换"><a href="#6-Z-字形变换" class="headerlink" title="6. Z 字形变换"></a><a href="https://leetcode.cn/problems/zigzag-conversion/">6. Z 字形变换</a></h3><h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>题解 1：二维数组模拟</p><p>题解 2：</p><h4 id="题解-1"><a href="#题解-1" class="headerlink" title="题解 1"></a>题解 1</h4><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList;<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">convert</span><span class="hljs-params">(String s, <span class="hljs-type">int</span> numRows)</span> &#123;<br>        <span class="hljs-keyword">if</span> (numRows == <span class="hljs-number">0</span> || numRows == <span class="hljs-number">1</span>) &#123;<br>            <span class="hljs-keyword">return</span> s;<br>        &#125;<br>        <span class="hljs-type">StringBuilder</span> <span class="hljs-variable">res</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">StringBuilder</span>();<br>        <span class="hljs-type">char</span>[][] chars = <span class="hljs-keyword">new</span> <span class="hljs-title class_">char</span>[numRows][<span class="hljs-number">1000</span>];<br>        <span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>, k = <span class="hljs-number">0</span>;<br>        <span class="hljs-type">boolean</span> <span class="hljs-variable">flag</span> <span class="hljs-operator">=</span> <span class="hljs-literal">false</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; s.length(); i++) &#123;<br>            <span class="hljs-keyword">if</span> (j == numRows) &#123;<br>                flag = <span class="hljs-literal">true</span>;<br>                j = numRows - <span class="hljs-number">2</span>;<br>                k++;<br>            &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (j == -<span class="hljs-number">1</span>) &#123;<br>                k--;<br>                j = <span class="hljs-number">1</span>;<br>                flag = <span class="hljs-literal">false</span>;<br>            &#125;<br>            <span class="hljs-keyword">if</span> (!flag) &#123;<br>                chars[j++][k] = s.charAt(i);<br>            &#125; <span class="hljs-keyword">else</span> &#123;<br>                chars[j--][k++] = s.charAt(i);<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">char</span>[] aChar : chars) &#123;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">char</span> c : aChar) &#123;<br>                <span class="hljs-keyword">if</span> (c != <span class="hljs-number">0</span>) &#123;<br>                    res.append(c);<br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> res.toString();<br>    &#125;<br>&#125;<br></code></pre></div></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>算法</category>
+      
+      <category>题解</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>GitHub 项目整理</title>
+    <link href="/2022/06/20/GitHub-%E9%A1%B9%E7%9B%AE%E6%95%B4%E7%90%86/"/>
+    <url>/2022/06/20/GitHub-%E9%A1%B9%E7%9B%AE%E6%95%B4%E7%90%86/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>记录</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>5. 最长回文子串</title>
     <link href="/2022/06/20/5-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2-1/"/>
     <url>/2022/06/20/5-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2-1/</url>
