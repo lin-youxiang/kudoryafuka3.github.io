@@ -16,18 +16,20 @@
   <meta name="author" content="ritsurin">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
-<meta property="og:title" content="GitHub 项目整理">
-<meta property="og:url" content="http://example.com/2022/06/20/GitHub-%E9%A1%B9%E7%9B%AE%E6%95%B4%E7%90%86/index.html">
+    <meta name="description" content="字符串反转12345678910111213141516171819202122class Solution &amp;#123;    public int reverse(int x) &amp;#123;        long ans &#x3D; 0;        boolean flag &#x3D; true;        StringBuilder stringBuilder &#x3D; new StringBuilde">
+<meta property="og:type" content="article">
+<meta property="og:title" content="7. 整数反转">
+<meta property="og:url" content="http://example.com/2022/06/23/7-%E6%95%B4%E6%95%B0%E5%8F%8D%E8%BD%AC/index.html">
 <meta property="og:site_name" content="你好👋">
+<meta property="og:description" content="字符串反转12345678910111213141516171819202122class Solution &amp;#123;    public int reverse(int x) &amp;#123;        long ans &#x3D; 0;        boolean flag &#x3D; true;        StringBuilder stringBuilder &#x3D; new StringBuilde">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-06-20T13:59:26.000Z">
-<meta property="article:modified_time" content="2022-06-20T13:59:38.979Z">
+<meta property="article:published_time" content="2022-06-23T06:47:24.000Z">
+<meta property="article:modified_time" content="2022-06-23T06:51:29.785Z">
 <meta property="article:author" content="ritsurin">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>GitHub 项目整理 - 你好👋</title>
+  <title>7. 整数反转 - 你好👋</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -173,7 +175,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="GitHub 项目整理">
+            <span class="h2" id="subtitle" title="7. 整数反转">
               
             </span>
 
@@ -183,8 +185,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-06-20 21:59" pubdate>
-        2022年6月20日 晚上
+      <time datetime="2022-06-23 14:47" pubdate>
+        2022年6月23日 下午
       </time>
     </span>
   
@@ -194,7 +196,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      0 字
+      860 字
     </span>
   
 
@@ -203,7 +205,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1 分钟
+      8 分钟
     </span>
   
 
@@ -232,10 +234,14 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">GitHub 项目整理</h1>
+            <h1 style="display: none">7. 整数反转</h1>
             
             <div class="markdown-body">
-              
+              <h4 id="字符串反转"><a href="#字符串反转" class="headerlink" title="字符串反转"></a>字符串反转</h4><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">reverse</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> &#123;<br>        <span class="hljs-type">long</span> <span class="hljs-variable">ans</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-type">boolean</span> <span class="hljs-variable">flag</span> <span class="hljs-operator">=</span> <span class="hljs-literal">true</span>;<br>        <span class="hljs-type">StringBuilder</span> <span class="hljs-variable">stringBuilder</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">StringBuilder</span>();<br>        stringBuilder.append(x);<br>        <span class="hljs-keyword">if</span> (stringBuilder.charAt(<span class="hljs-number">0</span>) == <span class="hljs-string">&#x27;-&#x27;</span>) &#123;<br>            stringBuilder = <span class="hljs-keyword">new</span> <span class="hljs-title class_">StringBuilder</span>(stringBuilder.substring(<span class="hljs-number">1</span>, stringBuilder.length()));<br>            flag = <span class="hljs-literal">false</span>;<br>        &#125;<br>        stringBuilder.reverse();<br>        ans = Long.parseLong(stringBuilder.toString());<br>        <span class="hljs-keyword">if</span> (!flag) &#123;<br>            ans = -ans;<br>        &#125;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">compareNum</span> <span class="hljs-operator">=</span> (<span class="hljs-type">int</span>)ans;<br>        <span class="hljs-keyword">if</span> (compareNum != ans) &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        &#125;<br>        <span class="hljs-keyword">return</span> compareNum;<br>    &#125;<br>&#125;<br></code></pre></div></td></tr></table></figure>
+
+<h4 id="数学方法"><a href="#数学方法" class="headerlink" title="数学方法"></a>数学方法</h4><figure class="highlight java"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">reverse</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span> &#123;<br>    	<span class="hljs-type">int</span> <span class="hljs-variable">res</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span> (x != <span class="hljs-number">0</span>) &#123;<br>            <span class="hljs-type">int</span> <span class="hljs-variable">temp</span> <span class="hljs-operator">=</span> x % <span class="hljs-number">10</span>;<br>            <span class="hljs-keyword">if</span> (res&gt;<span class="hljs-number">214748364</span> || (res==<span class="hljs-number">214748364</span> &amp;&amp; temp&gt;<span class="hljs-number">7</span>)) &#123;<br>                <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>            &#125;<br>            <span class="hljs-comment">//判断是否 小于 最小32位整数</span><br>            <span class="hljs-keyword">if</span> (res&lt;-<span class="hljs-number">214748364</span> || (res==-<span class="hljs-number">214748364</span> &amp;&amp; temp&lt;-<span class="hljs-number">8</span>)) &#123;<br>                <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>            &#125;<br>            res = res * <span class="hljs-number">10</span> + temp;<br>        	x /= <span class="hljs-number">10</span>;<br>        &#125;<br>        <span class="hljs-keyword">return</span> res;<br>    &#125;<br>&#125;<br></code></pre></div></td></tr></table></figure>
+
+
             </div>
             <hr>
             <div>
@@ -244,7 +250,9 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%AE%97%E6%B3%95/%E9%A2%98%E8%A7%A3/">题解</a>
                     
                   </div>
                 
@@ -262,18 +270,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/06/22/6-Z-%E5%AD%97%E5%BD%A2%E5%8F%98%E6%8D%A2/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">6. Z 字形变换</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/06/20/5-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2-1/">
-                        <span class="hidden-mobile">5. 最长回文子串</span>
+                      <a href="/2022/06/22/6-Z-%E5%AD%97%E5%BD%A2%E5%8F%98%E6%8D%A2/">
+                        <span class="hidden-mobile">6. Z 字形变换</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
