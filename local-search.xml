@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>Homebrew MySQL</title>
+    <link href="/2022/06/28/Homebrew-MySQL/"/>
+    <url>/2022/06/28/Homebrew-MySQL/</url>
+    
+    <content type="html"><![CDATA[<figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">设置密码</span><br>mysql_secure_installation<br><span class="hljs-meta prompt_"># </span><span class="language-bash">to connet run</span><br>mysql -uroot<br><span class="hljs-meta prompt_"># </span><span class="language-bash">If you need to have mysql@5.7 first <span class="hljs-keyword">in</span> your PATH, run:</span><br>echo &#x27;export PATH=&quot;/opt/homebrew/opt/mysql@5.7/bin:$PATH&quot;&#x27; &gt;&gt; ~/.zshrc<br><span class="hljs-meta prompt_"># </span><span class="language-bash">For compilers to find mysql@5.7 you may need to <span class="hljs-built_in">set</span>:</span><br>export LDFLAGS=&quot;-L/opt/homebrew/opt/mysql@5.7/lib&quot;<br>export CPPFLAGS=&quot;-I/opt/homebrew/opt/mysql@5.7/include&quot;<br><span class="hljs-meta prompt_"># </span><span class="language-bash">后台启动 MySQL</span><br>brew service start mysql<br><span class="hljs-meta prompt_"># </span><span class="language-bash">前台启动 mysql (关闭控制台，服务停止)</span><br>mysql.server start<br><span class="hljs-meta prompt_"># </span><span class="language-bash">To restart mysql@5.7 after an upgrade:</span><br>brew services restart mysql@5.7<br><span class="hljs-meta prompt_"># </span><span class="language-bash"><span class="hljs-keyword">if</span> you don<span class="hljs-string">&#x27;t want/need a background service you can just run:</span></span><br>/opt/homebrew/opt/mysql@5.7/bin/mysqld_safe --datadir=/opt/homebrew/var/mysql<br><span class="hljs-meta prompt_"># </span><span class="language-bash"><span class="hljs-string">连接 MySQL</span></span><br>连接 MySQL<br>mysql -u root -p<br></code></pre></div></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>记录</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>8. 字符串转换整数 (atoi)</title>
     <link href="/2022/06/26/8-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%95%B4%E6%95%B0-atoi/"/>
     <url>/2022/06/26/8-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%95%B4%E6%95%B0-atoi/</url>
