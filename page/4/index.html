@@ -1,725 +1,345 @@
 
 
-<!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
 
 
 
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.ico">
-  <link rel="icon" href="/img/favicon.ico">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <title> [ 你好👋 ]</title>
+
   
-  <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="ritsurin">
-  <meta name="keywords" content="">
-  
-    <meta property="og:type" content="website">
-<meta property="og:title" content="你好👋">
-<meta property="og:url" content="http://example.com/page/4/index.html">
-<meta property="og:site_name" content="你好👋">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="ritsurin">
-<meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-star.png">
   
   
-  <title>你好👋</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-one-light.min.css">
+  
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  
+  
 
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-<!-- 自定义样式保持在最底部 -->
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
-  </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <link rel="stylesheet" href="/css/third_party/utilities.min.css">
+  <link rel="stylesheet" href="/css/star.css">
 <meta name="generator" content="Hexo 6.1.0"></head>
-
-
 <body>
-  <header style="height: 100vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
-    </a>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
+<main class="page-content" aria-label="Content">
+  
 
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
-            </a>
-          </li>
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
-          </li>
-        
-      </ul>
+  <div class="wrapper">
+    
+    
+
+  <div class="home-title">
+    <p class="home-heading">
+      
+        你好👋
+      
+    </p>
+    <div class="flex items-center">
+      <div class="home-sub-heading mt-0">
+        <a style="color:inherit" href="/about">
+          About me
+        </a>
+      </div>
     </div>
   </div>
-</nav>
-
-    <div class="banner" id="banner" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="你好👋">
-              
-            </span>
-
-            
-          </div>
-
+  
+  
+    <ul class="post-list mt-0">
+      
+        
+        
           
-            <div class="scroll-down-bar">
-              <i class="iconfont icon-arrowdown"></i>
+        
+
+        
+          <h2 id="2022-ref" class="post-year">2022</h2>
+          <ul>
+        
+        
+          <li>
+            <div class="post-item">
+              <span class="post-meta"> 3月 31 </span>
+              <a
+                class="black-link post-link-layout"
+                href="/2022/03/31/%E9%80%9A%E8%BF%87-Amazon-%E8%8E%B7%E5%8F%96%E5%9B%BE%E4%B9%A6%E7%9A%84%E5%B0%81%E9%9D%A2/"
+              >
+                通过 Amazon 获取图书的封面
+              </a>
             </div>
+          </li>
+
+        
+      
+        
+        
           
-        </div>
-      </div>
-    </div>
-  </header>
+        
 
-  <main>
-    
-      <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          style=margin-top:0>
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/03/21/centos-%E5%AE%89%E8%A3%85-tomcat/" target="_self">
-          centos 安装 tomcat
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/03/21/centos-%E5%AE%89%E8%A3%85-tomcat/" target="_self">
-          
-          1. 下载 TomcatTomcat 官网：https:&#x2F;&#x2F;tomcat.apache.org&#x2F; 以 Tomcat9.0 为🌰     2. 用 SFTP 工具上传到服务器3. 解压 tar1tar -zxvf apache-tomcat-9.0.60.tar.gz  4. 启动 Tomcat123cd apache-tomcat-9.0.60&#x2F;cd binbash startup.sh   5
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-03-21 19:53" pubdate>
-              2022-03-21
-            </time>
-          </div>
         
         
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
-            
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/03/21/apple-%E5%BC%80%E5%8F%91%E8%80%85%E8%B4%A6%E6%88%B7-Bundle-Identifier-%E9%97%AE%E9%A2%98/" target="_self">
-          apple 开发者账户 Bundle Identifier 问题
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/03/21/apple-%E5%BC%80%E5%8F%91%E8%80%85%E8%B4%A6%E6%88%B7-Bundle-Identifier-%E9%97%AE%E9%A2%98/" target="_self">
-          
-          Your maximum App ID limit has been reached. You may create up to 10 App IDs every 7 days. 意思是免费账户 7 天内只能够创建 10 个 app id 解决办法：每次都用同一个 id  在这边修改，记得查看一下 Debug 与 Release 中是否也修改为同一个 id
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-03-21 12:56" pubdate>
-              2022-03-21
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
-            
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/03/20/mac-%E4%BF%AE%E6%94%B9-DNS/" target="_self">
-          mac 修改 DNS
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/03/20/mac-%E4%BF%AE%E6%94%B9-DNS/" target="_self">
-          
-          12345678cat &#x2F;etc&#x2F;resolv.conf # 查看当前 DNSnetworksetup -listallnetworkservices # 查看网络networksetup -setdnsservers Wi-Fi 223.5.5.5 223.6.6.6 # 设置 Wi-Fi 连接的 DNS 为阿里 DNSsudo dscacheutil -flushcache;sudo kill
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-03-20 18:47" pubdate>
-              2022-03-20
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
-            
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/03/20/Failed-to-instantiate-the-default-view-controller-for-UIMainStoryboardFile-Main-perhaps-the-designated-entry-point-is-not-set/" target="_self">
-          Failed to instantiate the default view controller for UIMainStoryboardFile &#39;Main&#39; - perhaps the designated entry point is not set?
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/03/20/Failed-to-instantiate-the-default-view-controller-for-UIMainStoryboardFile-Main-perhaps-the-designated-entry-point-is-not-set/" target="_self">
-          
-          Failed to instantiate the default view controller for UIMainStoryboardFile ‘Main’ - perhaps the designated entry point is not set?  勾选：Is initial View Controller
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-03-20 15:32" pubdate>
-              2022-03-20
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
-            
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/03/19/Xcode-%E4%BE%9D%E8%B5%96%E6%B7%BB%E5%8A%A0%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98/" target="_self">
-          Xcode 依赖添加失败问题
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/03/19/Xcode-%E4%BE%9D%E8%B5%96%E6%B7%BB%E5%8A%A0%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98/" target="_self">
-          
-          我的解决方案：  魔法工具🪄开全局 xcode ➡️ File ➡️ Packages ➡️ Reset Package Caches
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-03-19 14:41" pubdate>
-              2022-03-19
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
-            
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/03/18/Non-constant-range-argument-must-be-an-integer-literal/" target="_self">
-          Non-constant range: argument must be an integer literal
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/03/18/Non-constant-range-argument-must-be-an-integer-literal/" target="_self">
-          
-          Non-constant range: argument must be an integer literal 123ForEach(0..&lt;self.models.count)➡️ForEach(0..&lt;self.models.count,id:\.self)   记录，暂不清楚原因
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-03-18 14:32" pubdate>
-              2022-03-18
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
-            
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/03/17/%E5%88%A9%E7%94%A8%E8%85%BE%E8%AE%AF%E4%BA%91-COS-PicGo-Core-%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/" target="_self">
-          利用腾讯云 COS + PicGo-Core 搭建图床
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/03/17/%E5%88%A9%E7%94%A8%E8%85%BE%E8%AE%AF%E4%BA%91-COS-PicGo-Core-%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/" target="_self">
-          
-          1. 安装 PicGo-Core mac 上利用 npm 安装：npm install picgo -g (没有 npm 的话百度一下很快)  windows 上就简单了，设置里直接选择就好了，手边没有 win 的电脑就不截图了   2. 购买对象存储服务其实这里买腾讯云、阿里云等都可以，这里以腾讯云为例 3. 创建存储桶     名称创建完就无法更改 要选择公有读私有写  4. 创建腾讯云密钥
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-03-17 22:11" pubdate>
-              2022-03-17
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
-            
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/03/15/70-%E7%88%AC%E6%A5%BC%E6%A2%AF/" target="_self">
-          70. 爬楼梯
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/03/15/70-%E7%88%AC%E6%A5%BC%E6%A2%AF/" target="_self">
-          
-          思路F(n) &#x3D; F(n-1) + F(n-2) 用递归会超时，所以用循环来写 题解1234567891011121314151617func climbStairs(n int) int &amp;#123;    if n &#x3D;&#x3D; 1&amp;#123;        return 1    &amp;#125;    if n &#x3D;&#x3D; 2 &amp;#123;        return 2    &amp;#125;
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-03-15 22:22" pubdate>
-              2022-03-15
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/%E7%AE%97%E6%B3%95/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/03/15/Goland-%E6%8E%A7%E5%88%B6%E5%8F%B0%E9%9A%90%E8%97%8F%E5%A4%9A%E4%BA%8E%E7%9A%84%E4%BF%A1%E6%81%AF/" target="_self">
-          Goland 控制台隐藏多于的信息
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/03/15/Goland-%E6%8E%A7%E5%88%B6%E5%8F%B0%E9%9A%90%E8%97%8F%E5%A4%9A%E4%BA%8E%E7%9A%84%E4%BF%A1%E6%81%AF/" target="_self">
-          
-          cmd + shift + A  输入 Registry  找到 go.run.process.with.pty 取消前面的勾  效果如下
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-03-15 13:12" pubdate>
-              2022-03-15
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
-            
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/03/15/BFS/" target="_self">
-          BFS
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/03/15/BFS/" target="_self">
-          
-          BFS 伪代码12345while queue 非空:	node &#x3D; queue.pop()    for node 的所有相邻结点 m:        if m 未访问过:            queue.push(m)  求无权最短路径的  BFS 伪代码求 A 点到 B 点的最短距离，就是看 A 点到 B 点有多少层，所以需要修改代码，记录层数 123456789depth &#x3D; 0 # 记
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-03-15 13:10" pubdate>
-              2022-03-15
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/%E7%AE%97%E6%B3%95/%E5%AD%A6%E4%B9%A0/">学习</a>
-            
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-
-
-  <nav aria-label="navigation">
-    <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/3/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#board">5</a><a class="extend next" rel="next" href="/page/5/#board"><i class="iconfont icon-arrowright"></i></a>
-    </span>
-  </nav>
-
-
-
-              </div>
+          <li>
+            <div class="post-item">
+              <span class="post-meta"> 3月 21 </span>
+              <a
+                class="black-link post-link-layout"
+                href="/2022/03/21/centos-%E5%AE%89%E8%A3%85-tomcat/"
+              >
+                centos 安装 tomcat
+              </a>
             </div>
-          </div>
-        </div>
-      </div>
-    
+          </li>
 
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
+        
+      
+        
+        
+          
+        
 
-    
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-    
+        
+        
+          <li>
+            <div class="post-item">
+              <span class="post-meta"> 3月 21 </span>
+              <a
+                class="black-link post-link-layout"
+                href="/2022/03/21/apple-%E5%BC%80%E5%8F%91%E8%80%85%E8%B4%A6%E6%88%B7-Bundle-Identifier-%E9%97%AE%E9%A2%98/"
+              >
+                apple 开发者账户 Bundle Identifier 问题
+              </a>
+            </div>
+          </li>
 
-    
-  </main>
+        
+      
+        
+        
+          
+        
 
-  <footer class="text-center mt-5 py-3">
-  <div class="footer-content">
-     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
-  </div>
+        
+        
+          <li>
+            <div class="post-item">
+              <span class="post-meta"> 3月 20 </span>
+              <a
+                class="black-link post-link-layout"
+                href="/2022/03/20/mac-%E4%BF%AE%E6%94%B9-DNS/"
+              >
+                mac 修改 DNS
+              </a>
+            </div>
+          </li>
+
+        
+      
+        
+        
+          
+        
+
+        
+        
+          <li>
+            <div class="post-item">
+              <span class="post-meta"> 3月 20 </span>
+              <a
+                class="black-link post-link-layout"
+                href="/2022/03/20/Failed-to-instantiate-the-default-view-controller-for-UIMainStoryboardFile-Main-perhaps-the-designated-entry-point-is-not-set/"
+              >
+                Failed to instantiate the default view controller for UIMainStoryboardFile 'Main' - perhaps the designated entry point is not set?
+              </a>
+            </div>
+          </li>
+
+        
+      
+        
+        
+          
+        
+
+        
+        
+          <li>
+            <div class="post-item">
+              <span class="post-meta"> 3月 19 </span>
+              <a
+                class="black-link post-link-layout"
+                href="/2022/03/19/Xcode-%E4%BE%9D%E8%B5%96%E6%B7%BB%E5%8A%A0%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98/"
+              >
+                Xcode 依赖添加失败问题
+              </a>
+            </div>
+          </li>
+
+        
+      
+        
+        
+          
+        
+
+        
+        
+          <li>
+            <div class="post-item">
+              <span class="post-meta"> 3月 18 </span>
+              <a
+                class="black-link post-link-layout"
+                href="/2022/03/18/Non-constant-range-argument-must-be-an-integer-literal/"
+              >
+                Non-constant range: argument must be an integer literal
+              </a>
+            </div>
+          </li>
+
+        
+      
+        
+        
+          
+        
+
+        
+        
+          <li>
+            <div class="post-item">
+              <span class="post-meta"> 3月 17 </span>
+              <a
+                class="black-link post-link-layout"
+                href="/2022/03/17/%E5%88%A9%E7%94%A8%E8%85%BE%E8%AE%AF%E4%BA%91-COS-PicGo-Core-%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/"
+              >
+                利用腾讯云 COS + PicGo-Core 搭建图床
+              </a>
+            </div>
+          </li>
+
+        
+      
+        
+        
+          
+        
+
+        
+        
+          <li>
+            <div class="post-item">
+              <span class="post-meta"> 3月 15 </span>
+              <a
+                class="black-link post-link-layout"
+                href="/2022/03/15/70-%E7%88%AC%E6%A5%BC%E6%A2%AF/"
+              >
+                70. 爬楼梯
+              </a>
+            </div>
+          </li>
+
+        
+      
+        
+        
+          
+        
+
+        
+        
+          <li>
+            <div class="post-item">
+              <span class="post-meta"> 3月 15 </span>
+              <a
+                class="black-link post-link-layout"
+                href="/2022/03/15/Goland-%E6%8E%A7%E5%88%B6%E5%8F%B0%E9%9A%90%E8%97%8F%E5%A4%9A%E4%BA%8E%E7%9A%84%E4%BF%A1%E6%81%AF/"
+              >
+                Goland 控制台隐藏多于的信息
+              </a>
+            </div>
+          </li>
+
+        
+          </ul>
+        
+      
+    </ul>
   
 
   
 
+  </div>
+
+</main>
+
+<footer class="site-footer h-card">
+  
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <ul class="contact-list">
+          <li class="p-name"><a class="black-link" href="/">
+                ritsurin 
+              </a></li></ul>
+      </div>
+    </div>
+  </div>
+  
+    <div class="text-center">
+      
+        <span class="text-gray-300 text-sm" id="busuanzi_container_site_pv">
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span>
+      
+      
+        <span class="text-gray-300 text-sm">•</span>
+      
+      
+          <span class="text-gray-300 text-sm" id="busuanzi_container_site_uv">
+            本站访客数<span id="busuanzi_value_site_uv"></span>人次
+          </span>
+      
+    </div>
+  
   
 </footer>
 
 
-  <!-- SCRIPTS -->
-  
-  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 
-<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
-<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
-
-<!-- Plugins -->
+  <script async src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js">
+</script>
 
 
-  <script  src="/js/local-search.js" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/tocbot@4.18.2/dist/tocbot.min.js"></script>
 
 
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
-
-
-
-  
-
-
-
-
-
-
-
-
-  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var title = document.getElementById('subtitle').title;
-      
-        typing(title);
-      
-    })(window, document);
-  </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 主题的启动项 保持在最底部 -->
-<script  src="/js/boot.js" ></script>
-
+<script>
+  var Star = window.Star || {};
+  var CONFIG = {
+    fancybox: true,
+    tocbot: true
+  };
+  window.CONFIG = CONFIG;
+</script>
+<script src="/js/utils.js"></script>
+<script src="/js/star.js"></script>
 
 </body>
 </html>

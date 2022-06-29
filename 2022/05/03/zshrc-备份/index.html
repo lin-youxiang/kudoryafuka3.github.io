@@ -1,441 +1,175 @@
 
 
-<!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
 
 
 
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.ico">
-  <link rel="icon" href="/img/favicon.ico">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="ritsurin">
-  <meta name="keywords" content="">
-  
-    <meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
-<meta property="og:type" content="article">
-<meta property="og:title" content="zshrc 备份">
-<meta property="og:url" content="http://example.com/2022/05/03/zshrc-%E5%A4%87%E4%BB%BD/index.html">
-<meta property="og:site_name" content="你好👋">
-<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-05-03T05:47:11.000Z">
-<meta property="article:modified_time" content="2022-05-03T05:49:39.921Z">
-<meta property="article:author" content="ritsurin">
-<meta name="twitter:card" content="summary_large_image">
-  
-  
-  <title>zshrc 备份 - 你好👋</title>
-
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
-
-
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <title>zshrc 备份 [ 你好👋 ]</title>
 
   
-    
-    
-      
-      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/atom-one-dark.min.css" />
-    
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-star.png">
+  
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-one-light.min.css">
+  
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  
   
 
-  
-    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
-  
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-<!-- 自定义样式保持在最底部 -->
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
-  </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <link rel="stylesheet" href="/css/third_party/utilities.min.css">
+  <link rel="stylesheet" href="/css/star.css">
 <meta name="generator" content="Hexo 6.1.0"></head>
-
-
 <body>
-  <header style="height: 70vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
-    </a>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
+<main class="page-content" aria-label="Content">
+  
 
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
-            </a>
-          </li>
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
-          </li>
-        
-      </ul>
+  <div class="wrapper">
+    
+    
+  <article 
+    class="post h-entry"
+    id="post"
+    itemscope
+    itemtype="http://schema.org/BlogPosting"
+  >
+
+  <header class="post-header">
+    <div class="post-back">
+      <a class="black-link" href="/">
+        ← Home
+      </a>
     </div>
-  </div>
-</nav>
 
-    <div class="banner" id="banner" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="zshrc 备份">
-              
-            </span>
-
-            
-              <div class="mt-3">
-  
-  
-    <span class="post-meta">
-      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-05-03 13:47" pubdate>
-        2022年5月3日 下午
-      </time>
-    </span>
-  
-</div>
-
-<div class="mt-1">
-  
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      4.7k 字
-    </span>
-  
-
-  
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
+    <h1 class="post-title p-name" itemprop="name headline">
+      zshrc 备份
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="1651556831000"
+        itemprop="datePublished"
+      >
+        May 03, 2022
+      </time>•
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person"
+        ><span class="p-author h-card" itemprop="name"
+          >ritsurin</span
+        ></span
+      >
+        <span class="busuanzi_container_page">
+          <span id="busuanzi_container_page_pv">
+            •
+          <span id="busuanzi_value_page_pv"></span> View
+          </span>
+        </span>
       
-      
-      39 分钟
-    </span>
-  
-
-  
-  
-</div>
-
-            
-          </div>
-
-          
-        </div>
-      </div>
-    </div>
+    </p>
   </header>
 
-  <main>
-    
+  <div class="js-toc"></div>
+
+  <div class="post-content" itemprop="articleBody">
+    <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># If you come from bash you might have to change your $PATH.</span></span><br><span class="line"><span class="comment"># export PATH=$HOME/bin:/usr/local/bin:$PATH</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Path to your oh-my-zsh installation.</span></span><br><span class="line"><span class="built_in">export</span> ZSH=<span class="string">&quot;<span class="variable">$HOME</span>/.oh-my-zsh&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Set name of the theme to load --- if set to &quot;random&quot;, it will</span></span><br><span class="line"><span class="comment"># load a random theme each time oh-my-zsh is loaded, in which case,</span></span><br><span class="line"><span class="comment"># to know which specific one was loaded, run: echo $RANDOM_THEME</span></span><br><span class="line"><span class="comment"># See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes</span></span><br><span class="line">ZSH_THEME=<span class="string">&quot;robbyrussell&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Set list of themes to pick from when loading at random</span></span><br><span class="line"><span class="comment"># Setting this variable when ZSH_THEME=random will cause zsh to load</span></span><br><span class="line"><span class="comment"># a theme from this variable instead of looking in $ZSH/themes/</span></span><br><span class="line"><span class="comment"># If set to an empty array, this variable will have no effect.</span></span><br><span class="line"><span class="comment"># ZSH_THEME_RANDOM_CANDIDATES=( &quot;robbyrussell&quot; &quot;agnoster&quot; )</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Uncomment the following line to use case-sensitive completion.</span></span><br><span class="line"><span class="comment"># CASE_SENSITIVE=&quot;true&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Uncomment the following line to use hyphen-insensitive completion.</span></span><br><span class="line"><span class="comment"># Case-sensitive completion must be off. _ and - will be interchangeable.</span></span><br><span class="line"><span class="comment"># HYPHEN_INSENSITIVE=&quot;true&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Uncomment one of the following lines to change the auto-update behavior</span></span><br><span class="line"><span class="comment"># zstyle &#x27;:omz:update&#x27; mode disabled  # disable automatic updates</span></span><br><span class="line"><span class="comment"># zstyle &#x27;:omz:update&#x27; mode auto      # update automatically without asking</span></span><br><span class="line"><span class="comment"># zstyle &#x27;:omz:update&#x27; mode reminder  # just remind me to update when it&#x27;s time</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Uncomment the following line to change how often to auto-update (in days).</span></span><br><span class="line"><span class="comment"># zstyle &#x27;:omz:update&#x27; frequency 13</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Uncomment the following line if pasting URLs and other text is messed up.</span></span><br><span class="line"><span class="comment"># DISABLE_MAGIC_FUNCTIONS=&quot;true&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Uncomment the following line to disable colors in ls.</span></span><br><span class="line"><span class="comment"># DISABLE_LS_COLORS=&quot;true&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Uncomment the following line to disable auto-setting terminal title.</span></span><br><span class="line"><span class="comment"># DISABLE_AUTO_TITLE=&quot;true&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Uncomment the following line to enable command auto-correction.</span></span><br><span class="line"><span class="comment"># ENABLE_CORRECTION=&quot;true&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Uncomment the following line to display red dots whilst waiting for completion.</span></span><br><span class="line"><span class="comment"># You can also set it to another string to have that shown instead of the default red dots.</span></span><br><span class="line"><span class="comment"># e.g. COMPLETION_WAITING_DOTS=&quot;%F&#123;yellow&#125;waiting...%f&quot;</span></span><br><span class="line"><span class="comment"># Caution: this setting can cause issues with multiline prompts in zsh &lt; 5.7.1 (see #5765)</span></span><br><span class="line"><span class="comment"># COMPLETION_WAITING_DOTS=&quot;true&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Uncomment the following line if you want to disable marking untracked files</span></span><br><span class="line"><span class="comment"># under VCS as dirty. This makes repository status check for large repositories</span></span><br><span class="line"><span class="comment"># much, much faster.</span></span><br><span class="line"><span class="comment"># DISABLE_UNTRACKED_FILES_DIRTY=&quot;true&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Uncomment the following line if you want to change the command execution time</span></span><br><span class="line"><span class="comment"># stamp shown in the history command output.</span></span><br><span class="line"><span class="comment"># You can set one of the optional three formats:</span></span><br><span class="line"><span class="comment"># &quot;mm/dd/yyyy&quot;|&quot;dd.mm.yyyy&quot;|&quot;yyyy-mm-dd&quot;</span></span><br><span class="line"><span class="comment"># or set a custom format using the strftime function format specifications,</span></span><br><span class="line"><span class="comment"># see &#x27;man strftime&#x27; for details.</span></span><br><span class="line"><span class="comment"># HIST_STAMPS=&quot;mm/dd/yyyy&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Would you like to use another custom folder than $ZSH/custom?</span></span><br><span class="line"><span class="comment"># ZSH_CUSTOM=/path/to/new-custom-folder</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Which plugins would you like to load?</span></span><br><span class="line"><span class="comment"># Standard plugins can be found in $ZSH/plugins/</span></span><br><span class="line"><span class="comment"># Custom plugins may be added to $ZSH_CUSTOM/plugins/</span></span><br><span class="line"><span class="comment"># Example format: plugins=(rails git textmate ruby lighthouse)</span></span><br><span class="line"><span class="comment"># Add wisely, as too many plugins slow down shell startup.</span></span><br><span class="line">plugins=(git zsh-syntax-highlighting) </span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> <span class="variable">$ZSH</span>/oh-my-zsh.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># User configuration</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># export MANPATH=&quot;/usr/local/man:$MANPATH&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># You may need to manually set your language environment</span></span><br><span class="line"><span class="comment"># export LANG=en_US.UTF-8</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Preferred editor for local and remote sessions</span></span><br><span class="line"><span class="comment"># if [[ -n $SSH_CONNECTION ]]; then</span></span><br><span class="line"><span class="comment">#   export EDITOR=&#x27;vim&#x27;</span></span><br><span class="line"><span class="comment"># else</span></span><br><span class="line"><span class="comment">#   export EDITOR=&#x27;mvim&#x27;</span></span><br><span class="line"><span class="comment"># fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Compilation flags</span></span><br><span class="line"><span class="comment"># export ARCHFLAGS=&quot;-arch x86_64&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Set personal aliases, overriding those provided by oh-my-zsh libs,</span></span><br><span class="line"><span class="comment"># plugins, and themes. Aliases can be placed here, though oh-my-zsh</span></span><br><span class="line"><span class="comment"># users are encouraged to define aliases within the ZSH_CUSTOM folder.</span></span><br><span class="line"><span class="comment"># For a full list of active aliases, run `alias`.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Example aliases</span></span><br><span class="line"><span class="comment"># alias zshconfig=&quot;mate ~/.zshrc&quot;</span></span><br><span class="line"><span class="comment"># alias ohmyzsh=&quot;mate ~/.oh-my-zsh&quot;</span></span><br><span class="line"><span class="built_in">alias</span> updateblog=<span class="string">&quot;cd /Users/ritsu/study/hexo/source/_posts&amp;&amp;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d&quot;</span></span><br><span class="line"><span class="built_in">alias</span> writeblog=<span class="string">&quot;cd /Users/ritsu/study/hexo/source/_posts&quot;</span></span><br><span class="line"><span class="built_in">alias</span> typora=<span class="string">&quot;open -a typora&quot;</span></span><br><span class="line"><span class="built_in">alias</span> cl=<span class="string">&quot;cd ~ &amp;&amp; clear&quot;</span></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">command</span> -v pyenv 1&gt;/dev/null 2&gt;&amp;1; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">eval</span> <span class="string">&quot;<span class="subst">$(pyenv init -)</span>&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">&quot;~/.pyenv/bin:<span class="variable">$PATH</span>&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># proxy</span></span><br><span class="line"><span class="built_in">export</span> http_proxy=<span class="string">&quot;http://127.0.0.1:7890&quot;</span></span><br><span class="line"><span class="built_in">export</span> https_proxy=<span class="variable">$http_proxy</span></span><br><span class="line"><span class="built_in">export</span> socks5_proxy=<span class="string">&quot;socks5://127.0.0.1:7890&quot;</span></span><br><span class="line"><span class="function"><span class="title">proxy</span></span> () &#123;</span><br><span class="line">  <span class="built_in">export</span> http_proxy=<span class="string">&quot;http://127.0.0.1:7890&quot;</span></span><br><span class="line">  <span class="built_in">export</span> https_proxy=<span class="variable">$http_proxy</span></span><br><span class="line">  <span class="built_in">export</span> socks5_proxy=<span class="string">&quot;socks5://127.0.0.1:7890&quot;</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;HTTP Proxy on&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># noproxy</span></span><br><span class="line"><span class="function"><span class="title">proxyoff</span></span> () &#123;</span><br><span class="line">  <span class="built_in">unset</span> http_proxy</span><br><span class="line">  <span class="built_in">unset</span> https_proxy</span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;HTTP Proxy off&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+  </div>
+  </article>
+
+  <div class="ant-alert mb-0">
+    <ul>
+      <li>版权声明：本文采用<a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">知识共享 3.0 许可证</a> (<strong>保持署名</strong>-自由转载-非商用-非衍生)</li>
+      <li>
+        发表于 2022-05-03
+      </li>
+    </ul>
+  </div>
+
+  <div class="page-navigation">
+  
+  <a class="prev" href="/2022/05/02/5-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/">&laquo; 上一篇</a>
+   
+  
+  <a class="next" href="/2022/05/04/11-%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/">下一篇 &raquo;</a>
+  
+  </div> 
+
+  <div id="gitalk-container"></div>
+
+  </div>
+
+</main>
+
+<footer class="site-footer h-card">
+  
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <ul class="contact-list">
+          <li class="p-name"><a class="black-link" href="/">
+                ritsurin 
+              </a></li></ul>
+      </div>
+    </div>
+  </div>
+  
+    <div class="text-center">
       
-
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">zshrc 备份</h1>
-            
-            <div class="markdown-body">
-              <figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh"><span class="hljs-comment"># If you come from bash you might have to change your $PATH.</span><br><span class="hljs-comment"># export PATH=$HOME/bin:/usr/local/bin:$PATH</span><br><br><span class="hljs-comment"># Path to your oh-my-zsh installation.</span><br><span class="hljs-built_in">export</span> ZSH=<span class="hljs-string">&quot;<span class="hljs-variable">$HOME</span>/.oh-my-zsh&quot;</span><br><br><span class="hljs-comment"># Set name of the theme to load --- if set to &quot;random&quot;, it will</span><br><span class="hljs-comment"># load a random theme each time oh-my-zsh is loaded, in which case,</span><br><span class="hljs-comment"># to know which specific one was loaded, run: echo $RANDOM_THEME</span><br><span class="hljs-comment"># See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes</span><br>ZSH_THEME=<span class="hljs-string">&quot;robbyrussell&quot;</span><br><br><span class="hljs-comment"># Set list of themes to pick from when loading at random</span><br><span class="hljs-comment"># Setting this variable when ZSH_THEME=random will cause zsh to load</span><br><span class="hljs-comment"># a theme from this variable instead of looking in $ZSH/themes/</span><br><span class="hljs-comment"># If set to an empty array, this variable will have no effect.</span><br><span class="hljs-comment"># ZSH_THEME_RANDOM_CANDIDATES=( &quot;robbyrussell&quot; &quot;agnoster&quot; )</span><br><br><span class="hljs-comment"># Uncomment the following line to use case-sensitive completion.</span><br><span class="hljs-comment"># CASE_SENSITIVE=&quot;true&quot;</span><br><br><span class="hljs-comment"># Uncomment the following line to use hyphen-insensitive completion.</span><br><span class="hljs-comment"># Case-sensitive completion must be off. _ and - will be interchangeable.</span><br><span class="hljs-comment"># HYPHEN_INSENSITIVE=&quot;true&quot;</span><br><br><span class="hljs-comment"># Uncomment one of the following lines to change the auto-update behavior</span><br><span class="hljs-comment"># zstyle &#x27;:omz:update&#x27; mode disabled  # disable automatic updates</span><br><span class="hljs-comment"># zstyle &#x27;:omz:update&#x27; mode auto      # update automatically without asking</span><br><span class="hljs-comment"># zstyle &#x27;:omz:update&#x27; mode reminder  # just remind me to update when it&#x27;s time</span><br><br><span class="hljs-comment"># Uncomment the following line to change how often to auto-update (in days).</span><br><span class="hljs-comment"># zstyle &#x27;:omz:update&#x27; frequency 13</span><br><br><span class="hljs-comment"># Uncomment the following line if pasting URLs and other text is messed up.</span><br><span class="hljs-comment"># DISABLE_MAGIC_FUNCTIONS=&quot;true&quot;</span><br><br><span class="hljs-comment"># Uncomment the following line to disable colors in ls.</span><br><span class="hljs-comment"># DISABLE_LS_COLORS=&quot;true&quot;</span><br><br><span class="hljs-comment"># Uncomment the following line to disable auto-setting terminal title.</span><br><span class="hljs-comment"># DISABLE_AUTO_TITLE=&quot;true&quot;</span><br><br><span class="hljs-comment"># Uncomment the following line to enable command auto-correction.</span><br><span class="hljs-comment"># ENABLE_CORRECTION=&quot;true&quot;</span><br><br><span class="hljs-comment"># Uncomment the following line to display red dots whilst waiting for completion.</span><br><span class="hljs-comment"># You can also set it to another string to have that shown instead of the default red dots.</span><br><span class="hljs-comment"># e.g. COMPLETION_WAITING_DOTS=&quot;%F&#123;yellow&#125;waiting...%f&quot;</span><br><span class="hljs-comment"># Caution: this setting can cause issues with multiline prompts in zsh &lt; 5.7.1 (see #5765)</span><br><span class="hljs-comment"># COMPLETION_WAITING_DOTS=&quot;true&quot;</span><br><br><span class="hljs-comment"># Uncomment the following line if you want to disable marking untracked files</span><br><span class="hljs-comment"># under VCS as dirty. This makes repository status check for large repositories</span><br><span class="hljs-comment"># much, much faster.</span><br><span class="hljs-comment"># DISABLE_UNTRACKED_FILES_DIRTY=&quot;true&quot;</span><br><br><span class="hljs-comment"># Uncomment the following line if you want to change the command execution time</span><br><span class="hljs-comment"># stamp shown in the history command output.</span><br><span class="hljs-comment"># You can set one of the optional three formats:</span><br><span class="hljs-comment"># &quot;mm/dd/yyyy&quot;|&quot;dd.mm.yyyy&quot;|&quot;yyyy-mm-dd&quot;</span><br><span class="hljs-comment"># or set a custom format using the strftime function format specifications,</span><br><span class="hljs-comment"># see &#x27;man strftime&#x27; for details.</span><br><span class="hljs-comment"># HIST_STAMPS=&quot;mm/dd/yyyy&quot;</span><br><br><span class="hljs-comment"># Would you like to use another custom folder than $ZSH/custom?</span><br><span class="hljs-comment"># ZSH_CUSTOM=/path/to/new-custom-folder</span><br><br><span class="hljs-comment"># Which plugins would you like to load?</span><br><span class="hljs-comment"># Standard plugins can be found in $ZSH/plugins/</span><br><span class="hljs-comment"># Custom plugins may be added to $ZSH_CUSTOM/plugins/</span><br><span class="hljs-comment"># Example format: plugins=(rails git textmate ruby lighthouse)</span><br><span class="hljs-comment"># Add wisely, as too many plugins slow down shell startup.</span><br>plugins=(git zsh-syntax-highlighting) <br><br><span class="hljs-built_in">source</span> <span class="hljs-variable">$ZSH</span>/oh-my-zsh.sh<br><br><span class="hljs-comment"># User configuration</span><br><br><span class="hljs-comment"># export MANPATH=&quot;/usr/local/man:$MANPATH&quot;</span><br><br><span class="hljs-comment"># You may need to manually set your language environment</span><br><span class="hljs-comment"># export LANG=en_US.UTF-8</span><br><br><span class="hljs-comment"># Preferred editor for local and remote sessions</span><br><span class="hljs-comment"># if [[ -n $SSH_CONNECTION ]]; then</span><br><span class="hljs-comment">#   export EDITOR=&#x27;vim&#x27;</span><br><span class="hljs-comment"># else</span><br><span class="hljs-comment">#   export EDITOR=&#x27;mvim&#x27;</span><br><span class="hljs-comment"># fi</span><br><br><span class="hljs-comment"># Compilation flags</span><br><span class="hljs-comment"># export ARCHFLAGS=&quot;-arch x86_64&quot;</span><br><br><span class="hljs-comment"># Set personal aliases, overriding those provided by oh-my-zsh libs,</span><br><span class="hljs-comment"># plugins, and themes. Aliases can be placed here, though oh-my-zsh</span><br><span class="hljs-comment"># users are encouraged to define aliases within the ZSH_CUSTOM folder.</span><br><span class="hljs-comment"># For a full list of active aliases, run `alias`.</span><br><span class="hljs-comment">#</span><br><span class="hljs-comment"># Example aliases</span><br><span class="hljs-comment"># alias zshconfig=&quot;mate ~/.zshrc&quot;</span><br><span class="hljs-comment"># alias ohmyzsh=&quot;mate ~/.oh-my-zsh&quot;</span><br><span class="hljs-built_in">alias</span> updateblog=<span class="hljs-string">&quot;cd /Users/ritsu/study/hexo/source/_posts&amp;&amp;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d&quot;</span><br><span class="hljs-built_in">alias</span> writeblog=<span class="hljs-string">&quot;cd /Users/ritsu/study/hexo/source/_posts&quot;</span><br><span class="hljs-built_in">alias</span> typora=<span class="hljs-string">&quot;open -a typora&quot;</span><br><span class="hljs-built_in">alias</span> cl=<span class="hljs-string">&quot;cd ~ &amp;&amp; clear&quot;</span><br><span class="hljs-keyword">if</span> <span class="hljs-built_in">command</span> -v pyenv 1&gt;/dev/null 2&gt;&amp;1; <span class="hljs-keyword">then</span><br>  <span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;<span class="hljs-subst">$(pyenv init -)</span>&quot;</span><br><span class="hljs-keyword">fi</span><br><span class="hljs-built_in">export</span> PATH=<span class="hljs-string">&quot;~/.pyenv/bin:<span class="hljs-variable">$PATH</span>&quot;</span><br><br><br><span class="hljs-comment"># proxy</span><br><span class="hljs-built_in">export</span> http_proxy=<span class="hljs-string">&quot;http://127.0.0.1:7890&quot;</span><br><span class="hljs-built_in">export</span> https_proxy=<span class="hljs-variable">$http_proxy</span><br><span class="hljs-built_in">export</span> socks5_proxy=<span class="hljs-string">&quot;socks5://127.0.0.1:7890&quot;</span><br><span class="hljs-function"><span class="hljs-title">proxy</span></span> () &#123;<br>  <span class="hljs-built_in">export</span> http_proxy=<span class="hljs-string">&quot;http://127.0.0.1:7890&quot;</span><br>  <span class="hljs-built_in">export</span> https_proxy=<span class="hljs-variable">$http_proxy</span><br>  <span class="hljs-built_in">export</span> socks5_proxy=<span class="hljs-string">&quot;socks5://127.0.0.1:7890&quot;</span><br>  <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;HTTP Proxy on&quot;</span><br>&#125;<br><br><span class="hljs-comment"># noproxy</span><br><span class="hljs-function"><span class="hljs-title">proxyoff</span></span> () &#123;<br>  <span class="hljs-built_in">unset</span> http_proxy<br>  <span class="hljs-built_in">unset</span> https_proxy<br>  <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;HTTP Proxy off&quot;</span><br>&#125;<br></code></pre></div></td></tr></table></figure>
-
-
-            </div>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
-                    
-                  </div>
-                
-                
-              </div>
-              
-                <p class="note note-warning">
-                  
-                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
-                  
-                </p>
-              
-              
-                <div class="post-prevnext">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/2022/05/04/11-%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">11. 盛最多水的容器</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/2022/05/02/5-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/">
-                        <span class="hidden-mobile">5. 最长回文子串</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
-            </div>
-
-            
-          </article>
-        </div>
-      </div>
+        <span class="text-gray-300 text-sm" id="busuanzi_container_site_pv">
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span>
+      
+      
+        <span class="text-gray-300 text-sm">•</span>
+      
+      
+          <span class="text-gray-300 text-sm" id="busuanzi_container_site_uv">
+            本站访客数<span id="busuanzi_value_site_uv"></span>人次
+          </span>
+      
     </div>
-    
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-      </div>
-    
-  </div>
-</div>
-
-<!-- Custom -->
-
-
-    
-
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
-
-    
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-    
-
-    
-  </main>
-
-  <footer class="text-center mt-5 py-3">
-  <div class="footer-content">
-     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
-  </div>
   
-
-  
-
   
 </footer>
 
 
-  <!-- SCRIPTS -->
-  
-  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 
-<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
-<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
-
-<!-- Plugins -->
+  <script async src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js">
+</script>
 
 
-  <script  src="/js/local-search.js" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/tocbot@4.18.2/dist/tocbot.min.js"></script>
 
 
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
-
-
-
-  
-
-
-
-  
-    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
-  
-  
-    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
-  
-  
-    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
-  
-  
-    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
-  
-
-
-
-
-
-
-  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var title = document.getElementById('subtitle').title;
-      
-        typing(title);
-      
-    })(window, document);
-  </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 主题的启动项 保持在最底部 -->
-<script  src="/js/boot.js" ></script>
-
+<script>
+  var Star = window.Star || {};
+  var CONFIG = {
+    fancybox: true,
+    tocbot: true
+  };
+  window.CONFIG = CONFIG;
+</script>
+<script src="/js/utils.js"></script>
+<script src="/js/star.js"></script>
 
 </body>
 </html>

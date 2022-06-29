@@ -1,727 +1,345 @@
 
 
-<!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
 
 
 
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.ico">
-  <link rel="icon" href="/img/favicon.ico">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <title> [ 你好👋 ]</title>
+
   
-  <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="ritsurin">
-  <meta name="keywords" content="">
-  
-    <meta property="og:type" content="website">
-<meta property="og:title" content="你好👋">
-<meta property="og:url" content="http://example.com/page/3/index.html">
-<meta property="og:site_name" content="你好👋">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="ritsurin">
-<meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-star.png">
   
   
-  <title>你好👋</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-one-light.min.css">
+  
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  
+  
 
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-<!-- 自定义样式保持在最底部 -->
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
-  </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <link rel="stylesheet" href="/css/third_party/utilities.min.css">
+  <link rel="stylesheet" href="/css/star.css">
 <meta name="generator" content="Hexo 6.1.0"></head>
-
-
 <body>
-  <header style="height: 100vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
-    </a>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
+<main class="page-content" aria-label="Content">
+  
 
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
-            </a>
-          </li>
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
-          </li>
-        
-      </ul>
+  <div class="wrapper">
+    
+    
+
+  <div class="home-title">
+    <p class="home-heading">
+      
+        你好👋
+      
+    </p>
+    <div class="flex items-center">
+      <div class="home-sub-heading mt-0">
+        <a style="color:inherit" href="/about">
+          About me
+        </a>
+      </div>
     </div>
   </div>
-</nav>
-
-    <div class="banner" id="banner" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="你好👋">
-              
-            </span>
-
-            
-          </div>
-
+  
+  
+    <ul class="post-list mt-0">
+      
+        
+        
           
-            <div class="scroll-down-bar">
-              <i class="iconfont icon-arrowdown"></i>
+        
+
+        
+          <h2 id="2022-ref" class="post-year">2022</h2>
+          <ul>
+        
+        
+          <li>
+            <div class="post-item">
+              <span class="post-meta"> 5月 05 </span>
+              <a
+                class="black-link post-link-layout"
+                href="/2022/05/05/12-%E6%95%B4%E6%95%B0%E8%BD%AC%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97/"
+              >
+                12. 整数转罗马数字
+              </a>
             </div>
+          </li>
+
+        
+      
+        
+        
           
-        </div>
-      </div>
-    </div>
-  </header>
+        
 
-  <main>
-    
-      <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          style=margin-top:0>
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/05/04/11-%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/" target="_self">
-          11. 盛最多水的容器
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/05/04/11-%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/" target="_self">
-          
-          思路双指针 每次移动较矮的那一边 题解12345678910111213141516171819202122232425262728func maxArea(height []int) int &amp;#123;    res :&#x3D; 0    left,right :&#x3D; 0, len(height) - 1    for left !&#x3D; right &amp;#123;        temp :&#x3D; minHe
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-05-04 11:04" pubdate>
-              2022-05-04
-            </time>
-          </div>
         
         
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/%E7%AE%97%E6%B3%95/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/05/03/zshrc-%E5%A4%87%E4%BB%BD/" target="_self">
-          zshrc 备份
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/05/03/zshrc-%E5%A4%87%E4%BB%BD/" target="_self">
-          
-          12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-05-03 13:47" pubdate>
-              2022-05-03
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
-            
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/05/02/5-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/" target="_self">
-          5. 最长回文子串
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/05/02/5-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/" target="_self">
-          
-          暴力解1234567891011121314151617181920212223242526272829303132333435func longestPalindrome(s string) string &amp;#123;	if IsPalindrome(s) &amp;#123;		return s	&amp;#125;	maxLength :&#x3D; 0	var ans string	for width :&#x3D; 1;
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-05-02 20:43" pubdate>
-              2022-05-02
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/%E7%AE%97%E6%B3%95/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/04/30/3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/" target="_self">
-          3. 无重复字符的最长子串
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/04/30/3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/" target="_self">
-          
-          题解12345678910111213141516171819202122232425262728293031func lengthOfLongestSubstring(s string) int &amp;#123;    lengthOfString :&#x3D; len(s)    left,right :&#x3D; 0,0    ans :&#x3D; 0    if lengthOfString &#x3D;&#x3D; 0 &amp;#123;
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-04-30 11:56" pubdate>
-              2022-04-30
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
-            
-              <a href="/categories/%E7%AE%97%E6%B3%95/%E9%A2%98%E8%A7%A3/">题解</a>
-            
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/04/26/macOS-%E8%87%AA%E5%AE%9A%E4%B9%89-Typora-%E5%BF%AB%E6%8D%B7%E9%94%AE/" target="_self">
-          macOS 自定义 Typora 快捷键
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/04/26/macOS-%E8%87%AA%E5%AE%9A%E4%B9%89-Typora-%E5%BF%AB%E6%8D%B7%E9%94%AE/" target="_self">
-          
-          macOS 上行内代码的快捷键上在输入法时中文模式下，没办法用，这样快捷键就失去意义了，还在 macOS 可以自定义快捷键。  打开设置如下   点击 “+”，选择 Typora.app，菜单标题选择代码
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-04-26 00:43" pubdate>
-              2022-04-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
-            
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/04/26/%E5%9C%A8%E7%BB%88%E7%AB%AF%E7%94%A8-Typora-%E6%89%93%E5%BC%80-markdown-%E6%96%87%E4%BB%B6/" target="_self">
-          在终端用 Typora 打开 markdown 文件
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/04/26/%E5%9C%A8%E7%BB%88%E7%AB%AF%E7%94%A8-Typora-%E6%89%93%E5%BC%80-markdown-%E6%96%87%E4%BB%B6/" target="_self">
-          
-          用 Hexo 写博客时，一般需要在终端先 new 一下 markdown 文件，然后再写。这时候切到 Finder 或 Typora 再去打开就很麻烦，于是进行如下操作。 1open -a typora 文件名  其中 open -a typora ➡️ 用 Typora 打开某文件 为方便使用，将 open -a typora 设置为别名 我用的 zsh，故以 zsh 为例  打开 ~&#x2F;.zsh
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-04-26 00:33" pubdate>
-              2022-04-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
-            
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/04/26/macOS-%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%E5%A4%B9/" target="_self">
-          macOS 隐藏文件夹
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/04/26/macOS-%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%E5%A4%B9/" target="_self">
-          
-          打开终端  输入如下代码 1chflags hidden+空格  将需要隐藏的文件夹拖入终端  Shift + Command + .  可显示隐藏文件夹  文件同理
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-04-26 00:28" pubdate>
-              2022-04-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
-            
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/04/25/%E6%9B%B4%E6%8D%A2-Mac-%E8%BD%AF%E4%BB%B6%E5%9B%BE%E6%A0%87/" target="_self">
-          更换 Mac 软件图标
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/04/25/%E6%9B%B4%E6%8D%A2-Mac-%E8%BD%AF%E4%BB%B6%E5%9B%BE%E6%A0%87/" target="_self">
-          
-          1. 如何更换 在对应网址中搜索 app 名称 https:&#x2F;&#x2F;macosicons.com&#x2F;#&#x2F;  下载图标  Finder ➡️ 应用程序 ➡️ 找到对应 app 右键 ➡️ 显示简介 ➡️ 将下载好的图标拖拽到原图标上，即可完成替换   2. 常见问题 dock 栏上没有更新图标 可能是点了在程序坞中保留，暂时先将该选项去掉，然后完全退出应用，再次打开应该没有问题  如何换回原图标 Find
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-04-25 22:26" pubdate>
-              2022-04-25
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
-            
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/04/20/%E4%BB%93%E5%BA%93%E4%B8%8E%E6%9C%AC%E5%9C%B0%E5%86%85%E5%AE%B9%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/" target="_self">
-          仓库与本地内容不一致问题
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/04/20/%E4%BB%93%E5%BA%93%E4%B8%8E%E6%9C%AC%E5%9C%B0%E5%86%85%E5%AE%B9%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/" target="_self">
-          
-          今天发现一个问题，当我在本地仓库更新目录结构后，push 到 GitHub，但是远程仓库并没有发现对应的修改。于是在网上找该问题的解决办法，发现修改 .gitignore 文件内容后，再次 push 就成功了，暂时不清楚原因，所以先记录一下， .gitignore 内容如下： 123456789# OS generated files #######################.DS_Stor
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-04-20 13:35" pubdate>
-              2022-04-20
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
-            
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/03/31/%E9%80%9A%E8%BF%87-Amazon-%E8%8E%B7%E5%8F%96%E5%9B%BE%E4%B9%A6%E7%9A%84%E5%B0%81%E9%9D%A2/" target="_self">
-          通过 Amazon 获取图书的封面
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2022/03/31/%E9%80%9A%E8%BF%87-Amazon-%E8%8E%B7%E5%8F%96%E5%9B%BE%E4%B9%A6%E7%9A%84%E5%B0%81%E9%9D%A2/" target="_self">
-          
-          1. 打开亚马逊官网地址：https:&#x2F;&#x2F;www.amazon.cn&#x2F; 2. 搜索图书这里以《ARKit 原生开发 入门精粹》为例   3. 获取 ASIN 编号  该书的 ASIN：B09995RR9H 4. 将 ASIN 填入封面地址1234# 首选https:&#x2F;&#x2F;m.media-amazon.com&#x2F;images&#x2F;P&#x2F;*****.01.MAIN._SCRM_.jpg# 备选http:&#x2F;&#x2F;s3
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-03-31 22:42" pubdate>
-              2022-03-31
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
-            
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-
-
-  <nav aria-label="navigation">
-    <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/2/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#board">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#board">4</a><a class="page-number" href="/page/5/#board">5</a><a class="extend next" rel="next" href="/page/4/#board"><i class="iconfont icon-arrowright"></i></a>
-    </span>
-  </nav>
-
-
-
-              </div>
+          <li>
+            <div class="post-item">
+              <span class="post-meta"> 5月 04 </span>
+              <a
+                class="black-link post-link-layout"
+                href="/2022/05/04/11-%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/"
+              >
+                11. 盛最多水的容器
+              </a>
             </div>
-          </div>
-        </div>
-      </div>
-    
+          </li>
 
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
+        
+      
+        
+        
+          
+        
 
-    
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-    
+        
+        
+          <li>
+            <div class="post-item">
+              <span class="post-meta"> 5月 03 </span>
+              <a
+                class="black-link post-link-layout"
+                href="/2022/05/03/zshrc-%E5%A4%87%E4%BB%BD/"
+              >
+                zshrc 备份
+              </a>
+            </div>
+          </li>
 
-    
-  </main>
+        
+      
+        
+        
+          
+        
 
-  <footer class="text-center mt-5 py-3">
-  <div class="footer-content">
-     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
-  </div>
+        
+        
+          <li>
+            <div class="post-item">
+              <span class="post-meta"> 5月 02 </span>
+              <a
+                class="black-link post-link-layout"
+                href="/2022/05/02/5-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/"
+              >
+                5. 最长回文子串
+              </a>
+            </div>
+          </li>
+
+        
+      
+        
+        
+          
+        
+
+        
+        
+          <li>
+            <div class="post-item">
+              <span class="post-meta"> 4月 30 </span>
+              <a
+                class="black-link post-link-layout"
+                href="/2022/04/30/3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/"
+              >
+                3. 无重复字符的最长子串
+              </a>
+            </div>
+          </li>
+
+        
+      
+        
+        
+          
+        
+
+        
+        
+          <li>
+            <div class="post-item">
+              <span class="post-meta"> 4月 26 </span>
+              <a
+                class="black-link post-link-layout"
+                href="/2022/04/26/macOS-%E8%87%AA%E5%AE%9A%E4%B9%89-Typora-%E5%BF%AB%E6%8D%B7%E9%94%AE/"
+              >
+                macOS 自定义 Typora 快捷键
+              </a>
+            </div>
+          </li>
+
+        
+      
+        
+        
+          
+        
+
+        
+        
+          <li>
+            <div class="post-item">
+              <span class="post-meta"> 4月 26 </span>
+              <a
+                class="black-link post-link-layout"
+                href="/2022/04/26/%E5%9C%A8%E7%BB%88%E7%AB%AF%E7%94%A8-Typora-%E6%89%93%E5%BC%80-markdown-%E6%96%87%E4%BB%B6/"
+              >
+                在终端用 Typora 打开 markdown 文件
+              </a>
+            </div>
+          </li>
+
+        
+      
+        
+        
+          
+        
+
+        
+        
+          <li>
+            <div class="post-item">
+              <span class="post-meta"> 4月 26 </span>
+              <a
+                class="black-link post-link-layout"
+                href="/2022/04/26/macOS-%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%E5%A4%B9/"
+              >
+                macOS 隐藏文件夹
+              </a>
+            </div>
+          </li>
+
+        
+      
+        
+        
+          
+        
+
+        
+        
+          <li>
+            <div class="post-item">
+              <span class="post-meta"> 4月 25 </span>
+              <a
+                class="black-link post-link-layout"
+                href="/2022/04/25/%E6%9B%B4%E6%8D%A2-Mac-%E8%BD%AF%E4%BB%B6%E5%9B%BE%E6%A0%87/"
+              >
+                更换 Mac 软件图标
+              </a>
+            </div>
+          </li>
+
+        
+      
+        
+        
+          
+        
+
+        
+        
+          <li>
+            <div class="post-item">
+              <span class="post-meta"> 4月 20 </span>
+              <a
+                class="black-link post-link-layout"
+                href="/2022/04/20/%E4%BB%93%E5%BA%93%E4%B8%8E%E6%9C%AC%E5%9C%B0%E5%86%85%E5%AE%B9%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/"
+              >
+                仓库与本地内容不一致问题
+              </a>
+            </div>
+          </li>
+
+        
+          </ul>
+        
+      
+    </ul>
   
 
   
 
+  </div>
+
+</main>
+
+<footer class="site-footer h-card">
+  
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <ul class="contact-list">
+          <li class="p-name"><a class="black-link" href="/">
+                ritsurin 
+              </a></li></ul>
+      </div>
+    </div>
+  </div>
+  
+    <div class="text-center">
+      
+        <span class="text-gray-300 text-sm" id="busuanzi_container_site_pv">
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span>
+      
+      
+        <span class="text-gray-300 text-sm">•</span>
+      
+      
+          <span class="text-gray-300 text-sm" id="busuanzi_container_site_uv">
+            本站访客数<span id="busuanzi_value_site_uv"></span>人次
+          </span>
+      
+    </div>
+  
   
 </footer>
 
 
-  <!-- SCRIPTS -->
-  
-  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 
-<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
-<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
-
-<!-- Plugins -->
+  <script async src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js">
+</script>
 
 
-  <script  src="/js/local-search.js" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/tocbot@4.18.2/dist/tocbot.min.js"></script>
 
 
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
-
-
-
-  
-
-
-
-
-
-
-
-
-  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var title = document.getElementById('subtitle').title;
-      
-        typing(title);
-      
-    })(window, document);
-  </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 主题的启动项 保持在最底部 -->
-<script  src="/js/boot.js" ></script>
-
+<script>
+  var Star = window.Star || {};
+  var CONFIG = {
+    fancybox: true,
+    tocbot: true
+  };
+  window.CONFIG = CONFIG;
+</script>
+<script src="/js/utils.js"></script>
+<script src="/js/star.js"></script>
 
 </body>
 </html>

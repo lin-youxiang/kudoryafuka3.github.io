@@ -1,265 +1,109 @@
 
 
-<!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
 
 
 
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.ico">
-  <link rel="icon" href="/img/favicon.ico">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="ritsurin">
-  <meta name="keywords" content="">
-  
-    <meta name="description" content="1. 确保电脑有 node 环境12node -vnpm -v  输出如下：  没有 node 环境就百度装下，很快 2. 安装 hexo 中文官网地址：https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;  1npm install hexo-cli -g  3. 在你喜欢的位置新建一个文件夹该文件夹用于存储 hexo 文件，以后本地上的博客内容也在里面 &#x3D;&#x3D;命令行进入该文件夹&amp;#x">
-<meta property="og:type" content="article">
-<meta property="og:title" content="hexo 搭建博客并部署到 GitHub Page">
-<meta property="og:url" content="http://example.com/2022/03/14/hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B9%B6%E9%83%A8%E7%BD%B2%E5%88%B0-GitHub-Page/index.html">
-<meta property="og:site_name" content="你好👋">
-<meta property="og:description" content="1. 确保电脑有 node 环境12node -vnpm -v  输出如下：  没有 node 环境就百度装下，很快 2. 安装 hexo 中文官网地址：https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;  1npm install hexo-cli -g  3. 在你喜欢的位置新建一个文件夹该文件夹用于存储 hexo 文件，以后本地上的博客内容也在里面 &#x3D;&#x3D;命令行进入该文件夹&amp;#x">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gitee.com/liskarmw/typora-pictures/raw/master/img/20220314213608.png">
-<meta property="og:image" content="https://gitee.com/liskarmw/typora-pictures/raw/master/img/20220314214020.png">
-<meta property="og:image" content="https://gitee.com/liskarmw/typora-pictures/raw/master/img/20220314214651.png">
-<meta property="article:published_time" content="2022-03-14T13:34:45.000Z">
-<meta property="article:modified_time" content="2022-03-15T05:06:44.048Z">
-<meta property="article:author" content="ritsurin">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://gitee.com/liskarmw/typora-pictures/raw/master/img/20220314213608.png">
-  
-  
-  <title>hexo 搭建博客并部署到 GitHub Page - 你好👋</title>
-
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
-
-
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <title>hexo 搭建博客并部署到 GitHub Page [ 你好👋 ]</title>
 
   
-    
-    
-      
-      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/atom-one-dark.min.css" />
-    
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-star.png">
+  
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-one-light.min.css">
+  
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  
   
 
-  
-    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
-  
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-<!-- 自定义样式保持在最底部 -->
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
-  </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <link rel="stylesheet" href="/css/third_party/utilities.min.css">
+  <link rel="stylesheet" href="/css/star.css">
 <meta name="generator" content="Hexo 6.1.0"></head>
-
-
 <body>
-  <header style="height: 70vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
-    </a>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
+<main class="page-content" aria-label="Content">
+  
 
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
-            </a>
-          </li>
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
-          </li>
-        
-      </ul>
+  <div class="wrapper">
+    
+    
+  <article 
+    class="post h-entry"
+    id="post"
+    itemscope
+    itemtype="http://schema.org/BlogPosting"
+  >
+
+  <header class="post-header">
+    <div class="post-back">
+      <a class="black-link" href="/">
+        ← Home
+      </a>
     </div>
-  </div>
-</nav>
 
-    <div class="banner" id="banner" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="hexo 搭建博客并部署到 GitHub Page">
-              
-            </span>
-
-            
-              <div class="mt-3">
-  
-  
-    <span class="post-meta">
-      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-03-14 21:34" pubdate>
-        2022年3月14日 晚上
-      </time>
-    </span>
-  
-</div>
-
-<div class="mt-1">
-  
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      683 字
-    </span>
-  
-
-  
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
+    <h1 class="post-title p-name" itemprop="name headline">
+      hexo 搭建博客并部署到 GitHub Page
+    </h1>
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="1647264885000"
+        itemprop="datePublished"
+      >
+        Mar 14, 2022
+      </time>•
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person"
+        ><span class="p-author h-card" itemprop="name"
+          >ritsurin</span
+        ></span
+      >
+        <span class="busuanzi_container_page">
+          <span id="busuanzi_container_page_pv">
+            •
+          <span id="busuanzi_value_page_pv"></span> View
+          </span>
+        </span>
       
-      
-      6 分钟
-    </span>
-  
-
-  
-  
-</div>
-
-            
-          </div>
-
-          
-        </div>
-      </div>
-    </div>
+    </p>
   </header>
 
-  <main>
-    
-      
+  <div class="js-toc"></div>
 
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">hexo 搭建博客并部署到 GitHub Page</h1>
-            
-            <div class="markdown-body">
-              <h4 id="1-确保电脑有-node-环境"><a href="#1-确保电脑有-node-环境" class="headerlink" title="1. 确保电脑有 node 环境"></a>1. 确保电脑有 node 环境</h4><figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">node -v<br>npm -v<br></code></pre></div></td></tr></table></figure>
+  <div class="post-content" itemprop="articleBody">
+    <h4 id="1-确保电脑有-node-环境"><a href="#1-确保电脑有-node-环境" class="headerlink" title="1. 确保电脑有 node 环境"></a>1. 确保电脑有 node 环境</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
 
 <p>输出如下：</p>
-<p><img src="https://gitee.com/liskarmw/typora-pictures/raw/master/img/20220314213608.png" srcset="/img/loading.gif" lazyload alt="image-20220314213607755"></p>
+<p><img src="https://gitee.com/liskarmw/typora-pictures/raw/master/img/20220314213608.png" alt="image-20220314213607755"></p>
 <p>没有 node 环境就百度装下，很快</p>
 <h4 id="2-安装-hexo"><a href="#2-安装-hexo" class="headerlink" title="2. 安装 hexo"></a>2. 安装 hexo</h4><blockquote>
 <p>中文官网地址：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a></p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">npm install hexo-cli -g<br></code></pre></div></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
 
 <h4 id="3-在你喜欢的位置新建一个文件夹"><a href="#3-在你喜欢的位置新建一个文件夹" class="headerlink" title="3. 在你喜欢的位置新建一个文件夹"></a>3. 在你喜欢的位置新建一个文件夹</h4><p>该文件夹用于存储 hexo 文件，以后本地上的博客内容也在里面</p>
 <p>&#x3D;&#x3D;命令行进入该文件夹&#x3D;&#x3D;</p>
-<figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">hexo init<br></code></pre></div></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/liskarmw/typora-pictures/raw/master/img/20220314214020.png" srcset="/img/loading.gif" lazyload alt="image-20220314214019975"></p>
+<p><img src="https://gitee.com/liskarmw/typora-pictures/raw/master/img/20220314214020.png" alt="image-20220314214019975"></p>
 <p>需要等待亿小会</p>
-<h4 id="4-安装部署插件"><a href="#4-安装部署插件" class="headerlink" title="4. 安装部署插件"></a>4. 安装部署插件</h4><figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">npm install hexo-deployer-git --save<br></code></pre></div></td></tr></table></figure>
+<h4 id="4-安装部署插件"><a href="#4-安装部署插件" class="headerlink" title="4. 安装部署插件"></a>4. 安装部署插件</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
-<h4 id="5-测试本机-ssh-key"><a href="#5-测试本机-ssh-key" class="headerlink" title="5. 测试本机 ssh key"></a>5. 测试本机 ssh key</h4><figure class="highlight sh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sh">ssh -T git@github.com <br></code></pre></div></td></tr></table></figure>
+<h4 id="5-测试本机-ssh-key"><a href="#5-测试本机-ssh-key" class="headerlink" title="5. 测试本机 ssh key"></a>5. 测试本机 ssh key</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com </span><br></pre></td></tr></table></figure>
 
 <p>若输出 <code>Hi ...</code>，则说明本机 ssh 配置完成</p>
 <p>若输出其他，表示未配置 ssh</p>
@@ -267,211 +111,101 @@
 <h4 id="6-在-GitHub-上创建仓库"><a href="#6-在-GitHub-上创建仓库" class="headerlink" title="6. 在 GitHub 上创建仓库"></a>6. 在 GitHub 上创建仓库</h4><p>仓库名为：<code>你的用户名.github.io</code></p>
 <p>比如我的用户名为 liskarmw，则仓库名为 <code>liskarmw.github.io</code></p>
 <p>&#x3D;&#x3D;不可更改&#x3D;&#x3D;</p>
-<h4 id="7-打开-hexo-本地文件夹，修改-config-yml-配置"><a href="#7-打开-hexo-本地文件夹，修改-config-yml-配置" class="headerlink" title="7. 打开 hexo 本地文件夹，修改 _config.yml 配置"></a>7. 打开 hexo 本地文件夹，修改 _config.yml 配置</h4><p><img src="https://gitee.com/liskarmw/typora-pictures/raw/master/img/20220314214651.png" srcset="/img/loading.gif" lazyload alt="截屏2022-03-14 21.45.50"></p>
-<figure class="highlight yml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yml"><span class="hljs-attr">deploy:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>  <span class="hljs-attr">repository:</span><br>    <span class="hljs-attr">github:</span> <span class="hljs-string">此处为仓库</span> <span class="hljs-string">ssh</span> <span class="hljs-string">链接</span><br>  <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span><br></code></pre></div></td></tr></table></figure>
+<h4 id="7-打开-hexo-本地文件夹，修改-config-yml-配置"><a href="#7-打开-hexo-本地文件夹，修改-config-yml-配置" class="headerlink" title="7. 打开 hexo 本地文件夹，修改 _config.yml 配置"></a>7. 打开 hexo 本地文件夹，修改 _config.yml 配置</h4><p><img src="https://gitee.com/liskarmw/typora-pictures/raw/master/img/20220314214651.png" alt="截屏2022-03-14 21.45.50"></p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repository:</span></span><br><span class="line">    <span class="attr">github:</span> <span class="string">此处为仓库</span> <span class="string">ssh</span> <span class="string">链接</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="8-命令行输入命令测试"><a href="#8-命令行输入命令测试" class="headerlink" title="8. 命令行输入命令测试"></a>8. 命令行输入命令测试</h4><p>依次输入</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo clean</span><br><span class="hljs-attribute">hexo g</span><br><span class="hljs-attribute">hexo d</span><br></code></pre></div></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
 <p>等待 push 完成，在浏览器地址栏输入刚刚的仓库名，测试是否能正常访问</p>
-<h4 id="9-开始写作"><a href="#9-开始写作" class="headerlink" title="9. 开始写作"></a>9. 开始写作</h4><figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">hexo new &quot;文章名&quot;<br></code></pre></div></td></tr></table></figure>
+<h4 id="9-开始写作"><a href="#9-开始写作" class="headerlink" title="9. 开始写作"></a>9. 开始写作</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;文章名&quot;</span><br></pre></td></tr></table></figure>
 
 <p>文章路径为 <code>source/_post</code></p>
 <p>推送</p>
-<figure class="highlight shell"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs shell">hexo clean<br>hexo g<br>hexo d<br></code></pre></div></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
 <h4 id="10-自用主题"><a href="#10-自用主题" class="headerlink" title="10. 自用主题"></a>10. 自用主题</h4><p><a target="_blank" rel="noopener" href="https://butterfly.js.org/">https://butterfly.js.org/</a></p>
 
-            </div>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
-                    
-                  </div>
-                
-                
-              </div>
-              
-                <p class="note note-warning">
-                  
-                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
-                  
-                </p>
-              
-              
-                <div class="post-prevnext">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/2022/03/15/BFS/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">BFS</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                  </article>
-                </div>
-              
-            </div>
-
-            
-          </article>
-        </div>
-      </div>
-    </div>
-    
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-      </div>
-    
   </div>
-</div>
+  </article>
 
-<!-- Custom -->
+  <div class="ant-alert mb-0">
+    <ul>
+      <li>版权声明：本文采用<a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">知识共享 3.0 许可证</a> (<strong>保持署名</strong>-自由转载-非商用-非衍生)</li>
+      <li>
+        发表于 2022-03-14
+      </li>
+    </ul>
+  </div>
 
+  <div class="page-navigation">
+   
+  
+  <a class="next" href="/2022/03/15/BFS/">下一篇 &raquo;</a>
+  
+  </div> 
 
-    
+  <div id="gitalk-container"></div>
 
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
+  </div>
 
-    
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
+</main>
+
+<footer class="site-footer h-card">
+  
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <ul class="contact-list">
+          <li class="p-name"><a class="black-link" href="/">
+                ritsurin 
+              </a></li></ul>
       </div>
     </div>
   </div>
-</div>
-    
-
-    
-  </main>
-
-  <footer class="text-center mt-5 py-3">
-  <div class="footer-content">
-     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
-  </div>
   
-
+    <div class="text-center">
+      
+        <span class="text-gray-300 text-sm" id="busuanzi_container_site_pv">
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span>
+      
+      
+        <span class="text-gray-300 text-sm">•</span>
+      
+      
+          <span class="text-gray-300 text-sm" id="busuanzi_container_site_uv">
+            本站访客数<span id="busuanzi_value_site_uv"></span>人次
+          </span>
+      
+    </div>
   
-
   
 </footer>
 
 
-  <!-- SCRIPTS -->
-  
-  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 
-<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
-<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
-
-<!-- Plugins -->
+  <script async src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js">
+</script>
 
 
-  <script  src="/js/local-search.js" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/tocbot@4.18.2/dist/tocbot.min.js"></script>
 
 
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
-
-
-
-  
-
-
-
-  
-    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
-  
-  
-    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
-  
-  
-    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
-  
-  
-    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
-  
-
-
-
-
-
-
-  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var title = document.getElementById('subtitle').title;
-      
-        typing(title);
-      
-    })(window, document);
-  </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 主题的启动项 保持在最底部 -->
-<script  src="/js/boot.js" ></script>
-
+<script>
+  var Star = window.Star || {};
+  var CONFIG = {
+    fancybox: true,
+    tocbot: true
+  };
+  window.CONFIG = CONFIG;
+</script>
+<script src="/js/utils.js"></script>
+<script src="/js/star.js"></script>
 
 </body>
 </html>
