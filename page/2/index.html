@@ -1,239 +1,475 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>记录</title><meta name="author" content="ritsurin"><meta name="copyright" content="ritsurin"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta property="og:type" content="website">
-<meta property="og:title" content="记录">
-<meta property="og:url" content="http://example.com/page/2/index.html">
-<meta property="og:site_name" content="记录">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20220326174435.jpeg">
-<meta property="article:author" content="ritsurin">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20220326174435.jpeg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="http://example.com/page/2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  date_suffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: undefined,
-  source: {
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: '记录',
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2022-07-10 22:42:30'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
+<!DOCTYPE html>
+<html lang="zh-CN">
 
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
-
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
-
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
-
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="ritsurin" />
+  <meta name="description" content="" />
   
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
+    <meta name="robots" content="noindex" />
   
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
+  
+  <title>
     
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
+      记录
     
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.1.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20220326174435.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">54</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">记录</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">记录</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/07/02/%E3%80%8AON-JAVA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" title="《ON JAVA》读书笔记">《ON JAVA》读书笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-07-02T04:59:52.000Z" title="发表于 2022-07-02 12:59:52">2022-07-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></span></div><div class="content"></div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/07/01/%E6%B1%82%E8%81%8C/" title="求职">求职</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-07-01T08:47:42.000Z" title="发表于 2022-07-01 16:47:42">2022-07-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%B0%E5%BD%95/">记录</a></span></div><div class="content">1. 求职三件套1.1 基础一门语言 + 数据结构 + 操作系统 + 计算机网络，简单来说就是背八股文
-​    个人认为，应届生找工作，基础真的是重中之重，不追求过多的技能栈，已学的技能掌握越扎实越好，面试官总能在一个问题上一直深挖，如果你能一直答下去，这差距就拉开了。
-1.2 算法猛刷题（LeetCode or 牛客）
+  </title>
 
-LeetCode 刷题攻略
+  
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
+  
 
-1.3 项目1 ～ 2 个非常熟悉的项目，可以体现自身的技术栈
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:400,400italic,600|Roboto+Mono" rel="stylesheet">
 
-选择项目时的注意事项
-
-2. 进度规划2.1 前期找工作的时间点：
-
-秋招提前批：六、七月（最早的一批，好机会）
-秋招大概是金九银十 (也就是每年的九月和十月)
-春招大概是金三银四 (也就是每年的三月和四月，但春招招聘的岗位相比较秋招来说会比较少)
-
-秋招经验分享贴 – 大虾
-如何优化自己简历上的项目
-3. 找工作软件
-实习僧（主要是实习）
-牛客网
-公司官网或公司微信招聘公众号（牛客和这个会有一些内推信息，还可以
-智联招聘
-boss 直聘
-前程无忧
-拉勾招聘
-
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/06/28/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" title="动态规划">动态规划</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-06-28T13:15:43.000Z" title="发表于 2022-06-28 21:15:43">2022-06-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></span></div><div class="content">动态规划1. 概要动态规划中每一个状态一定是由上一个状态推导出来的
-解题步骤：
-
-确定 dp 数组（dp table）以及下标的含义
-确定递推公式
-dp 数组如何初始化
-确定遍历顺序
-举例推导 dp 数组
-
-2. 题目训练2.1 斐波那契数
-🔗题目链接
-
-2.1.1 思路
-确定 dp 数组（dp table）以及下标的含义
-dp[i] ➡️ 第 i 次斐波那契数的值
-
-确定递推公式
-dp[i] &#x3D; dp[i-1] + dp[i-2]
-
-dp 数组如何初始化
-
-d[0] &#x3D; 0
-d[1] &#x3D; 1
+  <!-- hexo site css -->
+  
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/iconfont/iconfont.css">
 
 
-确定遍历顺序
-dp[i] &#x3D; dp[i-1] + dp[i-2]
-要先确定前两位的数值，才能确定第三位的数值，所以是从前往后便利
+  
+    
+<link rel="stylesheet" href="/css/index.css">
 
-举例推导 dp 数组
-0，1，1，2，3，5，8，13，21…
+  
+
+  
+
+  <!-- jquery3.3.1 -->
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- fancybox -->
+  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
+  <script async src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  
+<script src="/js/fancybox.js"></script>
 
 
-2.1.2 代码12345678910111213141516// 循环class Solution &#123;    public int fib(int n) &#123;        int dp1 = 0, dp2 = 1;        i ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/06/28/%E5%88%B7%E9%A2%98-md/" title="刷题">刷题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-06-28T12:58:38.000Z" title="发表于 2022-06-28 20:58:38">2022-06-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></span></div><div class="content">
-从【学习板块 LeetBook】刷起，从【简单的】刷起，从【通过率高】的刷起！
-看看 LeetBook？
-可以打一打牛客、LeetCode 的周赛
-代码随想录
+<meta name="generator" content="Hexo 6.1.0"></head>
 
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/06/28/Homebrew-MySQL/" title="Homebrew MySQL">Homebrew MySQL</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-06-28T01:49:32.000Z" title="发表于 2022-06-28 09:49:32">2022-06-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%B0%E5%BD%95/">记录</a></span></div><div class="content">
-to connet run
-1mysql -uroot
 
-If you need to have &#109;&#121;&#x73;&#x71;&#x6c;&#64;&#x35;&#46;&#55; first in your PATH, run:
-1echo &#x27;export PATH=&quot;/opt/homebrew/opt/mysql@5.7/bin:$PATH&quot;&#x27; &gt;&gt; ~/.zshrc
+  <body>
+    <div id="app">
+      <div class="header">
+  <a href="/">LEEDOM</a>
+</div>
 
-For compilers to find &#109;&#121;&#x73;&#x71;&#108;&#64;&#53;&#x2e;&#x37; you may need to set:
-1export LDFLAGS=&quot;-L/opt/homebrew/opt/mysql@5.7/lib&quot;
 
-1export CPPFLAGS=&quot;-I/opt/homebrew/opt/mysql@5.7/include&quot;
+      <p class="links">
+  
+    <a title="archives" target="" href="/archives/">
+      <i class="iconfont icon-bookmark"></i>
+    </a>
+  
+    <a title="github" target="_blank" href="https://github.com/leedom92/hexo-theme-leedom">
+      <i class="iconfont icon-github"></i>
+    </a>
+  
+    <a title="email" target="" href="">
+      <i class="iconfont icon-envelope"></i>
+    </a>
+  
+    <a title="facebook" target="" href="">
+      <i class="iconfont icon-facebooksquare"></i>
+    </a>
+  
+    <a title="twitter" target="" href="">
+      <i class="iconfont icon-twitter"></i>
+    </a>
+  
+    <a title="wechat" target="" href="">
+      <i class="iconfont icon-wechat"></i>
+    </a>
+  
+    <a title="weibo" target="" href="">
+      <i class="iconfont icon-weibo"></i>
+    </a>
+  
+    <a title="rss" target="_blank" href="/atom.xml">
+      <i class="iconfont icon-rss"></i>
+    </a>
+  
+</p>
 
-后台启动 MySQL
-1brew service start mysql
 
-前台启动 mysq ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/06/26/8-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%95%B4%E6%95%B0-atoi/" title="8. 字符串转换整数 (atoi)">8. 字符串转换整数 (atoi)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-06-26T05:30:31.000Z" title="发表于 2022-06-26 13:30:31">2022-06-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="content">8. 字符串转换整数 (atoi)123456789101112131415161718192021222324252627282930313233343536373839404142434445class Solution &#123;    public int myAtoi(String s) &#123;        double res = 0; // 用 long 不够        boolean flag = true;        int index = 0;        int len = s.length();        char[] chars = s.toCharArray();        // 去除前导空格        while(index &lt; len) &#123;            if (chars[index] == &#x27; &#x27;) &#123;                index++;            &#125; else &#123;                break;        ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/06/23/7-%E6%95%B4%E6%95%B0%E5%8F%8D%E8%BD%AC/" title="7. 整数反转">7. 整数反转</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-06-23T06:47:24.000Z" title="发表于 2022-06-23 14:47:24">2022-06-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="content">字符串反转12345678910111213141516171819202122class Solution &#123;    public int reverse(int x) &#123;        long ans = 0;        boolean flag = true;        StringBuilder stringBuilder = new StringBuilder();        stringBuilder.append(x);        if (stringBuilder.charAt(0) == &#x27;-&#x27;) &#123;            stringBuilder = new StringBuilder(stringBuilder.substring(1, stringBuilder.length()));            flag = false;        &#125;        stringBuilder.reverse();        ans = Long.parseLong(string ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/06/22/6-Z-%E5%AD%97%E5%BD%A2%E5%8F%98%E6%8D%A2/" title="6. Z 字形变换">6. Z 字形变换</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-06-22T05:20:21.000Z" title="发表于 2022-06-22 13:20:21">2022-06-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="content">6. Z 字形变换思路题解 1：二维数组模拟
-题解 2：
-题解 112345678910111213141516171819202122232425262728293031323334353637import java.util.ArrayList;class Solution &#123;    public String convert(String s, int numRows) &#123;        if (numRows == 0 || numRows == 1) &#123;            return s;        &#125;        StringBuilder res = new StringBuilder();        char[][] chars = new char[numRows][1000];        int j = 0, k = 0;        boolean flag = false;        for (int i = 0; i &lt; s.length(); i++) &#123;            ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/06/20/5-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2-1/" title="5. 最长回文子串">5. 最长回文子串</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-06-20T11:58:50.000Z" title="发表于 2022-06-20 19:58:50">2022-06-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="content">双循环暴力解1234567891011121314151617181920212223242526272829class Solution &#123;    public String longestPalindrome(String s) &#123;        String res = &quot;&quot;;        if (s.length() == 1 || isPalindrome(s)) &#123;            return s;        &#125;        for (int i = 0; i &lt; s.length() - 1; i++) &#123;            for (int j = i + 1; j &lt; s.length() + 1; j++) &#123;                String subString = s.substring(i, j);                if (subString.length() &gt;= res.length()) &#123;        ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/06/20/Google-%E6%90%9C%E7%B4%A2-tips/" title="Google 搜索 tips">Google 搜索 tips</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-06-20T05:19:57.000Z" title="发表于 2022-06-20 13:19:57">2022-06-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%B0%E5%BD%95/">记录</a></span></div><div class="content">
-“”：完全匹配
--：排除内容
-*：通配符或未知字词，比如一串命令中间忘记是什么，可以用 * 代替
-year1..year2：指定搜索结果的日期范围
-OR&#x2F;AND：逻辑或&#x2F;逻辑与拼接关键词
-site:+ 网址 + 关键词：站内搜索
-define: 关键字：查询关键字的定义
-
-</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/#content-inner">6</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20220326174435.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">ritsurin</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">54</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/liskarmw"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/07/10/350-%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86-II/" title="350. 两个数组的交集 II">350. 两个数组的交集 II</a><time datetime="2022-07-10T12:22:00.000Z" title="发表于 2022-07-10 20:22:00">2022-07-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/07/09/JavaWeb/" title="JavaWeb">JavaWeb</a><time datetime="2022-07-09T13:41:31.000Z" title="发表于 2022-07-09 21:41:31">2022-07-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/07/08/88-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/" title="88. 合并两个有序数组">88. 合并两个有序数组</a><time datetime="2022-07-08T14:27:54.000Z" title="发表于 2022-07-08 22:27:54">2022-07-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/07/07/53-%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C/" title="53. 最大子数组和">53. 最大子数组和</a><time datetime="2022-07-07T05:24:41.000Z" title="发表于 2022-07-07 13:24:41">2022-07-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/07/07/217-%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0/" title="217. 存在重复元素">217. 存在重复元素</a><time datetime="2022-07-07T02:39:14.000Z" title="发表于 2022-07-07 10:39:14">2022-07-07</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
-            <i class="fas fa-folder-open"></i>
-            <span>分类</span>
+      <div class="main">
+        <div>
+  <ul>
+    <!-- 遍历渲染文章 -->
+    
+    <li>
+      <h3>Jul 02, 2022</h3>
+      <h2>
+        <a href="/2022/07/02/%E4%B8%AA%E4%BA%BA-Mac-%E6%B8%85%E7%90%86/">
+          
             
-            </div>
-            <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/"><span class="card-category-list-name">学习</span><span class="card-category-list-count">7</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%AE%B0%E5%BD%95/"><span class="card-category-list-name">记录</span><span class="card-category-list-count">25</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E9%A1%B9%E7%9B%AE/"><span class="card-category-list-name">项目</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E9%A2%98%E8%A7%A3/"><span class="card-category-list-name">题解</span><span class="card-category-list-count">21</span></a></li>
-            </ul></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/07/"><span class="card-archive-list-date">七月 2022</span><span class="card-archive-list-count">12</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/06/"><span class="card-archive-list-date">六月 2022</span><span class="card-archive-list-count">14</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/05/"><span class="card-archive-list-date">五月 2022</span><span class="card-archive-list-count">10</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/04/"><span class="card-archive-list-date">四月 2022</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/03/"><span class="card-archive-list-date">三月 2022</span><span class="card-archive-list-count">12</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">54</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-07-10T14:42:30.580Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 By ritsurin</div><div class="footer_custom_text">Don't have a good day, have a great day!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+              <span>个人 Mac 清理</span>
+            
+          
+        </a>
+      </h2>
+    </li>
+    
+    <li>
+      <h3>Jul 02, 2022</h3>
+      <h2>
+        <a href="/2022/07/02/%E3%80%8AON-JAVA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+          
+            
+              <span>《ON JAVA》读书笔记</span>
+            
+          
+        </a>
+      </h2>
+    </li>
+    
+    <li>
+      <h3>Jul 01, 2022</h3>
+      <h2>
+        <a href="/2022/07/01/%E6%B1%82%E8%81%8C/">
+          
+            
+              <span>求职</span>
+            
+          
+        </a>
+      </h2>
+    </li>
+    
+    <li>
+      <h3>Jun 28, 2022</h3>
+      <h2>
+        <a href="/2022/06/28/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+          
+            
+              <span>动态规划</span>
+            
+          
+        </a>
+      </h2>
+    </li>
+    
+    <li>
+      <h3>Jun 28, 2022</h3>
+      <h2>
+        <a href="/2022/06/28/%E5%88%B7%E9%A2%98-md/">
+          
+            
+              <span>刷题</span>
+            
+          
+        </a>
+      </h2>
+    </li>
+    
+    <li>
+      <h3>Jun 28, 2022</h3>
+      <h2>
+        <a href="/2022/06/28/Homebrew-MySQL/">
+          
+            
+              <span>Homebrew MySQL</span>
+            
+          
+        </a>
+      </h2>
+    </li>
+    
+    <li>
+      <h3>Jun 26, 2022</h3>
+      <h2>
+        <a href="/2022/06/26/8-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%95%B4%E6%95%B0-atoi/">
+          
+            
+              <span>8. 字符串转换整数 (atoi)</span>
+            
+          
+        </a>
+      </h2>
+    </li>
+    
+    <li>
+      <h3>Jun 23, 2022</h3>
+      <h2>
+        <a href="/2022/06/23/7-%E6%95%B4%E6%95%B0%E5%8F%8D%E8%BD%AC/">
+          
+            
+              <span>7. 整数反转</span>
+            
+          
+        </a>
+      </h2>
+    </li>
+    
+    <li>
+      <h3>Jun 22, 2022</h3>
+      <h2>
+        <a href="/2022/06/22/6-Z-%E5%AD%97%E5%BD%A2%E5%8F%98%E6%8D%A2/">
+          
+            
+              <span>6. Z 字形变换</span>
+            
+          
+        </a>
+      </h2>
+    </li>
+    
+    <li>
+      <h3>Jun 20, 2022</h3>
+      <h2>
+        <a href="/2022/06/20/5-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2-1/">
+          
+            
+              <span>5. 最长回文子串</span>
+            
+          
+        </a>
+      </h2>
+    </li>
+    
+  </ul>
+  
+  <nav class="post-navigation">
+    
+      <a id="prev" class="index-nav" href="/">&lt;&nbsp;NEWER</a>
+    
+    
+      <a id="next" class="index-nav" href="/page/3/">OLDER&nbsp;&gt;</a>
+    
+  </nav>
+</div>
+
+        <div class="footer">
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/leedom92/hexo-theme-leedom">Copyright © Leedom 2021</a>
+        
+    </div>
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/leedom92/hexo-theme-leedom">Theme by Leedom | Powered by Hexo</a>
+        
+    </div>
+  
+</div>
+
+      </div>
+
+      <div class="back-to-top hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+      
+  <div class="search-icon" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-box">
+        <div class="search-title">
+          <!-- <span class="search-icon-input">
+            <a href="javascript: void(0)">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </span> -->
+          
+            <input type="text" class="search-input" id="search-input" placeholder="搜索...">
+          
+          <span class="search-close-icon" id="search-close-icon">
+            <a href="javascript: void(0)">
+              <i class="iconfont icon-close"></i>
+            </a>
+          </span>
+        </div>
+        <div class="search-result" id="search-result"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    // inputArea.onclick = function() {
+    //   getSearchFile()
+    //   this.onclick = null
+    // }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        inputArea.focus()
+        getSearchFile()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'><span></ul>";
+      // $resultContent.innerHTML = "<ul><span class='local-search-empty'>首次搜索，正在载入索引文件，请稍后……<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='/" + data_url + "' class='search-result-title'><h2>" + orig_data_title + "</h2></a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<h3 class=\"search-result-abstract\">" + match_content + "...</h3>"
+                }
+                str += "<hr></li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>没有找到内容，请尝试更换检索词。<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>未找到search.xml文件，具体请参考：<a href='https://github.com/leedom92/hexo-theme-leedom#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>请求失败，尝试重新刷新页面或稍后重试。<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
+    </div>
+  </body>
+</html>
