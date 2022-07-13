@@ -4,44 +4,6 @@
   
     
     <entry>
-      <title>IDEA Remote Tomcat Server</title>
-      <link href="/2022/07/11/IDEA-Remote-Tomcat-Server/"/>
-      <url>/2022/07/11/IDEA-Remote-Tomcat-Server/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> 记录 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>121. 买卖股票的最佳时机</title>
-      <link href="/2022/07/11/121-%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA/"/>
-      <url>/2022/07/11/121-%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA/</url>
-      
-        <content type="html"><![CDATA[<h4 id="贪心"><a href="#贪心" class="headerlink" title="贪心"></a>贪心</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">maxProfit</span><span class="params">(<span class="type">int</span>[] prices)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">low</span> <span class="operator">=</span> Integer.MAX_VALUE;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> value : prices) &#123;</span><br><span class="line">            low = Math.min(low,value);</span><br><span class="line">            res = Math.max(res,value - low);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h4><ol><li><p>确定 dp 数组（dp table）以及下标的含义</p><p>dp[i] ➡️ </p></li><li><p>确定递推公式</p></li><li><p>dp 数组如何初始化</p></li><li><p>确定遍历顺序</p></li><li><p>举例推导 dp 数组</p></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 题解 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>350. 两个数组的交集 II</title>
       <link href="/2022/07/10/350-%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86-II/"/>
       <url>/2022/07/10/350-%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86-II/</url>
@@ -52,25 +14,6 @@
       <categories>
           
           <category> 题解 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>JavaWeb</title>
-      <link href="/2022/07/09/JavaWeb/"/>
-      <url>/2022/07/09/JavaWeb/</url>
-      
-        <content type="html"><![CDATA[<h4 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h4><p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20220710131414.png" alt="image-20220710131414463"></p><h4 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h4><p>文件目录结构</p><ul><li>bin：可执行文件</li><li>conf：配置文件</li><li>logs：日志</li><li>webapps：项目部署</li><li>work：工作目录</li></ul><p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20220712150119.png" alt="image-20220712150119247"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 学习 </category>
           
       </categories>
       
@@ -128,25 +71,6 @@
       <categories>
           
           <category> 题解 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>MySQL 索引学习</title>
-      <link href="/2022/07/05/MySQL%20%E7%B4%A2%E5%BC%95%E5%AD%A6%E4%B9%A0/"/>
-      <url>/2022/07/05/MySQL%20%E7%B4%A2%E5%BC%95%E5%AD%A6%E4%B9%A0/</url>
-      
-        <content type="html"><![CDATA[<p>索引优点：加快查询速度</p><p>索引缺点：</p><ul><li>耗费数据库资源</li><li>占用磁盘空间</li><li>维护索引会影响 crud 的速度</li></ul><p>索引分类</p><ul><li>主键索引</li><li>单值索引</li><li>唯一索引</li><li>复合索引</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 学习 </category>
           
       </categories>
       
@@ -232,9 +156,9 @@
     
     
     <entry>
-      <title>《ON JAVA》读书笔记</title>
-      <link href="/2022/07/02/%E3%80%8AON-JAVA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-      <url>/2022/07/02/%E3%80%8AON-JAVA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
+      <title>ON JAVA 读书笔记</title>
+      <link href="/2022/07/02/ON%20JAVA%20%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <url>/2022/07/02/ON%20JAVA%20%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
       
         <content type="html"><![CDATA[<h1 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h1><h2 id="1-什么是对象"><a href="#1-什么是对象" class="headerlink" title="1. 什么是对象"></a>1. 什么是对象</h2><h3 id="1-1-抽象的历程"><a href="#1-1-抽象的历程" class="headerlink" title="1.1 抽象的历程"></a>1.1 抽象的历程</h3><h3 id="1-2-对象具有接口"><a href="#1-2-对象具有接口" class="headerlink" title="1.2 对象具有接口"></a>1.2 对象具有接口</h3><h3 id="1-3-对象可以提供服务"><a href="#1-3-对象可以提供服务" class="headerlink" title="1.3 对象可以提供服务"></a>1.3 对象可以提供服务</h3><ul><li>将对象想象成服务的提供者</li><li>一个对象只做好一件事，决不贪多</li></ul>]]></content>
       
@@ -312,7 +236,7 @@
       <link href="/2022/06/28/Homebrew-MySQL/"/>
       <url>/2022/06/28/Homebrew-MySQL/</url>
       
-        <content type="html"><![CDATA[<ul><li><p>to connet run</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot</span><br></pre></td></tr></table></figure></li><li><p>If you need to have <a href="mailto:&#109;&#121;&#115;&#113;&#108;&#64;&#x35;&#46;&#55;">&#109;&#121;&#115;&#113;&#108;&#64;&#x35;&#46;&#55;</a> first in your PATH, run:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;export PATH=&quot;/opt/homebrew/opt/mysql@5.7/bin:$PATH&quot;&#x27; &gt;&gt; ~/.zshrc</span><br></pre></td></tr></table></figure></li><li><p>For compilers to find <a href="mailto:&#x6d;&#121;&#115;&#113;&#x6c;&#64;&#x35;&#x2e;&#55;">&#x6d;&#121;&#115;&#113;&#x6c;&#64;&#x35;&#x2e;&#55;</a> you may need to set:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export LDFLAGS=&quot;-L/opt/homebrew/opt/mysql@5.7/lib&quot;</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export CPPFLAGS=&quot;-I/opt/homebrew/opt/mysql@5.7/include&quot;</span><br></pre></td></tr></table></figure></li><li><p>后台启动 MySQL</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew service start mysql</span><br></pre></td></tr></table></figure><p>前台启动 mysql (关闭控制台，服务停止)</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql.server start</span><br></pre></td></tr></table></figure><p>To restart <a href="mailto:&#x6d;&#x79;&#115;&#x71;&#x6c;&#64;&#x35;&#x2e;&#55;">&#x6d;&#x79;&#115;&#x71;&#x6c;&#64;&#x35;&#x2e;&#55;</a> after an upgrade:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services restart mysql@5.7</span><br></pre></td></tr></table></figure></li><li><p>if you don’t want&#x2F;need a background service you can just run:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/homebrew/opt/mysql@5.7/bin/mysqld_safe --datadir=/opt/homebrew/var/mysql</span><br></pre></td></tr></table></figure></li><li><p>连接 MySQL</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure></li><li><p>查看 MySQL 的端口号</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">show</span> <span class="keyword">global</span> variables <span class="keyword">like</span> <span class="string">&#x27;port&#x27;</span>;</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+        <content type="html"><![CDATA[<ul><li><p>to connet run</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot</span><br></pre></td></tr></table></figure></li><li><p>If you need to have <a href="mailto:&#x6d;&#121;&#115;&#x71;&#108;&#x40;&#53;&#46;&#55;">&#x6d;&#121;&#115;&#x71;&#108;&#x40;&#53;&#46;&#55;</a> first in your PATH, run:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;export PATH=&quot;/opt/homebrew/opt/mysql@5.7/bin:$PATH&quot;&#x27; &gt;&gt; ~/.zshrc</span><br></pre></td></tr></table></figure></li><li><p>For compilers to find <a href="mailto:&#109;&#121;&#x73;&#x71;&#108;&#64;&#x35;&#46;&#55;">&#109;&#121;&#x73;&#x71;&#108;&#64;&#x35;&#46;&#55;</a> you may need to set:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export LDFLAGS=&quot;-L/opt/homebrew/opt/mysql@5.7/lib&quot;</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export CPPFLAGS=&quot;-I/opt/homebrew/opt/mysql@5.7/include&quot;</span><br></pre></td></tr></table></figure></li><li><p>后台启动 MySQL</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew service start mysql</span><br></pre></td></tr></table></figure><p>前台启动 mysql (关闭控制台，服务停止)</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql.server start</span><br></pre></td></tr></table></figure><p>To restart <a href="mailto:&#109;&#x79;&#x73;&#113;&#108;&#x40;&#x35;&#x2e;&#x37;">&#109;&#x79;&#x73;&#113;&#108;&#x40;&#x35;&#x2e;&#x37;</a> after an upgrade:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services restart mysql@5.7</span><br></pre></td></tr></table></figure></li><li><p>if you don’t want&#x2F;need a background service you can just run:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/homebrew/opt/mysql@5.7/bin/mysqld_safe --datadir=/opt/homebrew/var/mysql</span><br></pre></td></tr></table></figure></li><li><p>连接 MySQL</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure></li><li><p>查看 MySQL 的端口号</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">show</span> <span class="keyword">global</span> variables <span class="keyword">like</span> <span class="string">&#x27;port&#x27;</span>;</span><br></pre></td></tr></table></figure></li></ul>]]></content>
       
       
       <categories>
