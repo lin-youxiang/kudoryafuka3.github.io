@@ -189,6 +189,59 @@
 <li>正向代理：替客户端向服务器发送请求</li>
 <li>反向代理：替服务接受请求</li>
 </ul>
+<hr>
+<h3 id="2022-年-7-月-30-日"><a href="#2022-年-7-月-30-日" class="headerlink" title="2022 年 7 月 30 日"></a>2022 年 7 月 30 日</h3><h4 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h4><ul>
+<li><p>mapper（dao）：访问数据库，进行 <code>crud</code></p>
+</li>
+<li><p>controller：接收前端页面传递过来的请求，调用 service 层的方法</p>
+</li>
+<li><p>service：调用数据层，进行业务逻辑的编写，比如&#x3D;&#x3D;登录&#x3D;&#x3D;、&#x3D;&#x3D;注册&#x3D;&#x3D;</p>
+</li>
+<li><p>model：数据库中的字段 ➡️ Java 类</p>
+</li>
+<li><p>utils：存放工具类</p>
+</li>
+<li><p>在 SpringBoot 的引导类中</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@MapperScan(&quot;com.example.mapper&quot;)</span></span><br></pre></td></tr></table></figure>
+
+<p>可以将该 mapper 包下的所有接口所动态生成的代理类，交给 IOC 容器来管理</p>
+<p>IOC 中只能存放类的 bean，不能存放接口的 bean</p>
+</li>
+<li><p>Wrapper：MyBatis-Plus 的条件构造器</p>
+</li>
+<li><p>输出 List 集合</p>
+<p><code>list.forEach(System.out::println);</code></p>
+</li>
+<li><p><code>@TableName(&quot;表名&quot;)</code></p>
+<p>MyBatis 访问的表名</p>
+</li>
+<li><p>设置访问表名的前缀</p>
+<p>配置文件中：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">mybatis-plus:</span> </span><br><span class="line">  <span class="attr">global-config:</span> </span><br><span class="line">    <span class="attr">db-config:</span></span><br><span class="line">      <span class="attr">table-prefix:</span> <span class="string">&quot;xx&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>@TableId</code>：指定某个字段为主键</p>
+</li>
+<li><p><code>@TableField(&quot;列名&quot;)</code>：指定属性所对应表中的字段名</p>
+</li>
+<li><p><code>@TableLogic</code>：逻辑删除</p>
+</li>
+<li><p>Wrapper</p>
+</li>
+</ul>
+<h4 id="用户的注册逻辑"><a href="#用户的注册逻辑" class="headerlink" title="用户的注册逻辑"></a>用户的注册逻辑</h4><ul>
+<li>用户在前端输入账户和密码、以及校验码</li>
+<li>校验用户的账户、密码、校验密码，是否符合要求<ul>
+<li>非空</li>
+<li>账户长度 不小于 4位</li>
+<li>密码就 不小于 8位</li>
+<li>账户不能重复</li>
+<li>账户不包含特殊字符</li>
+<li>密码和校验密码相同</li>
+</ul>
+</li>
+<li>对密码进行加密（密码千万不要直接以明文存储到数据库中）</li>
+<li>向数据库插入用戶数据</li>
+</ul>
 
   </div>
   
