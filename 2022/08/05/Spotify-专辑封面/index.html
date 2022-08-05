@@ -11,7 +11,7 @@
   
   <title>
     
-      Homebrew MySQL 
+      Spotify 专辑封面 
       
       
     
@@ -91,51 +91,28 @@
 
 <div class="post">
   <h3 class="date">
-    Jun 28, 2022
+    Aug 05, 2022
   </h3>
   <h1>
-    Homebrew MySQL
+    Spotify 专辑封面
   </h1>
   <div class="content markdown-body">
-    <ul>
-<li><p>to connet run</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot</span><br></pre></td></tr></table></figure>
+    <ol>
+<li><p>复制<code>歌曲链接</code></p>
 </li>
-<li><p>If you need to have <a href="mailto:&#109;&#x79;&#x73;&#113;&#108;&#64;&#x35;&#x2e;&#55;">&#109;&#x79;&#x73;&#113;&#108;&#64;&#x35;&#x2e;&#55;</a> first in your PATH, run:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;export PATH=&quot;/opt/homebrew/opt/mysql@5.7/bin:$PATH&quot;&#x27; &gt;&gt; ~/.zshrc</span><br></pre></td></tr></table></figure>
+<li><p><a target="_blank" rel="noopener" href="https://open.spotify.com/oembed?url=%60%E6%AD%8C%E6%9B%B2%E9%93%BE%E6%8E%A5%60">https://open.spotify.com/oembed?url=`歌曲链接`</a></p>
 </li>
-<li><p>For compilers to find <a href="mailto:&#x6d;&#121;&#115;&#x71;&#108;&#64;&#x35;&#46;&#x37;">&#x6d;&#121;&#115;&#x71;&#108;&#64;&#x35;&#46;&#x37;</a> you may need to set:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export LDFLAGS=&quot;-L/opt/homebrew/opt/mysql@5.7/lib&quot;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export CPPFLAGS=&quot;-I/opt/homebrew/opt/mysql@5.7/include&quot;</span><br></pre></td></tr></table></figure>
+<li><p>“thumbnail_url”:”封面的地址”</p>
+<p>打不开就换换节点</p>
 </li>
-<li><p>后台启动 MySQL</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew service start mysql</span><br></pre></td></tr></table></figure>
-
-<p>前台启动 mysql (关闭控制台，服务停止)</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql.server start</span><br></pre></td></tr></table></figure>
-
-<p>To restart <a href="mailto:&#x6d;&#121;&#x73;&#x71;&#108;&#64;&#53;&#46;&#x37;">&#x6d;&#121;&#x73;&#x71;&#108;&#64;&#53;&#46;&#x37;</a> after an upgrade:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services restart mysql@5.7</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>if you don’t want&#x2F;need a background service you can just run:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/homebrew/opt/mysql@5.7/bin/mysqld_safe --datadir=/opt/homebrew/var/mysql</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>连接 MySQL</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看 MySQL 的端口号</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">show</span> <span class="keyword">global</span> variables <span class="keyword">like</span> <span class="string">&#x27;port&#x27;</span>;</span><br></pre></td></tr></table></figure></li>
-</ul>
+</ol>
 
   </div>
   
     
-      <a id="older" class="blog-nav" href="/2022/06/26/8-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%95%B4%E6%95%B0-atoi/">OLDER&nbsp;&gt;</a>
+      <a id="older" class="blog-nav" href="/2022/08/04/1403-%E9%9D%9E%E9%80%92%E5%A2%9E%E9%A1%BA%E5%BA%8F%E7%9A%84%E6%9C%80%E5%B0%8F%E5%AD%90%E5%BA%8F%E5%88%97/">OLDER&nbsp;&gt;</a>
       
         
-          <a id="newer" class="blog-nav" href="/2022/06/28/%E5%88%B7%E9%A2%98-md/">&lt;&nbsp;NEWER</a>
-          
             
 </div>
         <div class="footer">
