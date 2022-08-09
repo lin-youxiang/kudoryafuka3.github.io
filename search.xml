@@ -4,6 +4,82 @@
   
     
     <entry>
+      <title>1413. 逐步求和得到正数的最小值</title>
+      <link href="/2022/08/09/1413-%E9%80%90%E6%AD%A5%E6%B1%82%E5%92%8C%E5%BE%97%E5%88%B0%E6%AD%A3%E6%95%B0%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BC/"/>
+      <url>/2022/08/09/1413-%E9%80%90%E6%AD%A5%E6%B1%82%E5%92%8C%E5%BE%97%E5%88%B0%E6%AD%A3%E6%95%B0%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BC/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1413-逐步求和得到正数的最小值"><a href="#1413-逐步求和得到正数的最小值" class="headerlink" title="1413. 逐步求和得到正数的最小值"></a><a href="https://leetcode.cn/problems/minimum-value-to-get-positive-step-by-step-sum/">1413. 逐步求和得到正数的最小值</a></h3><ul><li>假设 <code>startValue = 0</code>，先进行一轮求和</li><li>将每次求和结果存入 <code>sums</code> 数组中</li><li>遍历 <code>sums</code> 数组找到数组中最小的数</li><li>若<code>最小值</code>为负数，则<code>取反+1</code></li><li>若<code>最小值</code>为正数，直接返回 <code>1</code></li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">minStartValue</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> Integer.MAX_VALUE;</span><br><span class="line">        <span class="type">int</span>[] sums = <span class="keyword">new</span> <span class="title class_">int</span>[nums.length];</span><br><span class="line">        <span class="type">int</span> <span class="variable">startValue</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">            sums[i] = startValue + nums[i];</span><br><span class="line">            startValue = sums[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; sums.length; i++) &#123;</span><br><span class="line">            res = Math.min(res, sums[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res &gt;= <span class="number">1</span> ? <span class="number">1</span> : Math.abs(res) + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 题解 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Git 学习</title>
+      <link href="/2022/08/09/Git-%E5%AD%A6%E4%B9%A0/"/>
+      <url>/2022/08/09/Git-%E5%AD%A6%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-Git-配置"><a href="#1-Git-配置" class="headerlink" title="1. Git 配置"></a>1. Git 配置</h3><h4 id="1-1-Git-换行符配置"><a href="#1-1-Git-换行符配置" class="headerlink" title="1.1 Git 换行符配置"></a>1.1 Git 换行符配置</h4><blockquote><p>Windows 用回车和换行结束一行 CRLF</p><p>MacOS 和 Linux 只食用换行一个字符 LF</p></blockquote><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">在提交时，自动将 CRLF 转成 LF，在签出时自动将 LF 转成 CRLF</span></span><br><span class="line">git config --global core.autocrlf true</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">在提交时，自动将 CRLF 转成 LF，在签出时不转换</span></span><br><span class="line">git config --global core.autocrlf input</span><br><span class="line"></span><br></pre></td></tr></table></figure><h4 id="1-2-文本编码配置"><a href="#1-2-文本编码配置" class="headerlink" title="1.2 文本编码配置"></a>1.2 文本编码配置</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">显示 status 编码</span></span><br><span class="line">git config --global core.quotepath false   </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">图形界面编码</span></span><br><span class="line">git config --global gui.encoding utf-8      </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">提交信息编码</span></span><br><span class="line">git config --global i18n.commit.encoding utf-8</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">输出 <span class="built_in">log</span> 编码</span></span><br><span class="line">git config --global i18n.logoutputencoding utf-8 </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">因为 git <span class="built_in">log</span> 默认使用 less 分页，所以需要 bash 对 less 命令进行 utf-8 编码</span></span><br><span class="line">export LESSCHARSET=utf-8</span><br></pre></td></tr></table></figure><h4 id="1-3-SSH-配置"><a href="#1-3-SSH-配置" class="headerlink" title="1.3 SSH 配置"></a>1.3 SSH 配置</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">生成公钥</span></span><br><span class="line">ssh-keygen -t rsa -C [邮箱]</span><br></pre></td></tr></table></figure><p>​    之后将生成的公钥文件添加到对应的网站中</p><h3 id="2-Git-基本命令"><a href="#2-Git-基本命令" class="headerlink" title="2. Git 基本命令"></a>2. Git 基本命令</h3><h4 id="2-1"><a href="#2-1" class="headerlink" title="2.1"></a>2.1</h4>]]></content>
+      
+      
+      <categories>
+          
+          <category> 记录 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Mac 终端指令</title>
+      <link href="/2022/08/08/Mac-%E7%BB%88%E7%AB%AF%E6%8C%87%E4%BB%A4/"/>
+      <url>/2022/08/08/Mac-%E7%BB%88%E7%AB%AF%E6%8C%87%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<ul><li><p><code>whoami</code></p><p>显示当前的用户昵称</p></li><li><p><code>sudo -i</code></p><p>进入临时 root 权限</p></li><li><p><code>sudo spctl --master-disable</code></p><p>允许安装任何来源的软件</p></li><li><p><code>rm [拖入文件] 或 sudo rm [拖入文件]</code></p><p>删除顽固文件</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 记录 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>1408. 数组中的字符串匹配</title>
+      <link href="/2022/08/06/1408-%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D/"/>
+      <url>/2022/08/06/1408-%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1408-数组中的字符串匹配"><a href="#1408-数组中的字符串匹配" class="headerlink" title="1408. 数组中的字符串匹配"></a><a href="https://leetcode.cn/problems/string-matching-in-an-array/">1408. 数组中的字符串匹配</a></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;String&gt; <span class="title function_">stringMatching</span><span class="params">(String[] words)</span> &#123;</span><br><span class="line">        List&lt;String&gt; strs = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; words.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; words.length ; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span>(words[j].contains(words[i]) &amp;&amp; j != i) &#123;</span><br><span class="line">                    strs.add(words[i]);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> strs;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 题解 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>623. 在二叉树中增加一行</title>
       <link href="/2022/08/05/623-%E5%9C%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%A2%9E%E5%8A%A0%E4%B8%80%E8%A1%8C/"/>
       <url>/2022/08/05/623-%E5%9C%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%A2%9E%E5%8A%A0%E4%B8%80%E8%A1%8C/</url>
@@ -388,7 +464,7 @@
       <link href="/2022/06/28/Homebrew-MySQL/"/>
       <url>/2022/06/28/Homebrew-MySQL/</url>
       
-        <content type="html"><![CDATA[<ul><li><p>to connet run</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot</span><br></pre></td></tr></table></figure></li><li><p>If you need to have <a href="mailto:&#x6d;&#x79;&#x73;&#x71;&#108;&#x40;&#53;&#x2e;&#x37;">&#x6d;&#x79;&#x73;&#x71;&#108;&#x40;&#53;&#x2e;&#x37;</a> first in your PATH, run:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;export PATH=&quot;/opt/homebrew/opt/mysql@5.7/bin:$PATH&quot;&#x27; &gt;&gt; ~/.zshrc</span><br></pre></td></tr></table></figure></li><li><p>For compilers to find <a href="mailto:&#109;&#121;&#115;&#x71;&#x6c;&#64;&#53;&#x2e;&#55;">&#109;&#121;&#115;&#x71;&#x6c;&#64;&#53;&#x2e;&#55;</a> you may need to set:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export LDFLAGS=&quot;-L/opt/homebrew/opt/mysql@5.7/lib&quot;</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export CPPFLAGS=&quot;-I/opt/homebrew/opt/mysql@5.7/include&quot;</span><br></pre></td></tr></table></figure></li><li><p>后台启动 MySQL</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew service start mysql</span><br></pre></td></tr></table></figure><p>前台启动 mysql (关闭控制台，服务停止)</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql.server start</span><br></pre></td></tr></table></figure><p>To restart <a href="mailto:&#109;&#121;&#x73;&#x71;&#x6c;&#x40;&#53;&#46;&#55;">&#109;&#121;&#x73;&#x71;&#x6c;&#x40;&#53;&#46;&#55;</a> after an upgrade:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services restart mysql@5.7</span><br></pre></td></tr></table></figure></li><li><p>if you don’t want&#x2F;need a background service you can just run:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/homebrew/opt/mysql@5.7/bin/mysqld_safe --datadir=/opt/homebrew/var/mysql</span><br></pre></td></tr></table></figure></li><li><p>连接 MySQL</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure></li><li><p>查看 MySQL 的端口号</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">show</span> <span class="keyword">global</span> variables <span class="keyword">like</span> <span class="string">&#x27;port&#x27;</span>;</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+        <content type="html"><![CDATA[<ul><li><p>to connet run</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot</span><br></pre></td></tr></table></figure></li><li><p>If you need to have <a href="mailto:&#x6d;&#121;&#115;&#x71;&#x6c;&#64;&#x35;&#46;&#x37;">&#x6d;&#121;&#115;&#x71;&#x6c;&#64;&#x35;&#46;&#x37;</a> first in your PATH, run:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;export PATH=&quot;/opt/homebrew/opt/mysql@5.7/bin:$PATH&quot;&#x27; &gt;&gt; ~/.zshrc</span><br></pre></td></tr></table></figure></li><li><p>For compilers to find <a href="mailto:&#x6d;&#x79;&#115;&#113;&#x6c;&#x40;&#x35;&#x2e;&#x37;">&#x6d;&#x79;&#115;&#113;&#x6c;&#x40;&#x35;&#x2e;&#x37;</a> you may need to set:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export LDFLAGS=&quot;-L/opt/homebrew/opt/mysql@5.7/lib&quot;</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export CPPFLAGS=&quot;-I/opt/homebrew/opt/mysql@5.7/include&quot;</span><br></pre></td></tr></table></figure></li><li><p>后台启动 MySQL</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew service start mysql</span><br></pre></td></tr></table></figure><p>前台启动 mysql (关闭控制台，服务停止)</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql.server start</span><br></pre></td></tr></table></figure><p>To restart <a href="mailto:&#x6d;&#121;&#x73;&#113;&#108;&#x40;&#x35;&#46;&#x37;">&#x6d;&#121;&#x73;&#113;&#108;&#x40;&#x35;&#46;&#x37;</a> after an upgrade:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services restart mysql@5.7</span><br></pre></td></tr></table></figure></li><li><p>if you don’t want&#x2F;need a background service you can just run:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/homebrew/opt/mysql@5.7/bin/mysqld_safe --datadir=/opt/homebrew/var/mysql</span><br></pre></td></tr></table></figure></li><li><p>连接 MySQL</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure></li><li><p>查看 MySQL 的端口号</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">show</span> <span class="keyword">global</span> variables <span class="keyword">like</span> <span class="string">&#x27;port&#x27;</span>;</span><br></pre></td></tr></table></figure></li></ul>]]></content>
       
       
       <categories>

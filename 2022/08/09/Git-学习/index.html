@@ -8,12 +8,12 @@
   <meta name="author" content="ritsurin" />
   <meta name="description" content="" />
   
-    <meta name="robots" content="noindex" />
-  
   
   <title>
     
-      记录
+      Git 学习 
+      
+      
     
   </title>
 
@@ -33,10 +33,10 @@
 
 
   
-    
-<link rel="stylesheet" href="/css/index.css">
 
   
+    
+<link rel="stylesheet" href="/css/post.css">
 
   
 
@@ -74,152 +74,51 @@
 
 
       <div class="main">
-        <div>
-  <ul>
-    <!-- 遍历渲染文章 -->
-    
-    <li>
-      <h3>May 07, 2022</h3>
-      <h2>
-        <a href="/2022/05/07/15-%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/">
-          
-            
-              <span>15. 三数之和</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>May 06, 2022</h3>
-      <h2>
-        <a href="/2022/05/06/13-%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E8%BD%AC%E6%95%B4%E6%95%B0/">
-          
-            
-              <span>13. 罗马数字转整数</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>May 05, 2022</h3>
-      <h2>
-        <a href="/2022/05/05/12-%E6%95%B4%E6%95%B0%E8%BD%AC%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97/">
-          
-            
-              <span>12. 整数转罗马数字</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>May 04, 2022</h3>
-      <h2>
-        <a href="/2022/05/04/11-%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/">
-          
-            
-              <span>11. 盛最多水的容器</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>May 03, 2022</h3>
-      <h2>
-        <a href="/2022/05/03/zshrc-%E5%A4%87%E4%BB%BD/">
-          
-            
-              <span>zshrc 备份</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>May 02, 2022</h3>
-      <h2>
-        <a href="/2022/05/02/5-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/">
-          
-            
-              <span>5. 最长回文子串</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Apr 30, 2022</h3>
-      <h2>
-        <a href="/2022/04/30/3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/">
-          
-            
-              <span>3. 无重复字符的最长子串</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Apr 26, 2022</h3>
-      <h2>
-        <a href="/2022/04/26/macOS-%E8%87%AA%E5%AE%9A%E4%B9%89-Typora-%E5%BF%AB%E6%8D%B7%E9%94%AE/">
-          
-            
-              <span>macOS 自定义 Typora 快捷键</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Apr 26, 2022</h3>
-      <h2>
-        <a href="/2022/04/26/%E5%9C%A8%E7%BB%88%E7%AB%AF%E7%94%A8-Typora-%E6%89%93%E5%BC%80-markdown-%E6%96%87%E4%BB%B6/">
-          
-            
-              <span>在终端用 Typora 打开 markdown 文件</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Apr 26, 2022</h3>
-      <h2>
-        <a href="/2022/04/26/macOS-%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%E5%A4%B9/">
-          
-            
-              <span>macOS 隐藏文件夹</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-  </ul>
-  
-  <nav class="post-navigation">
-    
-      <a id="prev" class="index-nav" href="/page/4/">&lt;&nbsp;NEWER</a>
-    
-    
-      <a id="next" class="index-nav" href="/page/6/">OLDER&nbsp;&gt;</a>
-    
-  </nav>
-</div>
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+
+<div class="post">
+  <h3 class="date">
+    Aug 09, 2022
+  </h3>
+  <h1>
+    Git 学习
+  </h1>
+  <div class="content markdown-body">
+    <h3 id="1-Git-配置"><a href="#1-Git-配置" class="headerlink" title="1. Git 配置"></a>1. Git 配置</h3><h4 id="1-1-Git-换行符配置"><a href="#1-1-Git-换行符配置" class="headerlink" title="1.1 Git 换行符配置"></a>1.1 Git 换行符配置</h4><blockquote>
+<p>Windows 用回车和换行结束一行 CRLF</p>
+<p>MacOS 和 Linux 只食用换行一个字符 LF</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">在提交时，自动将 CRLF 转成 LF，在签出时自动将 LF 转成 CRLF</span></span><br><span class="line">git config --global core.autocrlf true</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">在提交时，自动将 CRLF 转成 LF，在签出时不转换</span></span><br><span class="line">git config --global core.autocrlf input</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="1-2-文本编码配置"><a href="#1-2-文本编码配置" class="headerlink" title="1.2 文本编码配置"></a>1.2 文本编码配置</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">显示 status 编码</span></span><br><span class="line">git config --global core.quotepath false   </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">图形界面编码</span></span><br><span class="line">git config --global gui.encoding utf-8      </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">提交信息编码</span></span><br><span class="line">git config --global i18n.commit.encoding utf-8</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">输出 <span class="built_in">log</span> 编码</span></span><br><span class="line">git config --global i18n.logoutputencoding utf-8 </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">因为 git <span class="built_in">log</span> 默认使用 less 分页，所以需要 bash 对 less 命令进行 utf-8 编码</span></span><br><span class="line">export LESSCHARSET=utf-8</span><br></pre></td></tr></table></figure>
+
+<h4 id="1-3-SSH-配置"><a href="#1-3-SSH-配置" class="headerlink" title="1.3 SSH 配置"></a>1.3 SSH 配置</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">生成公钥</span></span><br><span class="line">ssh-keygen -t rsa -C [邮箱]</span><br></pre></td></tr></table></figure>
+
+<p>​    之后将生成的公钥文件添加到对应的网站中</p>
+<h3 id="2-Git-基本命令"><a href="#2-Git-基本命令" class="headerlink" title="2. Git 基本命令"></a>2. Git 基本命令</h3><h4 id="2-1"><a href="#2-1" class="headerlink" title="2.1"></a>2.1</h4>
+  </div>
+  
+    
+      <a id="older" class="blog-nav" href="/2022/08/08/Mac-%E7%BB%88%E7%AB%AF%E6%8C%87%E4%BB%A4/">OLDER&nbsp;&gt;</a>
+      
+        
+          <a id="newer" class="blog-nav" href="/2022/08/09/1413-%E9%80%90%E6%AD%A5%E6%B1%82%E5%92%8C%E5%BE%97%E5%88%B0%E6%AD%A3%E6%95%B0%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BC/">&lt;&nbsp;NEWER</a>
+          
+            
+</div>
         <div class="footer">
   
     <div class="footer-more">
