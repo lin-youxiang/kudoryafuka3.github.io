@@ -8,12 +8,12 @@
   <meta name="author" content="ritsurin" />
   <meta name="description" content="" />
   
-    <meta name="robots" content="noindex" />
-  
   
   <title>
     
-      记录
+      IDEA 
+      
+      
     
   </title>
 
@@ -33,10 +33,10 @@
 
 
   
-    
-<link rel="stylesheet" href="/css/index.css">
 
   
+    
+<link rel="stylesheet" href="/css/post.css">
 
   
 
@@ -74,137 +74,109 @@
 
 
       <div class="main">
-        <div>
-  <ul>
-    <!-- 遍历渲染文章 -->
-    
-    <li>
-      <h3>Mar 20, 2022</h3>
-      <h2>
-        <a href="/2022/03/20/mac-%E4%BF%AE%E6%94%B9-DNS/">
-          
-            
-              <span>mac 修改 DNS</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 20, 2022</h3>
-      <h2>
-        <a href="/2022/03/20/Failed-to-instantiate-the-default-view-controller-for-UIMainStoryboardFile-Main-perhaps-the-designated-entry-point-is-not-set/">
-          
-            
-              <span>Failed to instantiate the default view controller for UIMainStoryboardFile 'Main' - perhaps the designated entry point is not set?</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 19, 2022</h3>
-      <h2>
-        <a href="/2022/03/19/Xcode-%E4%BE%9D%E8%B5%96%E6%B7%BB%E5%8A%A0%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98/">
-          
-            
-              <span>Xcode 依赖添加失败问题</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 18, 2022</h3>
-      <h2>
-        <a href="/2022/03/18/Non-constant-range-argument-must-be-an-integer-literal/">
-          
-            
-              <span>Non-constant range: argument must be an integer literal</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 17, 2022</h3>
-      <h2>
-        <a href="/2022/03/17/%E5%88%A9%E7%94%A8%E8%85%BE%E8%AE%AF%E4%BA%91-COS-PicGo-Core-%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/">
-          
-            
-              <span>利用腾讯云 COS + PicGo-Core 搭建图床</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 15, 2022</h3>
-      <h2>
-        <a href="/2022/03/15/70-%E7%88%AC%E6%A5%BC%E6%A2%AF/">
-          
-            
-              <span>70. 爬楼梯</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 15, 2022</h3>
-      <h2>
-        <a href="/2022/03/15/Goland-%E6%8E%A7%E5%88%B6%E5%8F%B0%E9%9A%90%E8%97%8F%E5%A4%9A%E4%BA%8E%E7%9A%84%E4%BF%A1%E6%81%AF/">
-          
-            
-              <span>Goland 控制台隐藏多于的信息</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 15, 2022</h3>
-      <h2>
-        <a href="/2022/03/15/BFS/">
-          
-            
-              <span>BFS</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 14, 2022</h3>
-      <h2>
-        <a href="/2022/03/14/hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B9%B6%E9%83%A8%E7%BD%B2%E5%88%B0-GitHub-Page/">
-          
-            
-              <span>hexo 搭建博客并部署到 GitHub Page</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-  </ul>
-  
-  <nav class="post-navigation">
-    
-      <a id="prev" class="index-nav" href="/page/6/">&lt;&nbsp;NEWER</a>
-    
-    
-  </nav>
-</div>
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+
+<div class="post">
+  <h3 class="date">
+    Oct 01, 2022
+  </h3>
+  <h1>
+    IDEA
+  </h1>
+  <div class="content markdown-body">
+    <h4 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h4><ul>
+<li><p><code>ctrl + option + H</code> ➡️ 方法在哪里被调用</p>
+</li>
+<li><p><code>option + F7</code> ➡️ 变量在哪里被使用</p>
+</li>
+<li><p><code>ctrl + H</code> ➡️ 类的继承关系</p>
+</li>
+<li><p><code>cmd + B/U</code> ➡️ 方法实现（子类、父类）</p>
+</li>
+<li><p><code>cmd + F12</code> ➡️ 查看类中的所有方法</p>
+</li>
+<li><p><code>cmd + O</code> ➡️ 全局搜索文件</p>
+</li>
+<li><p><code>cmd + shift + F</code> ➡️ 全局搜索</p>
+</li>
+<li><p>删除当前行 ➡️ <code>cmd + backspace</code></p>
+</li>
+<li><p>复制当前行 ➡️ <code>cmd + d</code></p>
+</li>
+<li><p>自动补全 ➡️ <code>option+/</code></p>
+</li>
+<li><p>插入构造器等 ➡️ <code>cmd+n</code></p>
+</li>
+<li><p>查看类的继承关系 ➡️ <code>ctrl+h</code></p>
+</li>
+<li><p>对象创建 ➡️ <code>optipn+enter</code> 或 <code>.var</code></p>
+</li>
+<li><p>上下移动代码 ➡️ <code>cmd + shift + ⬆️/⬇️</code></p>
+</li>
+<li><p>实现接口的方法 ➡️ <code>ctrl + I</code></p>
+</li>
+<li><p>对选中的代码弹出环绕选项弹出层（try&#x2F;catch 之类） ➡️ <code>cmd + Option + T</code></p>
+</li>
+<li><p>快速生产 iterator 的 while 循环 ➡️ <code>itit</code></p>
+</li>
+<li><p>显示快捷提示 ➡️ <code>cmd + J</code></p>
+</li>
+<li><p>增强 for 循环 ➡️ <code>I</code></p>
+</li>
+<li><p>soutv ➡️ 打印变量</p>
+</li>
+<li><p>crtl + enter ➡️ </p>
+</li>
+<li><p>cmd + F12 ➡️ 查看类的所有方法</p>
+</li>
+<li><p>cmd + p ➡️ 提示方法形参列表</p>
+</li>
+<li><p>双击 shift ➡️ </p>
+</li>
+<li></li>
+<li><p>IDEA 每日 Tips ➡️ </p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20220724201933.png" alt="截屏2022-07-24 20.17.23"></p>
+<img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20220724201946.png" alt="截屏2022-07-24 20.17.55" style="zoom: 50%;" /></li>
+</ul>
+<h4 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h4><ul>
+<li><p>debug 的时候，直接点代码行数字，可以实现跳转</p>
+</li>
+<li><p>删除栈 Drop Frame，可以返回之前的步骤，而不用重新开启 debuf</p>
+</li>
+<li><p>条件断点：右键双击红色断点</p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20221001211930.png" alt="image-20221001211930349"></p>
+</li>
+<li><p>点击图中加号，可添加各种表达式，如查看某个变量的变化</p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20221001212153.png" alt="截屏2022-10-01 21.20.38"></p>
+</li>
+<li><p><code>cmd + shift + F8</code> ➡️ 查看所有断点，可以临时移除断点</p>
+</li>
+<li></li>
+</ul>
+
+  </div>
+  
+    
+      <a id="older" class="blog-nav" href="/2022/10/01/You-have-mail/">OLDER&nbsp;&gt;</a>
+      
+        
+          <a id="newer" class="blog-nav" href="/2022/10/02/Homebrew-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">&lt;&nbsp;NEWER</a>
+          
+            
+</div>
         <div class="footer">
   
     <div class="footer-more">

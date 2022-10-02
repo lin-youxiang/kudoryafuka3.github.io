@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>Homebrew 常用命令</title>
+      <link href="/2022/10/02/Homebrew-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+      <url>/2022/10/02/Homebrew-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><a href="https://formulae.brew.sh/">Homebrew Formulae</a></p></blockquote><ul><li>安装 ➡️ brew install <package></li><li>卸载 ➡️ brew uninstall <package></li><li>重装 ➡️ brew reinstall <package></li><li>检查 Homebrew 自身更新 ➡️ brew update</li><li>更新所有软件 ➡️ brew upgrade</li><li>更新指定软件 ➡️ brew upgrade <package></li><li>Homebrew 下载的软件存放路径 ➡️ brew –cache</li><li>通过 brew 安装的所有软件 ➡️ brew list</li><li>可更新的软件 ➡️ brew outdated</li><li>清理就版本的包 ➡️ brew cleanup</li><li>锁定某个不想更新的软件 ➡️ brew pin <package></li><li>取消锁定更新 ➡️ brew unpin <package></li><li></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 记录 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>IDEA</title>
+      <link href="/2022/10/01/IDEA/"/>
+      <url>/2022/10/01/IDEA/</url>
+      
+        <content type="html"><![CDATA[<h4 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h4><ul><li><p><code>ctrl + option + H</code> ➡️ 方法在哪里被调用</p></li><li><p><code>option + F7</code> ➡️ 变量在哪里被使用</p></li><li><p><code>ctrl + H</code> ➡️ 类的继承关系</p></li><li><p><code>cmd + B/U</code> ➡️ 方法实现（子类、父类）</p></li><li><p><code>cmd + F12</code> ➡️ 查看类中的所有方法</p></li><li><p><code>cmd + O</code> ➡️ 全局搜索文件</p></li><li><p><code>cmd + shift + F</code> ➡️ 全局搜索</p></li><li><p>删除当前行 ➡️ <code>cmd + backspace</code></p></li><li><p>复制当前行 ➡️ <code>cmd + d</code></p></li><li><p>自动补全 ➡️ <code>option+/</code></p></li><li><p>插入构造器等 ➡️ <code>cmd+n</code></p></li><li><p>查看类的继承关系 ➡️ <code>ctrl+h</code></p></li><li><p>对象创建 ➡️ <code>optipn+enter</code> 或 <code>.var</code></p></li><li><p>上下移动代码 ➡️ <code>cmd + shift + ⬆️/⬇️</code></p></li><li><p>实现接口的方法 ➡️ <code>ctrl + I</code></p></li><li><p>对选中的代码弹出环绕选项弹出层（try&#x2F;catch 之类） ➡️ <code>cmd + Option + T</code></p></li><li><p>快速生产 iterator 的 while 循环 ➡️ <code>itit</code></p></li><li><p>显示快捷提示 ➡️ <code>cmd + J</code></p></li><li><p>增强 for 循环 ➡️ <code>I</code></p></li><li><p>soutv ➡️ 打印变量</p></li><li><p>crtl + enter ➡️ </p></li><li><p>cmd + F12 ➡️ 查看类的所有方法</p></li><li><p>cmd + p ➡️ 提示方法形参列表</p></li><li><p>双击 shift ➡️ </p></li><li></li><li><p>IDEA 每日 Tips ➡️ </p><p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20220724201933.png" alt="截屏2022-07-24 20.17.23"></p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20220724201946.png" alt="截屏2022-07-24 20.17.55" style="zoom: 50%;" /></li></ul><h4 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h4><ul><li><p>debug 的时候，直接点代码行数字，可以实现跳转</p></li><li><p>删除栈 Drop Frame，可以返回之前的步骤，而不用重新开启 debuf</p></li><li><p>条件断点：右键双击红色断点</p><p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20221001211930.png" alt="image-20221001211930349"></p></li><li><p>点击图中加号，可添加各种表达式，如查看某个变量的变化</p><p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20221001212153.png" alt="截屏2022-10-01 21.20.38"></p></li><li><p><code>cmd + shift + F8</code> ➡️ 查看所有断点，可以临时移除断点</p></li><li></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 记录 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>You have mail.</title>
       <link href="/2022/10/01/You-have-mail/"/>
       <url>/2022/10/01/You-have-mail/</url>
@@ -521,7 +559,7 @@
       <link href="/2022/06/28/Homebrew-MySQL/"/>
       <url>/2022/06/28/Homebrew-MySQL/</url>
       
-        <content type="html"><![CDATA[<ul><li><p>to connet run</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot</span><br></pre></td></tr></table></figure></li><li><p>If you need to have <a href="mailto:&#x6d;&#x79;&#115;&#113;&#x6c;&#64;&#x35;&#46;&#55;">&#x6d;&#x79;&#115;&#113;&#x6c;&#64;&#x35;&#46;&#55;</a> first in your PATH, run:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;export PATH=&quot;/opt/homebrew/opt/mysql@5.7/bin:$PATH&quot;&#x27; &gt;&gt; ~/.zshrc</span><br></pre></td></tr></table></figure></li><li><p>For compilers to find <a href="mailto:&#x6d;&#x79;&#115;&#113;&#108;&#x40;&#53;&#x2e;&#55;">&#x6d;&#x79;&#115;&#113;&#108;&#x40;&#53;&#x2e;&#55;</a> you may need to set:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export LDFLAGS=&quot;-L/opt/homebrew/opt/mysql@5.7/lib&quot;</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export CPPFLAGS=&quot;-I/opt/homebrew/opt/mysql@5.7/include&quot;</span><br></pre></td></tr></table></figure></li><li><p>后台启动 MySQL</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew service start mysql</span><br></pre></td></tr></table></figure><p>前台启动 mysql (关闭控制台，服务停止)</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql.server start</span><br></pre></td></tr></table></figure><p>To restart <a href="mailto:&#109;&#121;&#115;&#113;&#x6c;&#x40;&#x35;&#x2e;&#x37;">&#109;&#121;&#115;&#113;&#x6c;&#x40;&#x35;&#x2e;&#x37;</a> after an upgrade:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services restart mysql@5.7</span><br></pre></td></tr></table></figure></li><li><p>if you don’t want&#x2F;need a background service you can just run:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/homebrew/opt/mysql@5.7/bin/mysqld_safe --datadir=/opt/homebrew/var/mysql</span><br></pre></td></tr></table></figure></li><li><p>连接 MySQL</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure></li><li><p>查看 MySQL 的端口号</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">show</span> <span class="keyword">global</span> variables <span class="keyword">like</span> <span class="string">&#x27;port&#x27;</span>;</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+        <content type="html"><![CDATA[<ul><li><p>to connet run</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot</span><br></pre></td></tr></table></figure></li><li><p>If you need to have <a href="mailto:&#109;&#x79;&#x73;&#x71;&#x6c;&#x40;&#x35;&#46;&#x37;">&#109;&#x79;&#x73;&#x71;&#x6c;&#x40;&#x35;&#46;&#x37;</a> first in your PATH, run:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;export PATH=&quot;/opt/homebrew/opt/mysql@5.7/bin:$PATH&quot;&#x27; &gt;&gt; ~/.zshrc</span><br></pre></td></tr></table></figure></li><li><p>For compilers to find <a href="mailto:&#x6d;&#121;&#x73;&#x71;&#108;&#x40;&#53;&#46;&#55;">&#x6d;&#121;&#x73;&#x71;&#108;&#x40;&#53;&#46;&#55;</a> you may need to set:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export LDFLAGS=&quot;-L/opt/homebrew/opt/mysql@5.7/lib&quot;</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export CPPFLAGS=&quot;-I/opt/homebrew/opt/mysql@5.7/include&quot;</span><br></pre></td></tr></table></figure></li><li><p>后台启动 MySQL</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew service start mysql</span><br></pre></td></tr></table></figure><p>前台启动 mysql (关闭控制台，服务停止)</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql.server start</span><br></pre></td></tr></table></figure><p>To restart <a href="mailto:&#x6d;&#121;&#x73;&#x71;&#x6c;&#64;&#53;&#46;&#55;">&#x6d;&#121;&#x73;&#x71;&#x6c;&#64;&#53;&#46;&#55;</a> after an upgrade:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services restart mysql@5.7</span><br></pre></td></tr></table></figure></li><li><p>if you don’t want&#x2F;need a background service you can just run:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/homebrew/opt/mysql@5.7/bin/mysqld_safe --datadir=/opt/homebrew/var/mysql</span><br></pre></td></tr></table></figure></li><li><p>连接 MySQL</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure></li><li><p>查看 MySQL 的端口号</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">show</span> <span class="keyword">global</span> variables <span class="keyword">like</span> <span class="string">&#x27;port&#x27;</span>;</span><br></pre></td></tr></table></figure></li></ul>]]></content>
       
       
       <categories>

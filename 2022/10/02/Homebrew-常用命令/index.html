@@ -8,12 +8,12 @@
   <meta name="author" content="ritsurin" />
   <meta name="description" content="" />
   
-    <meta name="robots" content="noindex" />
-  
   
   <title>
     
-      记录
+      Homebrew 常用命令 
+      
+      
     
   </title>
 
@@ -33,10 +33,10 @@
 
 
   
-    
-<link rel="stylesheet" href="/css/index.css">
 
   
+    
+<link rel="stylesheet" href="/css/post.css">
 
   
 
@@ -74,137 +74,56 @@
 
 
       <div class="main">
-        <div>
-  <ul>
-    <!-- 遍历渲染文章 -->
-    
-    <li>
-      <h3>Mar 20, 2022</h3>
-      <h2>
-        <a href="/2022/03/20/mac-%E4%BF%AE%E6%94%B9-DNS/">
-          
-            
-              <span>mac 修改 DNS</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 20, 2022</h3>
-      <h2>
-        <a href="/2022/03/20/Failed-to-instantiate-the-default-view-controller-for-UIMainStoryboardFile-Main-perhaps-the-designated-entry-point-is-not-set/">
-          
-            
-              <span>Failed to instantiate the default view controller for UIMainStoryboardFile 'Main' - perhaps the designated entry point is not set?</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 19, 2022</h3>
-      <h2>
-        <a href="/2022/03/19/Xcode-%E4%BE%9D%E8%B5%96%E6%B7%BB%E5%8A%A0%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98/">
-          
-            
-              <span>Xcode 依赖添加失败问题</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 18, 2022</h3>
-      <h2>
-        <a href="/2022/03/18/Non-constant-range-argument-must-be-an-integer-literal/">
-          
-            
-              <span>Non-constant range: argument must be an integer literal</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 17, 2022</h3>
-      <h2>
-        <a href="/2022/03/17/%E5%88%A9%E7%94%A8%E8%85%BE%E8%AE%AF%E4%BA%91-COS-PicGo-Core-%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/">
-          
-            
-              <span>利用腾讯云 COS + PicGo-Core 搭建图床</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 15, 2022</h3>
-      <h2>
-        <a href="/2022/03/15/70-%E7%88%AC%E6%A5%BC%E6%A2%AF/">
-          
-            
-              <span>70. 爬楼梯</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 15, 2022</h3>
-      <h2>
-        <a href="/2022/03/15/Goland-%E6%8E%A7%E5%88%B6%E5%8F%B0%E9%9A%90%E8%97%8F%E5%A4%9A%E4%BA%8E%E7%9A%84%E4%BF%A1%E6%81%AF/">
-          
-            
-              <span>Goland 控制台隐藏多于的信息</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 15, 2022</h3>
-      <h2>
-        <a href="/2022/03/15/BFS/">
-          
-            
-              <span>BFS</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 14, 2022</h3>
-      <h2>
-        <a href="/2022/03/14/hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B9%B6%E9%83%A8%E7%BD%B2%E5%88%B0-GitHub-Page/">
-          
-            
-              <span>hexo 搭建博客并部署到 GitHub Page</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-  </ul>
-  
-  <nav class="post-navigation">
-    
-      <a id="prev" class="index-nav" href="/page/6/">&lt;&nbsp;NEWER</a>
-    
-    
-  </nav>
-</div>
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+
+<div class="post">
+  <h3 class="date">
+    Oct 02, 2022
+  </h3>
+  <h1>
+    Homebrew 常用命令
+  </h1>
+  <div class="content markdown-body">
+    <blockquote>
+<p><a target="_blank" rel="noopener" href="https://formulae.brew.sh/">Homebrew Formulae</a></p>
+</blockquote>
+<ul>
+<li>安装 ➡️ brew install <package></li>
+<li>卸载 ➡️ brew uninstall <package></li>
+<li>重装 ➡️ brew reinstall <package></li>
+<li>检查 Homebrew 自身更新 ➡️ brew update</li>
+<li>更新所有软件 ➡️ brew upgrade</li>
+<li>更新指定软件 ➡️ brew upgrade <package></li>
+<li>Homebrew 下载的软件存放路径 ➡️ brew –cache</li>
+<li>通过 brew 安装的所有软件 ➡️ brew list</li>
+<li>可更新的软件 ➡️ brew outdated</li>
+<li>清理就版本的包 ➡️ brew cleanup</li>
+<li>锁定某个不想更新的软件 ➡️ brew pin <package></li>
+<li>取消锁定更新 ➡️ brew unpin <package></li>
+<li></li>
+</ul>
+
+  </div>
+  
+    
+      <a id="older" class="blog-nav" href="/2022/10/01/IDEA/">OLDER&nbsp;&gt;</a>
+      
+        
+            
+</div>
         <div class="footer">
   
     <div class="footer-more">
