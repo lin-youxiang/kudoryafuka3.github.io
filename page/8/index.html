@@ -8,12 +8,12 @@
   <meta name="author" content="ritsurin" />
   <meta name="description" content="" />
   
+    <meta name="robots" content="noindex" />
+  
   
   <title>
     
-      Homebrew MySQL 
-      
-      
+      记录
     
   </title>
 
@@ -33,10 +33,10 @@
 
 
   
+    
+<link rel="stylesheet" href="/css/index.css">
 
   
-    
-<link rel="stylesheet" href="/css/post.css">
 
   
 
@@ -74,70 +74,46 @@
 
 
       <div class="main">
-        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
-<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
-
-<!-- LaTex Display -->
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']]
-    }
-  };
-</script>
-
-<div class="post">
-  <h3 class="date">
-    Jun 28, 2022
-  </h3>
-  <h1>
-    Homebrew MySQL
-  </h1>
-  <div class="content markdown-body">
-    <ul>
-<li><p>to connet run</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>If you need to have <a href="mailto:&#109;&#121;&#115;&#x71;&#108;&#x40;&#x35;&#x2e;&#x37;">&#109;&#121;&#115;&#x71;&#108;&#x40;&#x35;&#x2e;&#x37;</a> first in your PATH, run:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;export PATH=&quot;/opt/homebrew/opt/mysql@5.7/bin:$PATH&quot;&#x27; &gt;&gt; ~/.zshrc</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>For compilers to find <a href="mailto:&#109;&#x79;&#115;&#113;&#108;&#x40;&#x35;&#x2e;&#x37;">&#109;&#x79;&#115;&#113;&#108;&#x40;&#x35;&#x2e;&#x37;</a> you may need to set:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export LDFLAGS=&quot;-L/opt/homebrew/opt/mysql@5.7/lib&quot;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export CPPFLAGS=&quot;-I/opt/homebrew/opt/mysql@5.7/include&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>后台启动 MySQL</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew service start mysql</span><br></pre></td></tr></table></figure>
-
-<p>前台启动 mysql (关闭控制台，服务停止)</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql.server start</span><br></pre></td></tr></table></figure>
-
-<p>To restart <a href="mailto:&#109;&#121;&#x73;&#113;&#108;&#64;&#x35;&#46;&#x37;">&#109;&#121;&#x73;&#113;&#108;&#64;&#x35;&#46;&#x37;</a> after an upgrade:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services restart mysql@5.7</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>if you don’t want&#x2F;need a background service you can just run:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/homebrew/opt/mysql@5.7/bin/mysqld_safe --datadir=/opt/homebrew/var/mysql</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>连接 MySQL</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看 MySQL 的端口号</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">show</span> <span class="keyword">global</span> variables <span class="keyword">like</span> <span class="string">&#x27;port&#x27;</span>;</span><br></pre></td></tr></table></figure></li>
-</ul>
-
-  </div>
-  
+        <div>
+  <ul>
+    <!-- 遍历渲染文章 -->
     
-      <a id="older" class="blog-nav" href="/2022/06/26/8-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%95%B4%E6%95%B0-atoi/">OLDER&nbsp;&gt;</a>
-      
-        
-          <a id="newer" class="blog-nav" href="/2022/06/28/%E5%88%B7%E9%A2%98-md/">&lt;&nbsp;NEWER</a>
+    <li>
+      <h3>Mar 15, 2022</h3>
+      <h2>
+        <a href="/2022/03/15/BFS/">
           
             
+              <span>BFS</span>
+            
+          
+        </a>
+      </h2>
+    </li>
+    
+    <li>
+      <h3>Mar 14, 2022</h3>
+      <h2>
+        <a href="/2022/03/14/hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B9%B6%E9%83%A8%E7%BD%B2%E5%88%B0-GitHub-Page/">
+          
+            
+              <span>hexo 搭建博客并部署到 GitHub Page</span>
+            
+          
+        </a>
+      </h2>
+    </li>
+    
+  </ul>
+  
+  <nav class="post-navigation">
+    
+      <a id="prev" class="index-nav" href="/page/7/">&lt;&nbsp;NEWER</a>
+    
+    
+  </nav>
 </div>
+
         <div class="footer">
   
     <div class="footer-more">
