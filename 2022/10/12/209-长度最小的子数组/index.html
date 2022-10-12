@@ -11,7 +11,7 @@
   
   <title>
     
-      83. 删除排序链表中的重复元素 
+      209. 长度最小的子数组 
       
       
     
@@ -94,21 +94,32 @@
     Oct 12, 2022
   </h3>
   <h1>
-    83. 删除排序链表中的重复元素
+    209. 长度最小的子数组
   </h1>
   <div class="content markdown-body">
-    <p>快慢指针</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode() &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> ListNode <span class="title function_">deleteDuplicates</span><span class="params">(ListNode head)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">null</span> || head.next == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">fast</span> <span class="operator">=</span> head.next;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">slow</span> <span class="operator">=</span> head;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">res</span> <span class="operator">=</span> slow;</span><br><span class="line">        <span class="keyword">while</span>(fast!=<span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span>(fast.val == slow.val) &#123;</span><br><span class="line">                slow.next = fast.next;</span><br><span class="line">                fast = fast.next;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                slow = slow.next;</span><br><span class="line">                fast = fast.next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <p>滑动窗口</p>
+<ul>
+<li><p><code>i</code> 是窗口的头，<code>j</code> 是窗口的尾</p>
+</li>
+<li><p>窗口内的值是 <code>sum</code></p>
+</li>
+<li><p>当 <code>sum &gt;= target</code> 时，循环移动起始位置 <code>i</code>，没移动一次，<code>sum</code> 减去对应的值 <code>nums[i]</code></p>
+</li>
+<li><p>为什么要用 <code>while</code></p>
+<p><code>[1,1,1,1,100], target = 100</code></p>
+<p><code>sum</code> 满足条件时，<code>i = 0</code>, <code>j = 4</code></p>
+<p>移动 <code>1</code> 次时，<code>sum = 104</code>，仍然大于 <code>100</code></p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">minSubArrayLen</span><span class="params">(<span class="type">int</span> target, <span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; nums.length; j++)&#123;</span><br><span class="line">            sum += nums[j];</span><br><span class="line">            <span class="keyword">while</span>(sum &gt;= target) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> j - i + <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span> (res == <span class="number">0</span>) &#123;</span><br><span class="line">                    res = len;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    res = res &lt; len ? res : len;</span><br><span class="line">                &#125;</span><br><span class="line">                sum -= nums[i];</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
   </div>
   
     
-      <a id="older" class="blog-nav" href="/2022/10/11/Docker-%E5%AD%A6%E4%B9%A0%EF%BC%88%E5%9F%BA%E4%BA%8E-CentOS-8-2%EF%BC%89/">OLDER&nbsp;&gt;</a>
+      <a id="older" class="blog-nav" href="/2022/10/12/83-%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0/">OLDER&nbsp;&gt;</a>
       
         
-          <a id="newer" class="blog-nav" href="/2022/10/12/209-%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/">&lt;&nbsp;NEWER</a>
-          
             
 </div>
         <div class="footer">
