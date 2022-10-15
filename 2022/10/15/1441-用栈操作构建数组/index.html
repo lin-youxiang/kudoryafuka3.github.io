@@ -8,12 +8,12 @@
   <meta name="author" content="ritsurin" />
   <meta name="description" content="" />
   
-    <meta name="robots" content="noindex" />
-  
   
   <title>
     
-      记录
+      1441. 用栈操作构建数组 
+      
+      
     
   </title>
 
@@ -33,10 +33,10 @@
 
 
   
-    
-<link rel="stylesheet" href="/css/index.css">
 
   
+    
+<link rel="stylesheet" href="/css/post.css">
 
   
 
@@ -74,152 +74,41 @@
 
 
       <div class="main">
-        <div>
-  <ul>
-    <!-- 遍历渲染文章 -->
-    
-    <li>
-      <h3>Mar 21, 2022</h3>
-      <h2>
-        <a href="/2022/03/21/centos-%E5%AE%89%E8%A3%85-tomcat/">
-          
-            
-              <span>centos 安装 tomcat</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 21, 2022</h3>
-      <h2>
-        <a href="/2022/03/21/apple-%E5%BC%80%E5%8F%91%E8%80%85%E8%B4%A6%E6%88%B7-Bundle-Identifier-%E9%97%AE%E9%A2%98/">
-          
-            
-              <span>apple 开发者账户 Bundle Identifier 问题</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 20, 2022</h3>
-      <h2>
-        <a href="/2022/03/20/mac-%E4%BF%AE%E6%94%B9-DNS/">
-          
-            
-              <span>mac 修改 DNS</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 20, 2022</h3>
-      <h2>
-        <a href="/2022/03/20/Failed-to-instantiate-the-default-view-controller-for-UIMainStoryboardFile-Main-perhaps-the-designated-entry-point-is-not-set/">
-          
-            
-              <span>Failed to instantiate the default view controller for UIMainStoryboardFile 'Main' - perhaps the designated entry point is not set?</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 19, 2022</h3>
-      <h2>
-        <a href="/2022/03/19/Xcode-%E4%BE%9D%E8%B5%96%E6%B7%BB%E5%8A%A0%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98/">
-          
-            
-              <span>Xcode 依赖添加失败问题</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 18, 2022</h3>
-      <h2>
-        <a href="/2022/03/18/Non-constant-range-argument-must-be-an-integer-literal/">
-          
-            
-              <span>Non-constant range: argument must be an integer literal</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 17, 2022</h3>
-      <h2>
-        <a href="/2022/03/17/%E5%88%A9%E7%94%A8%E8%85%BE%E8%AE%AF%E4%BA%91-COS-PicGo-Core-%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/">
-          
-            
-              <span>利用腾讯云 COS + PicGo-Core 搭建图床</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 15, 2022</h3>
-      <h2>
-        <a href="/2022/03/15/70-%E7%88%AC%E6%A5%BC%E6%A2%AF/">
-          
-            
-              <span>70. 爬楼梯</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 15, 2022</h3>
-      <h2>
-        <a href="/2022/03/15/Goland-%E6%8E%A7%E5%88%B6%E5%8F%B0%E9%9A%90%E8%97%8F%E5%A4%9A%E4%BA%8E%E7%9A%84%E4%BF%A1%E6%81%AF/">
-          
-            
-              <span>Goland 控制台隐藏多于的信息</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 15, 2022</h3>
-      <h2>
-        <a href="/2022/03/15/BFS/">
-          
-            
-              <span>BFS</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-  </ul>
-  
-  <nav class="post-navigation">
-    
-      <a id="prev" class="index-nav" href="/page/7/">&lt;&nbsp;NEWER</a>
-    
-    
-      <a id="next" class="index-nav" href="/page/9/">OLDER&nbsp;&gt;</a>
-    
-  </nav>
-</div>
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+
+<div class="post">
+  <h3 class="date">
+    Oct 15, 2022
+  </h3>
+  <h1>
+    1441. 用栈操作构建数组
+  </h1>
+  <div class="content markdown-body">
+    <p>虽然 tag 是中等题，但我觉得是简单模拟</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;String&gt; <span class="title function_">buildArray</span><span class="params">(<span class="type">int</span>[] target, <span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">push</span> <span class="operator">=</span> <span class="string">&quot;Push&quot;</span>;</span><br><span class="line">        <span class="type">String</span> <span class="variable">pop</span> <span class="operator">=</span> <span class="string">&quot;Pop&quot;</span>;</span><br><span class="line">        List&lt;String&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(count == target.length)&#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (i == target[count]) &#123;</span><br><span class="line">                res.add(push);</span><br><span class="line">                count++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                res.add(push);</span><br><span class="line">                res.add(pop);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+  </div>
+  
+    
+      <a id="older" class="blog-nav" href="/2022/10/15/940-%E4%B8%8D%E5%90%8C%E7%9A%84%E5%AD%90%E5%BA%8F%E5%88%97-II/">OLDER&nbsp;&gt;</a>
+      
+        
+            
+</div>
         <div class="footer">
   
     <div class="footer-more">
