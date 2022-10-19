@@ -8,12 +8,12 @@
   <meta name="author" content="ritsurin" />
   <meta name="description" content="" />
   
-    <meta name="robots" content="noindex" />
-  
   
   <title>
     
-      记录
+      459. 重复的子字符串 
+      
+      
     
   </title>
 
@@ -33,10 +33,10 @@
 
 
   
-    
-<link rel="stylesheet" href="/css/index.css">
 
   
+    
+<link rel="stylesheet" href="/css/post.css">
 
   
 
@@ -74,152 +74,41 @@
 
 
       <div class="main">
-        <div>
-  <ul>
-    <!-- 遍历渲染文章 -->
-    
-    <li>
-      <h3>Oct 14, 2022</h3>
-      <h2>
-        <a href="/2022/10/14/349-%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86/">
-          
-            
-              <span>349. 两个数组的交集</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Oct 13, 2022</h3>
-      <h2>
-        <a href="/2022/10/13/59-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5-II/">
-          
-            
-              <span>59. 螺旋矩阵 II</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Oct 12, 2022</h3>
-      <h2>
-        <a href="/2022/10/12/209-%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/">
-          
-            
-              <span>209. 长度最小的子数组</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Oct 12, 2022</h3>
-      <h2>
-        <a href="/2022/10/12/83-%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0/">
-          
-            
-              <span>83. 删除排序链表中的重复元素</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Oct 11, 2022</h3>
-      <h2>
-        <a href="/2022/10/11/Docker-%E5%AD%A6%E4%B9%A0%EF%BC%88%E5%9F%BA%E4%BA%8E-CentOS-8-2%EF%BC%89/">
-          
-            
-              <span>Docker 学习（基于 CentOS 8.2）</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Oct 06, 2022</h3>
-      <h2>
-        <a href="/2022/10/06/MySQL-%E6%81%A2%E5%A4%8D%E6%95%B0%E6%8D%AE%E5%BA%93/">
-          
-            
-              <span>MySQL 恢复数据库</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Oct 04, 2022</h3>
-      <h2>
-        <a href="/2022/10/04/643-%E5%AD%90%E6%95%B0%E7%BB%84%E6%9C%80%E5%A4%A7%E5%B9%B3%E5%9D%87%E6%95%B0-I/">
-          
-            
-              <span>643. 子数组最大平均数 I</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Oct 03, 2022</h3>
-      <h2>
-        <a href="/2022/10/03/LeetCode-%E5%88%B7%E9%A2%98/">
-          
-            
-              <span>LeetCode 刷题</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Oct 02, 2022</h3>
-      <h2>
-        <a href="/2022/10/02/Homebrew-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-          
-            
-              <span>Homebrew 常用命令</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Oct 01, 2022</h3>
-      <h2>
-        <a href="/2022/10/01/IDEA/">
-          
-            
-              <span>IDEA</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-  </ul>
-  
-  <nav class="post-navigation">
-    
-      <a id="prev" class="index-nav" href="/">&lt;&nbsp;NEWER</a>
-    
-    
-      <a id="next" class="index-nav" href="/page/3/">OLDER&nbsp;&gt;</a>
-    
-  </nav>
-</div>
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+
+<div class="post">
+  <h3 class="date">
+    Oct 19, 2022
+  </h3>
+  <h1>
+    459. 重复的子字符串
+  </h1>
+  <div class="content markdown-body">
+    <p>简单模拟，利用 HashSet 不重复 key 特性，当字符串长度能被 i 整除时，说明该字符串能被分成 i 份，只要保证每份一样，就表示该字符串能用同一个字串表示</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.HashSet;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">repeatedSubstringPattern</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">2</span>; i &lt;= s.length(); i++) &#123;</span><br><span class="line">            HashSet&lt;String&gt; hashSet = <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">            <span class="type">int</span> <span class="variable">start</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> s.length() / i;</span><br><span class="line">            <span class="keyword">if</span> (s.length() % i == <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; i; j++) &#123;</span><br><span class="line">                    hashSet.add(s.substring(start,start+len));</span><br><span class="line">                    start += len;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (hashSet.size() == <span class="number">1</span>) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+  </div>
+  
+    
+      <a id="older" class="blog-nav" href="/2022/10/19/1700-%E6%97%A0%E6%B3%95%E5%90%83%E5%8D%88%E9%A4%90%E7%9A%84%E5%AD%A6%E7%94%9F%E6%95%B0%E9%87%8F/">OLDER&nbsp;&gt;</a>
+      
+        
+            
+</div>
         <div class="footer">
   
     <div class="footer-more">
