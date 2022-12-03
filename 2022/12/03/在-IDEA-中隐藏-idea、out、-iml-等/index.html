@@ -8,12 +8,12 @@
   <meta name="author" content="ritsurin" />
   <meta name="description" content="" />
   
-    <meta name="robots" content="noindex" />
-  
   
   <title>
     
-      记录
+      在 IDEA 中隐藏 .idea、out、.iml 等 
+      
+      
     
   </title>
 
@@ -33,10 +33,10 @@
 
 
   
-    
-<link rel="stylesheet" href="/css/index.css">
 
   
+    
+<link rel="stylesheet" href="/css/post.css">
 
   
 
@@ -74,152 +74,47 @@
 
 
       <div class="main">
-        <div>
-  <ul>
-    <!-- 遍历渲染文章 -->
-    
-    <li>
-      <h3>Apr 26, 2022</h3>
-      <h2>
-        <a href="/2022/04/26/%E5%9C%A8%E7%BB%88%E7%AB%AF%E7%94%A8-Typora-%E6%89%93%E5%BC%80-markdown-%E6%96%87%E4%BB%B6/">
-          
-            
-              <span>在终端用 Typora 打开 markdown 文件</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Apr 26, 2022</h3>
-      <h2>
-        <a href="/2022/04/26/macOS-%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%E5%A4%B9/">
-          
-            
-              <span>macOS 隐藏文件夹</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Apr 25, 2022</h3>
-      <h2>
-        <a href="/2022/04/25/%E6%9B%B4%E6%8D%A2-Mac-%E8%BD%AF%E4%BB%B6%E5%9B%BE%E6%A0%87/">
-          
-            
-              <span>更换 Mac 软件图标</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Apr 20, 2022</h3>
-      <h2>
-        <a href="/2022/04/20/%E4%BB%93%E5%BA%93%E4%B8%8E%E6%9C%AC%E5%9C%B0%E5%86%85%E5%AE%B9%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/">
-          
-            
-              <span>仓库与本地内容不一致问题</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 31, 2022</h3>
-      <h2>
-        <a href="/2022/03/31/%E9%80%9A%E8%BF%87-Amazon-%E8%8E%B7%E5%8F%96%E5%9B%BE%E4%B9%A6%E7%9A%84%E5%B0%81%E9%9D%A2/">
-          
-            
-              <span>通过 Amazon 获取图书的封面</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 21, 2022</h3>
-      <h2>
-        <a href="/2022/03/21/centos-%E5%AE%89%E8%A3%85-tomcat/">
-          
-            
-              <span>centos 安装 tomcat</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 21, 2022</h3>
-      <h2>
-        <a href="/2022/03/21/apple-%E5%BC%80%E5%8F%91%E8%80%85%E8%B4%A6%E6%88%B7-Bundle-Identifier-%E9%97%AE%E9%A2%98/">
-          
-            
-              <span>apple 开发者账户 Bundle Identifier 问题</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 20, 2022</h3>
-      <h2>
-        <a href="/2022/03/20/mac-%E4%BF%AE%E6%94%B9-DNS/">
-          
-            
-              <span>mac 修改 DNS</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 20, 2022</h3>
-      <h2>
-        <a href="/2022/03/20/Failed-to-instantiate-the-default-view-controller-for-UIMainStoryboardFile-Main-perhaps-the-designated-entry-point-is-not-set/">
-          
-            
-              <span>Failed to instantiate the default view controller for UIMainStoryboardFile 'Main' - perhaps the designated entry point is not set?</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Mar 19, 2022</h3>
-      <h2>
-        <a href="/2022/03/19/Xcode-%E4%BE%9D%E8%B5%96%E6%B7%BB%E5%8A%A0%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98/">
-          
-            
-              <span>Xcode 依赖添加失败问题</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-  </ul>
-  
-  <nav class="post-navigation">
-    
-      <a id="prev" class="index-nav" href="/page/8/">&lt;&nbsp;NEWER</a>
-    
-    
-      <a id="next" class="index-nav" href="/page/10/">OLDER&nbsp;&gt;</a>
-    
-  </nav>
-</div>
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+
+<div class="post">
+  <h3 class="date">
+    Dec 03, 2022
+  </h3>
+  <h1>
+    在 IDEA 中隐藏 .idea、out、.iml 等
+  </h1>
+  <div class="content markdown-body">
+    <ol>
+<li><p>setting ➡️ editor ➡️ File Types</p>
+</li>
+<li><p>Ignored Files and Folders</p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20221203221452.png" alt="image-20221203221452234"></p>
+</li>
+<li><p>add filename extension</p>
+</li>
+</ol>
+
+  </div>
+  
+    
+      <a id="older" class="blog-nav" href="/2022/11/12/%E6%B6%88%E9%99%A4-pom-xml-%E7%9A%84%E8%AD%A6%E5%91%8A/">OLDER&nbsp;&gt;</a>
+      
+        
+            
+</div>
         <div class="footer">
   
     <div class="footer-more">
