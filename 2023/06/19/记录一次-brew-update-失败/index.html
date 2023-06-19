@@ -8,12 +8,12 @@
   <meta name="author" content="ritsurin" />
   <meta name="description" content="" />
   
-    <meta name="robots" content="noindex" />
-  
   
   <title>
     
-      记录
+      记录一次 brew update 失败 
+      
+      
     
   </title>
 
@@ -33,10 +33,10 @@
 
 
   
-    
-<link rel="stylesheet" href="/css/index.css">
 
   
+    
+<link rel="stylesheet" href="/css/post.css">
 
   
 
@@ -74,152 +74,53 @@
 
 
       <div class="main">
-        <div>
-  <ul>
-    <!-- 遍历渲染文章 -->
-    
-    <li>
-      <h3>Jul 01, 2022</h3>
-      <h2>
-        <a href="/2022/07/01/%E6%B1%82%E8%81%8C/">
-          
-            
-              <span>求职</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Jun 28, 2022</h3>
-      <h2>
-        <a href="/2022/06/28/%E5%88%B7%E9%A2%98-md/">
-          
-            
-              <span>刷题</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Jun 28, 2022</h3>
-      <h2>
-        <a href="/2022/06/28/Homebrew-MySQL/">
-          
-            
-              <span>Homebrew MySQL</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Jun 26, 2022</h3>
-      <h2>
-        <a href="/2022/06/26/8-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%95%B4%E6%95%B0-atoi/">
-          
-            
-              <span>8. 字符串转换整数 (atoi)</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Jun 23, 2022</h3>
-      <h2>
-        <a href="/2022/06/23/7-%E6%95%B4%E6%95%B0%E5%8F%8D%E8%BD%AC/">
-          
-            
-              <span>7. 整数反转</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Jun 22, 2022</h3>
-      <h2>
-        <a href="/2022/06/22/6-Z-%E5%AD%97%E5%BD%A2%E5%8F%98%E6%8D%A2/">
-          
-            
-              <span>6. Z 字形变换</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Jun 20, 2022</h3>
-      <h2>
-        <a href="/2022/06/20/5-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2-1/">
-          
-            
-              <span>5. 最长回文子串</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Jun 20, 2022</h3>
-      <h2>
-        <a href="/2022/06/20/Google-%E6%90%9C%E7%B4%A2-tips/">
-          
-            
-              <span>Google 搜索 tips</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Jun 20, 2022</h3>
-      <h2>
-        <a href="/2022/06/20/%E5%85%B3%E4%BA%8E%E6%97%A0%E6%B3%95-git-clone-%E9%97%AE%E9%A2%98/">
-          
-            
-              <span>关于无法 git clone 问题</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Jun 19, 2022</h3>
-      <h2>
-        <a href="/2022/06/19/3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2-1/">
-          
-            
-              <span>3. 无重复字符的最长子串</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-  </ul>
-  
-  <nav class="post-navigation">
-    
-      <a id="prev" class="index-nav" href="/page/6/">&lt;&nbsp;NEWER</a>
-    
-    
-      <a id="next" class="index-nav" href="/page/8/">OLDER&nbsp;&gt;</a>
-    
-  </nav>
-</div>
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+
+<div class="post">
+  <h3 class="date">
+    Jun 19, 2023
+  </h3>
+  <h1>
+    记录一次 brew update 失败
+  </h1>
+  <div class="content markdown-body">
+    <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brew update</span><br><span class="line">fetch-pack: unexpected disconnect while reading sideband packet</span><br><span class="line">fatal: protocol error: bad pack header</span><br></pre></td></tr></table></figure>
+
+<p>一开始以为是 DNS 问题，修改运营商默认 DNS 后无果</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew doctor</span><br></pre></td></tr></table></figure>
+
+<p>也一切正常</p>
+<p>然后一顿 Google，发现这篇文章：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/103478437">一次 homebrew 更新失败问题</a></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> <span class="string">&quot;<span class="subst">$(brew --repo)</span>&quot;</span></span><br><span class="line">git remote -v</span><br><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
+
+<p>这里 <code>git pull</code> 可以成功，然后我就继续 <code>brew update</code> 结果还是失败</p>
+<p>这时我重新运行了 <code>brew doctor</code>，和上次不一样了，这次结果如下</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Please note that these warnings are just used to <span class="built_in">help</span> the Homebrew maintainers</span><br><span class="line">with debugging <span class="keyword">if</span> you file an issue. If everything you use Homebrew <span class="keyword">for</span> is</span><br><span class="line">working fine: please don<span class="string">&#x27;t worry or file an issue; just ignore this. Thanks!</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Warning: You have an unnecessary local Cask tap.</span></span><br><span class="line"><span class="string">This can cause problems installing up-to-date casks.</span></span><br><span class="line"><span class="string">Please remove it by running:</span></span><br><span class="line"><span class="string">  brew untap homebrew/cask</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Warning: You have an unnecessary local Core tap!</span></span><br><span class="line"><span class="string">This can cause problems installing up-to-date formulae.</span></span><br><span class="line"><span class="string">Please remove it by running:</span></span><br><span class="line"><span class="string"> brew untap homebrew/core</span></span><br></pre></td></tr></table></figure>
+
+<p>我就按照上述提示跑了两个命令，结果再 <code>brew update</code> 就没问题</p>
+<p>总之记录下</p>
+
+  </div>
+  
+    
+      <a id="older" class="blog-nav" href="/2023/05/07/%E8%B7%9F%E7%9D%80-labuladong-%E5%AD%A6%E7%AE%97%E6%B3%95/">OLDER&nbsp;&gt;</a>
+      
+        
+            
+</div>
         <div class="footer">
   
     <div class="footer-more">
