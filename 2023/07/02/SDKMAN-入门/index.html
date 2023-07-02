@@ -11,7 +11,7 @@
   
   <title>
     
-      Homebrew MySQL 
+      SDKMAN 入门 
       
       
     
@@ -91,51 +91,40 @@
 
 <div class="post">
   <h3 class="date">
-    Jun 28, 2022
+    Jul 02, 2023
   </h3>
   <h1>
-    Homebrew MySQL
+    SDKMAN 入门
   </h1>
   <div class="content markdown-body">
-    <ul>
-<li><p>to connet run</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot</span><br></pre></td></tr></table></figure>
+    <p>我只是拿它作为管理 JDK 版本的工具，其他玩法后续再探索吧</p>
+<ul>
+<li><p><code>sdk java list</code>：查看可安装的 JDK 版本</p>
 </li>
-<li><p>If you need to have <a href="mailto:&#109;&#121;&#x73;&#113;&#x6c;&#64;&#x35;&#46;&#x37;">&#109;&#121;&#x73;&#113;&#x6c;&#64;&#x35;&#46;&#x37;</a> first in your PATH, run:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;export PATH=&quot;/opt/homebrew/opt/mysql@5.7/bin:$PATH&quot;&#x27; &gt;&gt; ~/.zshrc</span><br></pre></td></tr></table></figure>
+<li><p><code>sdk install java &lt;version&gt;</code>：安装对应版本的 JDK</p>
 </li>
-<li><p>For compilers to find <a href="mailto:&#x6d;&#x79;&#115;&#113;&#x6c;&#64;&#53;&#x2e;&#x37;">&#x6d;&#x79;&#115;&#113;&#x6c;&#64;&#53;&#x2e;&#x37;</a> you may need to set:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export LDFLAGS=&quot;-L/opt/homebrew/opt/mysql@5.7/lib&quot;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export CPPFLAGS=&quot;-I/opt/homebrew/opt/mysql@5.7/include&quot;</span><br></pre></td></tr></table></figure>
+<li><p><code>sdk current java</code>：当前使用的 JDK 版本</p>
+<img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20230702225440.png" alt="image-20230702225440170" style="zoom:67%;" />
 </li>
-<li><p>后台启动 MySQL</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew service start mysql</span><br></pre></td></tr></table></figure>
-
-<p>前台启动 mysql (关闭控制台，服务停止)</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql.server start</span><br></pre></td></tr></table></figure>
-
-<p>To restart <a href="mailto:&#109;&#x79;&#115;&#113;&#108;&#64;&#x35;&#46;&#55;">&#109;&#x79;&#115;&#113;&#108;&#64;&#x35;&#46;&#55;</a> after an upgrade:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services restart mysql@5.7</span><br></pre></td></tr></table></figure>
+<li><p><code>sdk home java &lt;version&gt;</code>：JDK 路径</p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20230702225550.png" alt="image-20230702225550286"></p>
 </li>
-<li><p>if you don’t want&#x2F;need a background service you can just run:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/homebrew/opt/mysql@5.7/bin/mysqld_safe --datadir=/opt/homebrew/var/mysql</span><br></pre></td></tr></table></figure>
+<li><p><code>sdk use java &lt;version&gt;</code>：切换 JDK 版本</p>
 </li>
-<li><p>连接 MySQL</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
+<li><p>可能会担心这样安装的 JDK，如何确认是 ARM 还是 x86，我们可以运行这样一条命令</p>
+<p><code>file $(which javac)</code></p>
+<img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20230702230230.png" alt="image-20230702230230396" style="zoom:150%;" />
 </li>
-<li><p>查看 MySQL 的端口号</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">show</span> <span class="keyword">global</span> variables <span class="keyword">like</span> <span class="string">&#x27;port&#x27;</span>;</span><br></pre></td></tr></table></figure></li>
+<li><p>Tips：善用 Tab 补全</p>
+</li>
 </ul>
 
   </div>
   
     
-      <a id="older" class="blog-nav" href="/2022/06/26/8-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%95%B4%E6%95%B0-atoi/">OLDER&nbsp;&gt;</a>
+      <a id="older" class="blog-nav" href="/2023/07/02/%E5%85%B3%E4%BA%8E%E4%B8%80%E6%AC%A1-zsh-command-not-found-mysql-%E4%BD%93%E9%AA%8C/">OLDER&nbsp;&gt;</a>
       
         
-          <a id="newer" class="blog-nav" href="/2022/06/28/%E5%88%B7%E9%A2%98-md/">&lt;&nbsp;NEWER</a>
-          
             
 </div>
         <div class="footer">
