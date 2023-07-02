@@ -8,12 +8,12 @@
   <meta name="author" content="ritsurin" />
   <meta name="description" content="" />
   
-    <meta name="robots" content="noindex" />
-  
   
   <title>
     
-      记录
+      MyBatis 入门 
+      
+      
     
   </title>
 
@@ -33,10 +33,10 @@
 
 
   
-    
-<link rel="stylesheet" href="/css/index.css">
 
   
+    
+<link rel="stylesheet" href="/css/post.css">
 
   
 
@@ -74,152 +74,60 @@
 
 
       <div class="main">
-        <div>
-  <ul>
-    <!-- 遍历渲染文章 -->
-    
-    <li>
-      <h3>Jun 20, 2022</h3>
-      <h2>
-        <a href="/2022/06/20/%E5%85%B3%E4%BA%8E%E6%97%A0%E6%B3%95-git-clone-%E9%97%AE%E9%A2%98/">
-          
-            
-              <span>关于无法 git clone 问题</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Jun 19, 2022</h3>
-      <h2>
-        <a href="/2022/06/19/3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2-1/">
-          
-            
-              <span>3. 无重复字符的最长子串</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Jun 19, 2022</h3>
-      <h2>
-        <a href="/2022/06/19/Mac-%E5%BF%83%E5%BE%97/">
-          
-            
-              <span>Mac 心得</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Jun 19, 2022</h3>
-      <h2>
-        <a href="/2022/06/19/2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/">
-          
-            
-              <span>2. 两数相加</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Jun 17, 2022</h3>
-      <h2>
-        <a href="/2022/06/17/Mac-%E5%85%B3%E9%97%AD-IPv6/">
-          
-            
-              <span>Mac 关闭 IPv6</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Jun 13, 2022</h3>
-      <h2>
-        <a href="/2022/06/13/%E5%85%B3%E4%BA%8E-Mac-%E5%8B%BF%E6%89%B0%E6%A8%A1%E5%BC%8F%E8%8F%9C%E5%8D%95%E6%A0%8F%E6%97%B6%E9%97%B4%E5%8F%98%E8%89%B2%E9%97%AE%E9%A2%98/">
-          
-            
-              <span>关于 Mac 勿扰模式菜单栏时间变色问题</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>May 23, 2022</h3>
-      <h2>
-        <a href="/2022/05/23/%E4%B8%8D%E9%94%99%E7%9A%84%E9%A1%B9%E7%9B%AE%E9%9B%86%E5%90%88/">
-          
-            
-              <span>不错的项目集合</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>May 10, 2022</h3>
-      <h2>
-        <a href="/2022/05/10/18-%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C/">
-          
-            
-              <span>18. 四数之和</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>May 09, 2022</h3>
-      <h2>
-        <a href="/2022/05/09/17-%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88/">
-          
-            
-              <span>17. 电话号码的字母组合</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>May 08, 2022</h3>
-      <h2>
-        <a href="/2022/05/08/16-%E6%9C%80%E6%8E%A5%E8%BF%91%E7%9A%84%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/">
-          
-            
-              <span>16. 最接近的三数之和</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-  </ul>
-  
-  <nav class="post-navigation">
-    
-      <a id="prev" class="index-nav" href="/page/7/">&lt;&nbsp;NEWER</a>
-    
-    
-      <a id="next" class="index-nav" href="/page/9/">OLDER&nbsp;&gt;</a>
-    
-  </nav>
-</div>
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+
+<div class="post">
+  <h3 class="date">
+    Jul 02, 2023
+  </h3>
+  <h1>
+    MyBatis 入门
+  </h1>
+  <div class="content markdown-body">
+    <ul>
+<li>MyBatis：持久层框架，简化 JDBC 开发<ul>
+<li>JDBC 缺点<ul>
+<li>硬编码<ul>
+<li>注册驱动 </li>
+<li>SQL 语句</li>
+</ul>
+</li>
+<li>操作繁琐<ul>
+<li>手动设置参数</li>
+<li>手动封装结果集</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>MyBatis 免除了 JDBC 代码、配置、设置结果集等操作</li>
+<li></li>
+</ul>
+
+  </div>
+  
+    
+      <a id="older" class="blog-nav" href="/2023/06/19/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1-brew-update-%E5%A4%B1%E8%B4%A5/">OLDER&nbsp;&gt;</a>
+      
+        
+          <a id="newer" class="blog-nav" href="/2023/07/02/%E5%85%B3%E4%BA%8E%E4%B8%80%E6%AC%A1-zsh-command-not-found-mysql-%E4%BD%93%E9%AA%8C/">&lt;&nbsp;NEWER</a>
+          
+            
+</div>
         <div class="footer">
   
     <div class="footer-more">

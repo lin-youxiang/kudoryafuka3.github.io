@@ -8,12 +8,12 @@
   <meta name="author" content="ritsurin" />
   <meta name="description" content="" />
   
-    <meta name="robots" content="noindex" />
-  
   
   <title>
     
-      记录
+      关于一次 zsh: command not found: mysql 体验 
+      
+      
     
   </title>
 
@@ -33,10 +33,10 @@
 
 
   
-    
-<link rel="stylesheet" href="/css/index.css">
 
   
+    
+<link rel="stylesheet" href="/css/post.css">
 
   
 
@@ -74,152 +74,66 @@
 
 
       <div class="main">
-        <div>
-  <ul>
-    <!-- 遍历渲染文章 -->
-    
-    <li>
-      <h3>Jun 20, 2022</h3>
-      <h2>
-        <a href="/2022/06/20/%E5%85%B3%E4%BA%8E%E6%97%A0%E6%B3%95-git-clone-%E9%97%AE%E9%A2%98/">
-          
-            
-              <span>关于无法 git clone 问题</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Jun 19, 2022</h3>
-      <h2>
-        <a href="/2022/06/19/3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2-1/">
-          
-            
-              <span>3. 无重复字符的最长子串</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Jun 19, 2022</h3>
-      <h2>
-        <a href="/2022/06/19/Mac-%E5%BF%83%E5%BE%97/">
-          
-            
-              <span>Mac 心得</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Jun 19, 2022</h3>
-      <h2>
-        <a href="/2022/06/19/2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/">
-          
-            
-              <span>2. 两数相加</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Jun 17, 2022</h3>
-      <h2>
-        <a href="/2022/06/17/Mac-%E5%85%B3%E9%97%AD-IPv6/">
-          
-            
-              <span>Mac 关闭 IPv6</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>Jun 13, 2022</h3>
-      <h2>
-        <a href="/2022/06/13/%E5%85%B3%E4%BA%8E-Mac-%E5%8B%BF%E6%89%B0%E6%A8%A1%E5%BC%8F%E8%8F%9C%E5%8D%95%E6%A0%8F%E6%97%B6%E9%97%B4%E5%8F%98%E8%89%B2%E9%97%AE%E9%A2%98/">
-          
-            
-              <span>关于 Mac 勿扰模式菜单栏时间变色问题</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>May 23, 2022</h3>
-      <h2>
-        <a href="/2022/05/23/%E4%B8%8D%E9%94%99%E7%9A%84%E9%A1%B9%E7%9B%AE%E9%9B%86%E5%90%88/">
-          
-            
-              <span>不错的项目集合</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>May 10, 2022</h3>
-      <h2>
-        <a href="/2022/05/10/18-%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C/">
-          
-            
-              <span>18. 四数之和</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>May 09, 2022</h3>
-      <h2>
-        <a href="/2022/05/09/17-%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88/">
-          
-            
-              <span>17. 电话号码的字母组合</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-    <li>
-      <h3>May 08, 2022</h3>
-      <h2>
-        <a href="/2022/05/08/16-%E6%9C%80%E6%8E%A5%E8%BF%91%E7%9A%84%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/">
-          
-            
-              <span>16. 最接近的三数之和</span>
-            
-          
-        </a>
-      </h2>
-    </li>
-    
-  </ul>
-  
-  <nav class="post-navigation">
-    
-      <a id="prev" class="index-nav" href="/page/7/">&lt;&nbsp;NEWER</a>
-    
-    
-      <a id="next" class="index-nav" href="/page/9/">OLDER&nbsp;&gt;</a>
-    
-  </nav>
-</div>
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+
+<div class="post">
+  <h3 class="date">
+    Jul 02, 2023
+  </h3>
+  <h1>
+    关于一次 zsh: command not found: mysql 体验
+  </h1>
+  <div class="content markdown-body">
+    <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ brew list | grep mysql</span><br><span class="line">mysql@5.7</span><br></pre></td></tr></table></figure>
+
+<p>用 homebrew 安装了 <a href="mailto:&#x6d;&#x79;&#x73;&#113;&#x6c;&#x40;&#x35;&#46;&#55;">&#x6d;&#x79;&#x73;&#113;&#x6c;&#x40;&#x35;&#46;&#55;</a></p>
+<p>但是运行时缺报错 “zsh: command not found: mysql”</p>
+<p>应该是环境变量没给上，去 Google 大家给的环境变量路径我用了还是失败</p>
+<p>这时候就请出 GPT 老师了</p>
+<ol>
+<li><p>打开终端应用程序（Terminal）。</p>
+</li>
+<li><p>运行以下命令来查找 MySQL 可执行文件的路径：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew --prefix mysql@5.7</span><br></pre></td></tr></table></figure>
+
+<p>这将返回 MySQL 5.7 的安装路径，类似于 <code>/usr/local/opt/mysql@5.7</code>。</p>
+</li>
+<li><p>打开 <code>~/.zshrc</code> 或 <code>~/.bash_profile</code> 文件（取决于您使用的终端配置文件），使用文本编辑器进行编辑。例如，使用 nano 编辑器打开 <code>~/.zshrc</code> 文件：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano ~/.zshrc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在文件的末尾添加以下行（将 <code>&lt;mysql_path&gt;</code> 替换为第 2 步中返回的路径）：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=<span class="string">&quot;&lt;mysql_path&gt;/bin:<span class="variable">$PATH</span>&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>保存文件并退出编辑器。</p>
+</li>
+<li><p>在终端中执行以下命令使更改生效：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<p>或者，如果您使用的是 <code>~/.bash_profile</code> 文件，执行：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+  </div>
+  
+    
+      <a id="older" class="blog-nav" href="/2023/07/02/MyBatis-%E5%85%A5%E9%97%A8/">OLDER&nbsp;&gt;</a>
+      
+        
+            
+</div>
         <div class="footer">
   
     <div class="footer-more">
