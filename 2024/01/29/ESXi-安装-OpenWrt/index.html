@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
 <meta property="article:published_time" content="2024-01-29T15:45:04.000Z">
-<meta property="article:modified_time" content="2024-01-29T15:45:46.138Z">
+<meta property="article:modified_time" content="2024-01-29T15:54:43.004Z">
 <meta property="article:author" content="Kudoryafuka">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="http://example.com/2024/01/29/ESXi-%E5%AE%89%E8%A3%85-OpenWrt/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
@@ -52,7 +52,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2024-01-29 23:45:46'
+  postUpdate: '2024-01-29 23:54:43'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -141,8 +141,8 @@
       }
     }
     detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.1.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20220326174435.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">114</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">🌊</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">ESXi 安装 OpenWrt</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-01-29T15:45:04.000Z" title="发表于 2024-01-29 23:45:04">2024-01-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-01-29T15:45:46.138Z" title="更新于 2024-01-29 23:45:46">2024-01-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AE%B0%E5%BD%95/">记录</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="ESXi 安装 OpenWrt"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="下载-OpenWrt-镜像"><a href="#下载-OpenWrt-镜像" class="headerlink" title="下载 OpenWrt 镜像"></a>下载 OpenWrt 镜像</h2><p>这边我们选择 eSir 高大全的镜像，下载地址：<a target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1PsS3c0P7a4A4KY8plQg4Fla8ZI-PGBb1">eSir 高大全</a></p>
-<h2 id="Overlay-扩容"><a href="#Overlay-扩容" class="headerlink" title="Overlay 扩容"></a>Overlay 扩容</h2><h3 id="前情提要"><a href="#前情提要" class="headerlink" title="前情提要"></a>前情提要</h3><p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234527.png" alt="CleanShot 2024-01-27 at 23.15.44@2x"></p>
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20220326174435.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">114</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">🌊</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">ESXi 安装 OpenWrt</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-01-29T15:45:04.000Z" title="发表于 2024-01-29 23:45:04">2024-01-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-01-29T15:54:43.004Z" title="更新于 2024-01-29 23:54:43">2024-01-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AE%B0%E5%BD%95/">记录</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="ESXi 安装 OpenWrt"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="下载-OpenWrt-镜像"><a href="#下载-OpenWrt-镜像" class="headerlink" title="下载 OpenWrt 镜像"></a>下载 OpenWrt 镜像</h2><p>这边我们选择 eSir 高大全的镜像，下载地址：<a target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1PsS3c0P7a4A4KY8plQg4Fla8ZI-PGBb1">eSir 高大全</a></p>
+<h2 id="Overlay-扩容"><a href="#Overlay-扩容" class="headerlink" title="Overlay 扩容"></a>Overlay 扩容</h2><h3 id="前情提要"><a href="#前情提要" class="headerlink" title="前情提要"></a>前情提要</h3><p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240127231552.png" alt="CleanShot 2024-01-27 at 23.15.44@2x"></p>
 <p>（图片来自网络）</p>
 <p>Overlay 的大小在系统第一次启动时确定，会自动占满 Sda2 的剩余空间。所以我们要扩容 Overlay，主要就是扩容 Sda2 的分区大小。</p>
 <p>思路：在 OpenWrt 第一次启动之前，把 Sda2 分区改成我们期望的大小。</p>
@@ -155,63 +155,63 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dd</span> <span class="keyword">if</span>=/dev/zero bs=1G count=10 &gt;&gt; openwrt_expansion_overlay.img</span><br></pre></td></tr></table></figure>
 
 <p>执行结果</p>
-<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234527.png" alt="CleanShot 2024-01-28 at 01.38.23@2x"></p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128013829.png" alt="CleanShot 2024-01-28 at 01.38.23@2x"></p>
 </li>
 <li><p>查看分区情况</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parted openwrt_expansion_overlay.img</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234527.png" alt="CleanShot 2024-01-28 at 00.07.34@2x"></p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128000740.png" alt="CleanShot 2024-01-28 at 00.07.34@2x"></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234527.png" alt="CleanShot 2024-01-28 at 01.38.44@2x"></p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128013854.png" alt="CleanShot 2024-01-28 at 01.38.44@2x"></p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ok</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234527.png" alt="CleanShot 2024-01-28 at 01.39.12@2x"></p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128013917.png" alt="CleanShot 2024-01-28 at 01.39.12@2x"></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fix</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234527.png" alt="CleanShot 2024-01-28 at 01.39.30@2x"></p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128013938.png" alt="CleanShot 2024-01-28 at 01.39.30@2x"></p>
 </li>
 <li><p>扩容分区 2</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">resizepart 2 100%</span><br><span class="line">print</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234527.png" alt="CleanShot 2024-01-28 at 01.40.13@2x"></p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128014024.png" alt="CleanShot 2024-01-28 at 01.40.13@2x"></p>
 </li>
 </ol>
 <h2 id="img-镜像转换成-vdmk"><a href="#img-镜像转换成-vdmk" class="headerlink" title="img 镜像转换成 vdmk"></a>img 镜像转换成 vdmk</h2><p>下载下来的镜像无法直接用在 OpenWrt 中，需要用镜像转换工具（StarWind V2V Converter）协助。</p>
 <ol>
 <li><p>从本地加载镜像</p>
-<img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234527.png" alt="image.png" style="zoom: 33%;" />
+<img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128162143.png" alt="image.png" style="zoom: 33%;" />
 
-<img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234527.png" alt="image.png" style="zoom:33%;" />
+<img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128162140.png" alt="image.png" style="zoom:33%;" />
 </li>
 <li><p>转换后的文件存放路径，选择存放在本地。</p>
-<img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234527.png" alt="image.png" style="zoom:33%;" />
+<img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128162138.png" alt="image.png" style="zoom:33%;" />
 </li>
 <li><p>选择转换的目标格式：VMDK</p>
-<img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234527.png" alt="image.png" style="zoom:33%;" />
+<img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128162125.png" alt="image.png" style="zoom:33%;" />
 </li>
 <li><p>选择预分配模式</p>
-<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234527.png" alt="image.png"></p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128162205.png" alt="image.png"></p>
 </li>
 <li><p>选择 VMDK 镜像格式为 ESXi image</p>
-<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234527.png" alt="image.png"></p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128162235.png" alt="image.png"></p>
 </li>
 <li><p>转换成功如图</p>
-<img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234527.png" alt="image.png" style="zoom:33%;" />
+<img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128162403.png" alt="image.png" style="zoom:33%;" />
 </li>
 <li><p>转换成功后会得到两个文件</p>
-<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234527.png" alt="CleanShot 2024-01-28 at 16.24.41@2x"></p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128162447.png" alt="CleanShot 2024-01-28 at 16.24.41@2x"></p>
 </li>
 </ol>
 <h2 id="ESXi-新建虚拟机"><a href="#ESXi-新建虚拟机" class="headerlink" title="ESXi 新建虚拟机"></a>ESXi 新建虚拟机</h2><ol>
 <li><p>创建新虚拟机</p>
-<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234527.png" alt="CleanShot 2024-01-27 at 22.32.40@2x"></p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240127223243.png" alt="CleanShot 2024-01-27 at 22.32.40@2x"></p>
 </li>
 <li><p>名称和客户机操作系统</p>
-<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234528.png" alt="CleanShot 2024-01-27 at 22.33.28@2x"></p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240127223342.png" alt="CleanShot 2024-01-27 at 22.33.28@2x"></p>
 </li>
 <li><p>选择存储</p>
-<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234528.png" alt="CleanShot 2024-01-27 at 22.50.31@2x"></p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240127225040.png" alt="CleanShot 2024-01-27 at 22.50.31@2x"></p>
 </li>
 <li><p>自定义设置</p>
 <ul>
@@ -219,7 +219,7 @@
 </li>
 <li><p>内存：2GB</p>
 <p>记得勾选预留所有客户机内存（全部锁定）</p>
-<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234528.png" alt="CleanShot 2024-01-28 at 16.27.18@2x"></p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128162726.png" alt="CleanShot 2024-01-28 at 16.27.18@2x"></p>
 </li>
 <li><p>硬盘、CD&#x2F;DVD 驱动器、USB 控制器：删除</p>
 </li>
@@ -227,26 +227,26 @@
 </li>
 </ul>
 <p>总览图如下：</p>
-<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234528.png" alt="CleanShot 2024-01-28 at 16.27.03@2x"></p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128162708.png" alt="CleanShot 2024-01-28 at 16.27.03@2x"></p>
 <p>引导选项选择：BIOS</p>
-<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234528.png" alt="CleanShot 2024-01-27 at 22.59.40@2x"></p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240127230005.png" alt="CleanShot 2024-01-27 at 22.59.40@2x"></p>
 </li>
 <li><p>创建完成</p>
-<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234528.png" alt="CleanShot 2024-01-27 at 23.01.06@2x"></p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240127230114.png" alt="CleanShot 2024-01-27 at 23.01.06@2x"></p>
 </li>
 </ol>
 <h2 id="硬盘设置"><a href="#硬盘设置" class="headerlink" title="硬盘设置"></a>硬盘设置</h2><ol>
 <li><p>打开数据存储浏览器，会发现有个 OpenWrt 的文件夹</p>
-<img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234528.png" alt="CleanShot 2024-01-28 at 13.10.08@2x" style="zoom:33%;" />
+<img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128131012.png" alt="CleanShot 2024-01-28 at 13.10.08@2x" style="zoom:33%;" />
 
-<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234528.png" alt="CleanShot 2024-01-28 at 13.10.17@2x"></p>
-<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234528.png" alt="CleanShot 2024-01-28 at 15.18.37@2x"></p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128131030.png" alt="CleanShot 2024-01-28 at 13.10.17@2x"></p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128151907.png" alt="CleanShot 2024-01-28 at 15.18.37@2x"></p>
 </li>
 <li><p>上传对应的两个 vdmk 文件</p>
-<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234528.png" alt="CleanShot 2024-01-28 at 13.11.19@2x"></p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128131153.png" alt="CleanShot 2024-01-28 at 13.11.19@2x"></p>
 </li>
 <li><p>打开 ESXi 的 SSH 功能</p>
-<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234528.png" alt="CleanShot 2024-01-28 at 15.16.43@2x"></p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128151714.png" alt="CleanShot 2024-01-28 at 15.16.43@2x"></p>
 </li>
 <li><p>找一个你喜欢的工具 SSH 到 ESXi</p>
 </li>
@@ -255,17 +255,17 @@
 
 <p><code>datastore1</code> 和 <code>OpenWrt</code> 以实际路径为准。</p>
 <p>执行 <code>ls</code> 命令应该能看到刚刚上传的 vdmk 文件。</p>
-<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234528.png" alt="CleanShot 2024-01-28 at 16.48.30@2x"></p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128164841.png" alt="CleanShot 2024-01-28 at 16.48.30@2x"></p>
 </li>
 <li><p>修改磁盘大小，这里我以修改成 100G 为例。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vmkfstools -X 100G openwrt_expansion_overlay.vmdk</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234529.png" alt="CleanShot 2024-01-28 at 16.49.55@2x"></p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128164959.png" alt="CleanShot 2024-01-28 at 16.49.55@2x"></p>
 </li>
 <li><p>修改完后，编辑 OpenWrt 虚拟机，选择添加硬盘，把我们刚刚修改好的 vmdk 添加到虚拟机中。</p>
-<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234529.png" alt="CleanShot 2024-01-28 at 16.50.12@2x"></p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128165029.png" alt="CleanShot 2024-01-28 at 16.50.12@2x"></p>
 <p>选择现有硬盘。</p>
-<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234529.png" alt="CleanShot 2024-01-28 at 16.50.46@2x"></p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128165050.png" alt="CleanShot 2024-01-28 at 16.50.46@2x"></p>
 </li>
 </ol>
 <h2 id="基本设置"><a href="#基本设置" class="headerlink" title="基本设置"></a>基本设置</h2><ol>
@@ -274,10 +274,10 @@
 <li><p>修改 IP 地址</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/config/network</span><br></pre></td></tr></table></figure>
 
-<img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234529.png" alt="CleanShot 2024-01-28 at 16.53.11@2x" style="zoom:25%;" />
+<img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128165324.png" alt="CleanShot 2024-01-28 at 16.53.11@2x" style="zoom:25%;" />
 
 <p>我这里改成 <code>192.168.5.2</code>。</p>
-<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240129234529.png" alt="CleanShot 2024-01-28 at 16.53.48@2x"></p>
+<p><img src="https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240128165401.png" alt="CleanShot 2024-01-28 at 16.53.48@2x"></p>
 </li>
 <li><p>重启</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure></li>
