@@ -13,11 +13,6 @@
   
   <title>
     
-      关于一次 zsh: command not found: mysql 体验 
-      
-      
-      |
-    
      🌊
   </title>
 
@@ -161,90 +156,31 @@
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">关于一次 zsh: command not found: mysql 体验</div>
+      <div class="post-title"></div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-          2023-07-02 19:50:43
+          2024-06-26 02:09:36
         </span>
         
-              <span class="post-categories">
-                <i class="iconfont icon-bookmark" title="分类"></i>
-                
-                <span class="span--category">
-                  <a href="/categories/%E8%AE%B0%E5%BD%95/" title="记录">
-                    <b>#</b> 记录
-                  </a>
-                </span>
-                
-              </span>
-          
       </div>
       <div class="markdown-body">
-        <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ brew list | grep mysql</span><br><span class="line">mysql@5.7</span><br></pre></td></tr></table></figure>
-
-<p>用 homebrew 安装了 <a href="mailto:&#x6d;&#121;&#115;&#x71;&#x6c;&#x40;&#53;&#x2e;&#55;">&#x6d;&#121;&#115;&#x71;&#x6c;&#x40;&#53;&#x2e;&#55;</a></p>
-<p>但是运行时缺报错 “zsh: command not found: mysql”</p>
-<p>应该是环境变量没给上，去 Google 大家给的环境变量路径我用了还是失败</p>
-<p>这时候就请出 GPT 老师了</p>
-<ol>
-<li><p>打开终端应用程序（Terminal）。</p>
-</li>
-<li><p>运行以下命令来查找 MySQL 可执行文件的路径：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew --prefix mysql@5.7</span><br></pre></td></tr></table></figure>
-
-<p>这将返回 MySQL 5.7 的安装路径，类似于 <code>/usr/local/opt/mysql@5.7</code>。</p>
-</li>
-<li><p>打开 <code>~/.zshrc</code> 或 <code>~/.bash_profile</code> 文件（取决于您使用的终端配置文件），使用文本编辑器进行编辑。例如，使用 nano 编辑器打开 <code>~/.zshrc</code> 文件：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano ~/.zshrc</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在文件的末尾添加以下行（将 <code>&lt;mysql_path&gt;</code> 替换为第 2 步中返回的路径）：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=<span class="string">&quot;&lt;mysql_path&gt;/bin:<span class="variable">$PATH</span>&quot;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>保存文件并退出编辑器。</p>
-</li>
-<li><p>在终端中执行以下命令使更改生效：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
-
-<p>或者，如果您使用的是 <code>~/.bash_profile</code> 文件，执行：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure></li>
-</ol>
+        <p>​—<br>title: tags<br>date: 2024-06-25 22:32:40<br>type: “tags”<br>categories:<br>tags:<br>​—</p>
 
       </div>
       
         <div class="prev-or-next">
           <div class="post-foot-next">
             
-              <a href="/2023/07/02/MyBatis-%E5%85%A5%E9%97%A8/" target="_self">
-                <i class="iconfont icon-chevronleft"></i>
-                <span>上一页</span>
-              </a>
-            
           </div>
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-              2023-07-02 19:50:43
+              2024-06-26 02:09:36
             </span>
             
-                  <span class="post-categories">
-                    <i class="iconfont icon-bookmark" title="分类"></i>
-                    
-                    <span class="span--category">
-                      <a href="/categories/%E8%AE%B0%E5%BD%95/" title="记录">
-                        <b>#</b> 记录
-                      </a>
-                    </span>
-                    
-                  </span>
-              
           </div>
           <div class="post-foot-prev">
-            
-              <a href="/2023/07/02/SDKMAN-%E5%85%A5%E9%97%A8/" target="_self">
-                <span>下一页</span>
-                <i class="iconfont icon-chevronright"></i>
-              </a>
             
           </div>
         </div>
@@ -552,12 +488,12 @@
       </a>
       <div class="share-content hidden">
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + %E5%85%B3%E4%BA%8E%E4%B8%80%E6%AC%A1%20zsh%3A%20command%20not%20found%3A%20mysql%20%E4%BD%93%E9%AA%8C + '&url=' + http%3A%2F%2Fexample.com%2F2023%2F07%2F02%2F%25E5%2585%25B3%25E4%25BA%258E%25E4%25B8%2580%25E6%25AC%25A1-zsh-command-not-found-mysql-%25E4%25BD%2593%25E9%25AA%258C%2F + '" target="_blank" title="Twitter">
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' +  + '&url=' + http%3A%2F%2Fexample.com%2Ftags%2Findex.html + '" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         
         
-          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2023/07/02/%E5%85%B3%E4%BA%8E%E4%B8%80%E6%AC%A1-zsh-command-not-found-mysql-%E4%BD%93%E9%AA%8C/" target="_blank" title="Facebook">
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/tags/index.html" target="_blank" title="Facebook">
             <i class="iconfont icon-facebooksquare"></i>
           </a>
         
