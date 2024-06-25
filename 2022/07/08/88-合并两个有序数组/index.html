@@ -86,6 +86,10 @@
           <a href="/archives/">Archives</a>
         </li>
       
+        <li class="nav-item" data-path="/categories/">
+          <a href="/categories/">Categories</a>
+        </li>
+      
         <li class="nav-item" data-path="/tags/">
           <a href="/tags/">Tags</a>
         </li>
@@ -160,6 +164,17 @@
           2022-07-08 22:36:09
         </span>
         
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="分类"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/%E9%A2%98%E8%A7%A3/" title="题解">
+                    <b>#</b> 题解
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
       <div class="markdown-body">
         <h3 id="88-合并两个有序数组"><a href="#88-合并两个有序数组" class="headerlink" title="88. 合并两个有序数组"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/merge-sorted-array/">88. 合并两个有序数组</a></h3><h4 id="开新数组"><a href="#开新数组" class="headerlink" title="开新数组"></a>开新数组</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">merge</span><span class="params">(<span class="type">int</span>[] nums1, <span class="type">int</span> m, <span class="type">int</span>[] nums2, <span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">index1</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">index2</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span>[] res = <span class="keyword">new</span> <span class="title class_">int</span>[m + n];</span><br><span class="line">        <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (index1 &lt; m &amp;&amp; index2 &lt; n) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums1[index1] &lt;= nums2[index2]) &#123;</span><br><span class="line">                res[i++] = nums1[index1++];</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                res[i++] = nums2[index2++];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (index1 &lt; m) &#123;</span><br><span class="line">            res[i++] = nums1[index1++];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (index2 &lt; n) &#123;</span><br><span class="line">            res[i++] = nums2[index2++];</span><br><span class="line">        &#125;</span><br><span class="line">        System.arraycopy(res, <span class="number">0</span>, nums1, <span class="number">0</span>, res.length);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -187,6 +202,17 @@
               2022-07-08 22:36:09
             </span>
             
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="分类"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/%E9%A2%98%E8%A7%A3/" title="题解">
+                        <b>#</b> 题解
+                      </a>
+                    </span>
+                    
+                  </span>
+              
           </div>
           <div class="post-foot-prev">
             

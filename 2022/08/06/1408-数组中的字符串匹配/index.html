@@ -86,6 +86,10 @@
           <a href="/archives/">Archives</a>
         </li>
       
+        <li class="nav-item" data-path="/categories/">
+          <a href="/categories/">Categories</a>
+        </li>
+      
         <li class="nav-item" data-path="/tags/">
           <a href="/tags/">Tags</a>
         </li>
@@ -160,6 +164,17 @@
           2022-08-06 23:19:21
         </span>
         
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="分类"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/%E9%A2%98%E8%A7%A3/" title="题解">
+                    <b>#</b> 题解
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
       <div class="markdown-body">
         <h3 id="1408-数组中的字符串匹配"><a href="#1408-数组中的字符串匹配" class="headerlink" title="1408. 数组中的字符串匹配"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/string-matching-in-an-array/">1408. 数组中的字符串匹配</a></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;String&gt; <span class="title function_">stringMatching</span><span class="params">(String[] words)</span> &#123;</span><br><span class="line">        List&lt;String&gt; strs = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; words.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; words.length ; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span>(words[j].contains(words[i]) &amp;&amp; j != i) &#123;</span><br><span class="line">                    strs.add(words[i]);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> strs;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -182,6 +197,17 @@
               2022-08-06 23:19:21
             </span>
             
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="分类"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/%E9%A2%98%E8%A7%A3/" title="题解">
+                        <b>#</b> 题解
+                      </a>
+                    </span>
+                    
+                  </span>
+              
           </div>
           <div class="post-foot-prev">
             

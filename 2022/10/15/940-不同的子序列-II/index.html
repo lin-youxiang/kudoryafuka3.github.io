@@ -86,6 +86,10 @@
           <a href="/archives/">Archives</a>
         </li>
       
+        <li class="nav-item" data-path="/categories/">
+          <a href="/categories/">Categories</a>
+        </li>
+      
         <li class="nav-item" data-path="/tags/">
           <a href="/tags/">Tags</a>
         </li>
@@ -160,6 +164,17 @@
           2022-10-15 00:07:39
         </span>
         
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="分类"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/%E9%A2%98%E8%A7%A3/" title="题解">
+                    <b>#</b> 题解
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
       <div class="markdown-body">
         <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">distinctSubseqII</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="keyword">final</span> <span class="type">long</span> <span class="variable">MOD</span> <span class="operator">=</span> <span class="number">1000000007L</span>;</span><br><span class="line">        <span class="comment">// 第 i 个字符结尾的字符串数量</span></span><br><span class="line">        <span class="type">long</span>[] f = <span class="keyword">new</span> <span class="title class_">long</span>[s.length()];</span><br><span class="line">        <span class="comment">// 记录每个字母结尾的字符串数量，用作去重</span></span><br><span class="line">        <span class="type">long</span>[] ch = <span class="keyword">new</span> <span class="title class_">long</span>[<span class="number">26</span>];</span><br><span class="line">        <span class="type">char</span>[] chars = s.toCharArray();</span><br><span class="line">        f[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        ch[chars[<span class="number">0</span>] - <span class="string">&#x27;a&#x27;</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">            <span class="type">long</span> <span class="variable">pre</span> <span class="operator">=</span> f[i - <span class="number">1</span>] % MOD;</span><br><span class="line">            <span class="comment">// 每遇到一个新的字符，子序列数量 = 上一个字符的子序列数量 + 1</span></span><br><span class="line">            <span class="type">long</span> <span class="variable">now</span> <span class="operator">=</span> (pre + <span class="number">1</span>) % MOD;</span><br><span class="line">            <span class="type">long</span> <span class="variable">old</span> <span class="operator">=</span> ch[chars[i] - <span class="string">&#x27;a&#x27;</span>];</span><br><span class="line">            <span class="comment">// 没有重复</span></span><br><span class="line">            <span class="keyword">if</span> (old == <span class="number">0</span>) &#123;</span><br><span class="line">                f[i] = (now + pre) % MOD;</span><br><span class="line">                ch[chars[i] - <span class="string">&#x27;a&#x27;</span>] = now % MOD;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">// 存在重复，比如这次以 a 结尾，那么尝试的子序列中，就会包括之前以 a 结尾的子序列</span></span><br><span class="line">                <span class="comment">// 所以减去之前以 a 结尾生产的子序列，同时更新以 a 结尾的子序列数量</span></span><br><span class="line">                f[i] = (now + pre - old) % MOD;</span><br><span class="line">                <span class="comment">// 存在减法，可能有负数产生</span></span><br><span class="line">                <span class="comment">// 涉及到负数取余的规则</span></span><br><span class="line">                <span class="keyword">if</span>(f[i] &lt; <span class="number">0</span>) &#123;</span><br><span class="line">                    f[i] += MOD;</span><br><span class="line">                &#125;</span><br><span class="line">                ch[chars[i] - <span class="string">&#x27;a&#x27;</span>] = now % MOD;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (<span class="type">int</span>)f[s.length() - <span class="number">1</span>] % (<span class="type">int</span>)MOD;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;s</span><br></pre></td></tr></table></figure>
@@ -182,6 +197,17 @@
               2022-10-15 00:07:39
             </span>
             
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="分类"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/%E9%A2%98%E8%A7%A3/" title="题解">
+                        <b>#</b> 题解
+                      </a>
+                    </span>
+                    
+                  </span>
+              
           </div>
           <div class="post-foot-prev">
             

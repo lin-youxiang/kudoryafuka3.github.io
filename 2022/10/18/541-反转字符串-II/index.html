@@ -86,6 +86,10 @@
           <a href="/archives/">Archives</a>
         </li>
       
+        <li class="nav-item" data-path="/categories/">
+          <a href="/categories/">Categories</a>
+        </li>
+      
         <li class="nav-item" data-path="/tags/">
           <a href="/tags/">Tags</a>
         </li>
@@ -160,6 +164,17 @@
           2022-10-18 21:47:59
         </span>
         
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="分类"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/%E9%A2%98%E8%A7%A3/" title="题解">
+                    <b>#</b> 题解
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
       <div class="markdown-body">
         <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">reverseStr</span><span class="params">(String s, <span class="type">int</span> k)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (s.length() == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> s;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="variable">cnt</span> <span class="operator">=</span> s.length() / (<span class="number">2</span> * k);</span><br><span class="line">        <span class="type">StringBuilder</span> <span class="variable">stringBuilder</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">        <span class="type">int</span> <span class="variable">start</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">char</span>[] chars = s.toCharArray();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; cnt; i++) &#123;</span><br><span class="line">            <span class="type">char</span>[] subChars = Arrays.copyOfRange(chars,start,start + k);</span><br><span class="line">            stringBuilder.append(reverseSubStr(subChars));</span><br><span class="line">            stringBuilder.append(s, start+k, start+<span class="number">2</span>*k);</span><br><span class="line">            start+=<span class="number">2</span>*k;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="variable">leftChars</span> <span class="operator">=</span> s.length() - start;</span><br><span class="line">        <span class="type">char</span>[] subChars;</span><br><span class="line">        <span class="keyword">if</span>(leftChars &lt; k &amp;&amp; leftChars &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            subChars = Arrays.copyOfRange(chars, start, s.length());</span><br><span class="line">            stringBuilder.append(reverseSubStr(subChars));</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (leftChars &gt;= k &amp;&amp; leftChars &lt; <span class="number">2</span> * k)&#123;</span><br><span class="line">            subChars = Arrays.copyOfRange(chars, start, start + k);</span><br><span class="line">            stringBuilder.append(reverseSubStr(subChars));</span><br><span class="line">            stringBuilder.append(s, start+k, s.length());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> stringBuilder.toString();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">reverseSubStr</span><span class="params">(<span class="type">char</span>[] chars)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> chars.length;</span><br><span class="line">        <span class="type">char</span> temp;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; len / <span class="number">2</span>; i++) &#123;</span><br><span class="line">            temp = chars[i];</span><br><span class="line">            chars[i] = chars[len - <span class="number">1</span> - i];</span><br><span class="line">            chars[len - <span class="number">1</span> - i] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> String.valueOf(chars);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -182,6 +197,17 @@
               2022-10-18 21:47:59
             </span>
             
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="分类"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/%E9%A2%98%E8%A7%A3/" title="题解">
+                        <b>#</b> 题解
+                      </a>
+                    </span>
+                    
+                  </span>
+              
           </div>
           <div class="post-foot-prev">
             

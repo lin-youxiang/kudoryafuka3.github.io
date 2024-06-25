@@ -86,6 +86,10 @@
           <a href="/archives/">Archives</a>
         </li>
       
+        <li class="nav-item" data-path="/categories/">
+          <a href="/categories/">Categories</a>
+        </li>
+      
         <li class="nav-item" data-path="/tags/">
           <a href="/tags/">Tags</a>
         </li>
@@ -160,6 +164,17 @@
           2022-11-06 13:34:24
         </span>
         
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="分类"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/%E9%A2%98%E8%A7%A3/" title="题解">
+                    <b>#</b> 题解
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
       <div class="markdown-body">
         <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">interpret</span><span class="params">(String command)</span> &#123;</span><br><span class="line">        <span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">        HashMap&lt;String, String&gt; hashMap = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        hashMap.put(<span class="string">&quot;G&quot;</span>,<span class="string">&quot;G&quot;</span>);</span><br><span class="line">        hashMap.put(<span class="string">&quot;()&quot;</span>,<span class="string">&quot;o&quot;</span>);</span><br><span class="line">        hashMap.put(<span class="string">&quot;(al)&quot;</span>,<span class="string">&quot;al&quot;</span>);</span><br><span class="line">        <span class="type">StringBuilder</span> <span class="variable">constructor</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">        <span class="type">char</span>[] chars = command.toCharArray();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">char</span> value : chars) &#123;</span><br><span class="line">            constructor.append(value);</span><br><span class="line">            <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> hashMap.get(constructor.toString());</span><br><span class="line">            <span class="keyword">if</span>(str != <span class="literal">null</span>) &#123;</span><br><span class="line">                sb.append(str);</span><br><span class="line">                constructor.delete(<span class="number">0</span>,constructor.length());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -182,6 +197,17 @@
               2022-11-06 13:34:24
             </span>
             
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="分类"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/%E9%A2%98%E8%A7%A3/" title="题解">
+                        <b>#</b> 题解
+                      </a>
+                    </span>
+                    
+                  </span>
+              
           </div>
           <div class="post-foot-prev">
             

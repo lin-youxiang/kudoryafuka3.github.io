@@ -86,6 +86,10 @@
           <a href="/archives/">Archives</a>
         </li>
       
+        <li class="nav-item" data-path="/categories/">
+          <a href="/categories/">Categories</a>
+        </li>
+      
         <li class="nav-item" data-path="/tags/">
           <a href="/tags/">Tags</a>
         </li>
@@ -160,6 +164,17 @@
           2022-07-01 16:51:41
         </span>
         
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="分类"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/%E9%A2%98%E8%A7%A3/" title="题解">
+                    <b>#</b> 题解
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
       <div class="markdown-body">
         <h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">romanToInt</span><span class="params">(s <span class="type">string</span>)</span></span> <span class="type">int</span> &#123;</span><br><span class="line">    roman := <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="type">string</span>]<span class="type">int</span>)</span><br><span class="line">	roman[<span class="string">&quot;I&quot;</span>] = <span class="number">1</span></span><br><span class="line">	roman[<span class="string">&quot;IV&quot;</span>] = <span class="number">4</span></span><br><span class="line">	roman[<span class="string">&quot;V&quot;</span>] = <span class="number">5</span></span><br><span class="line">	roman[<span class="string">&quot;IX&quot;</span>] = <span class="number">9</span></span><br><span class="line">	roman[<span class="string">&quot;X&quot;</span>] = <span class="number">10</span></span><br><span class="line">	roman[<span class="string">&quot;XL&quot;</span>] = <span class="number">40</span></span><br><span class="line">	roman[<span class="string">&quot;L&quot;</span>] = <span class="number">50</span></span><br><span class="line">	roman[<span class="string">&quot;XC&quot;</span>] = <span class="number">90</span></span><br><span class="line">	roman[<span class="string">&quot;C&quot;</span>] = <span class="number">100</span></span><br><span class="line">	roman[<span class="string">&quot;CD&quot;</span>] = <span class="number">400</span></span><br><span class="line">	roman[<span class="string">&quot;D&quot;</span>] = <span class="number">500</span></span><br><span class="line">	roman[<span class="string">&quot;CM&quot;</span>] = <span class="number">900</span></span><br><span class="line">	roman[<span class="string">&quot;M&quot;</span>] = <span class="number">1000</span></span><br><span class="line">    <span class="keyword">var</span> lastRoman <span class="type">int</span></span><br><span class="line">    <span class="keyword">var</span> nowRoman <span class="type">int</span></span><br><span class="line">    res := <span class="number">0</span></span><br><span class="line">	res += roman[<span class="type">string</span>(s[<span class="number">0</span>])]</span><br><span class="line">    lastRoman = roman[<span class="type">string</span>(s[<span class="number">0</span>])]</span><br><span class="line">    <span class="keyword">for</span> i := <span class="number">1</span>; i &lt; <span class="built_in">len</span>(s); i++ &#123;</span><br><span class="line">        nowRoman = roman[<span class="type">string</span>(s[i])]</span><br><span class="line">        <span class="keyword">if</span> nowRoman &gt; lastRoman &#123;</span><br><span class="line">            res += nowRoman - lastRoman - lastRoman</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            res += nowRoman</span><br><span class="line">        &#125; </span><br><span class="line">        lastRoman = nowRoman</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -182,6 +197,17 @@
               2022-07-01 16:51:41
             </span>
             
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="分类"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/%E9%A2%98%E8%A7%A3/" title="题解">
+                        <b>#</b> 题解
+                      </a>
+                    </span>
+                    
+                  </span>
+              
           </div>
           <div class="post-foot-prev">
             
