@@ -240,6 +240,29 @@
 
 
 
+  <div id="gitalk-container"></div>
+
+  <script>
+    function loadGitalkSuc() {
+      const gitalk = new Gitalk({
+        clientID: 'Ov23li7MNA69cqZdXsXy',
+        clientSecret: '890f68898c10ff0370044d061abe3ed94e2e9e96',
+        repo: 'https://github.com/Kudoryafuka3/gitalk-comment',
+        owner: 'Kudoryafuka3',
+        admin: ['Kudoryafuka3'],
+        id: location.pathname,
+        distractionFreeMode: false
+      })
+
+      gitalk.render('gitalk-container')
+    }
+  </script>
+  
+    <link rel="stylesheet" href="/plugins/gitalk.css">
+    <script type="text/javascript" src="/plugins/gitalk.min.js" onload="loadGitalkSuc(this)"></script>
+  
+
+
 
       </div>
     
